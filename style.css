@@ -1,36 +1,39 @@
-/* style.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* Main styles */
 .navbar {
-  background-color: black; /* Black bar */
-  padding: 10px 20px;      /* Space around the content */
-  position: fixed;         /* Sticks to the top */
-  top: 0;
-  width: 100%;             /* Full-width bar */
-  z-index: 1000;           /* Ensures it stays on top */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 
 .menu {
-  list-style-type: none;   /* Remove bullet points */
+  display: flex;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;           /* Align items horizontally */
 }
 
 .menu li {
-  margin-right: 20px;      /* Space between menu items */
+  margin: 0 20px;
 }
 
 .menu a {
-  text-decoration: none;   /* Remove underline */
-  color: white;            /* White text */
-  font-size: 16px;         /* Adjust font size */
-  transition: color 0.3s;  /* Smooth hover effect */
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 .menu a:hover {
-  color: gray;             /* Change color on hover */
+  color: gray;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px; /* Add space between items */
+  }
+}
+
