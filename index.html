@@ -64,7 +64,8 @@
     .thumbnail {
       width: 100%;
       height: auto;
-      display: block;
+      max-height: 300px; /* Limit height */
+      object-fit: cover; /* Ensure the image covers the space without distortion */
     }
 
     .grid-item p {
@@ -102,6 +103,7 @@
   <!--Grid title and grid begins here -->
     <h1>Latest Articles</h1>
   </div>
+  
   <!-- Grid Container -->
   <div class="grid-container">
     <div class="grid-item">
@@ -110,12 +112,14 @@
         <p>Marvel Rivals: Sharks with Freakin' Laser Beams</p>
       </a>
     </div>
+	
     <div class="grid-item">
       <a href="page2.html">
         <img src="Assets/Veilguard/dragon-age-veilguard-eacom-coming-soon-16x9.jpg.adapt.crop191x100.1200w.jpg" alt="Dragon Age: The Veilguard" class="thumbnail">
         <p>Dragon Age: Veilguard – The Dreadwolfening</p>
       </a>
     </div>
+	
     <div class="grid-item">
       <a href="page3.html">
         <img src="Assets/Astrobot/astro-bot-review-blog-1725456007634.jpg" alt="Astrobot" class="thumbnail">
@@ -123,19 +127,19 @@
       </a>
     </div>
   </div>
+  
   <div class="grid-item">
       <a href="page4.html">
         <img src="Assets/metaphor/Metaphor-ReFantazio-6-1024x576.jpg" alt="Smarf's Top 5 Games of 2024" class="thumbnail">
         <p>Smarf's Top 5 Games of 2024</p>
       </a>
     </div>
+	
 	<div class="grid-item">
       <a href="page4.html">
         <img src="Assets/Concord/GV26fwCXYAAamvO.jpg" alt="Dissapointees 2024" class="thumbnail">
         <p>Dissapointees 2024</p>
       </a>
     </div>
-    <!-- Add more grid items as needed -->
-  </div>
 </body>
 </html>
