@@ -66,12 +66,11 @@
     }
 
     .thumbnail {
-      width: 250px;
+      width: 100%;
       height: 200px;
-      display: inline-block;
-	  background-size: cover;
-	  background-position: center center;
-	  background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
 
     .grid-item p {
@@ -79,13 +78,13 @@
       background-color: #333;
       color: white;
       margin: 0;
-	  height: 33px;
+      min-height: 33px; /* Flexible height for varying content */
     }
 
     .grid-item a {
       text-decoration: none;
       color: inherit;
-      display: block; /* Makes sure the link wraps the full content */
+      display: block;
     }
 
     .grid-item a:hover {
@@ -106,95 +105,94 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#news">News</a></li>
-      <li><a href="#contact me">Contact Me</a></li>
+      <li><a href="#contact-me">Contact Me</a></li>
     </ul>
   </nav>
 
- <!-- Main header -->
+  <!-- Main Header -->
   <header>
     <h1>Latest Articles</h1>
   </header>
 
-  <!-- Grid Container --> 
-<div class="grid-container">
-  <div class="grid-item">
-    <a href="Marvel rivals Review.html">
-      <div class="thumbnail" 
-           style="background-image: url('Assets/Marvel Rivals/Marvel-Rivals-Impressions-Piece-Featured-Image.webp');">
-      </div>
-      <p>Marvel Rivals: Sharks with Freakin' Laser Beams</p>
-    </a>
-  </div>
-</div>
-
+  <!-- Grid Container -->
+  <div class="grid-container">
+    <!-- Grid Items -->
+    <div class="grid-item">
+      <a href="Marvel rivals Review.html">
+        <div class="thumbnail" 
+             style="background-image: url('Assets/Marvel Rivals/Marvel-Rivals-Impressions-Piece-Featured-Image.webp');">
+        </div>
+        <p>Marvel Rivals: Sharks with Freakin' Laser Beams</p>
+      </a>
+    </div>
 
     <div class="grid-item">
       <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
+        <div class="thumbnail" style="background-image: url('Assets/Marvel Rivals/rivalsheader.jpg');"></div>
         <p>Marvel Rivals to Introduce Two New Heroes Every Season</p>
       </a>
     </div>
 
     <div class="grid-item">
       <a href="page2.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
+        <div class="thumbnail" style="background-image: url('Assets/Veilguard/dragon-age-veilguard-eacom-coming-soon-16x9.jpg.adapt.crop191x100.1200w.jpg');"></div>
         <p>Dragon Age: Veilguard – The Dreadwolfening</p>
       </a>
     </div>
 
     <div class="grid-item">
       <a href="page3.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
+        <div class="thumbnail" style="background-image: url('Assets/Astrobot/astro-bot-review-blog-1725456007634.jpg');"></div>
         <p>Astrobot - Gnome Sized, but not a Gnome</p>
       </a>
     </div>
 
     <div class="grid-item">
       <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
+        <div class="thumbnail" style="background-image: url('Assets/metaphor/Metaphor-ReFantazio-6-1024x576.jpg');"></div>
         <p>Smarf's Top 5 Games of 2024</p>
       </a>
     </div>
 
-    <div class="grid-item">
+	<div class="grid-item">
       <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
-        <p>Disappointees 2024</p>
-      </a>
-    </div>
-
-    <div class="grid-item">
-      <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
-        <p>What's going on with the Switch 2 leaks?</p>
-      </a>
-    </div>
-
-    <div class="grid-item">
-     <a href="page4.html">
-     <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
-     <p>Nintendo Responds to Leaks: "Not Official"</p>
-     </a>
-    </div>
-
-    <div class="grid-item">
-      <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
-        <p>Nintendo Switch 2 will be getting Xbox games according to leaker</p>
-      </a>
-    </div>
-
-    <div class="grid-item">
-      <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
+        <div class="thumbnail" style="background-image: url('Assets/Marvel Rivals/GfxEo1lWwAAFrul.jpg');"></div>
         <p>5 New Heroes Discovered in Marvel Rivals Game Files</p>
       </a>
     </div>
 
-    <div class="grid-item">
+	 <div class="grid-item">
       <a href="page4.html">
-        <div class="thumbnail" style="background-image: url('path/to/image.jpg');"></div>
+        <div class="thumbnail" style="background-image: url('Assets/Untitled-1_yJncNl4.webp');"></div>
         <p>Switch 2 Announcement Expected This Week</p>
+      </a>
+    </div>
+
+	 <div class="grid-item">
+      <a href="page4.html">
+        <div class="thumbnail" style="background-image: url('Assets/960x0.webp');"></div>
+        <p>Nintendo Switch 2 will be getting Xbox games according to leaker</p>
+      </a>
+    </div>
+
+	<div class="grid-item">
+     <a href="page4.html">
+     <div class="thumbnail" style="background-image: url('Assets/Nintendo Logo.jpg');"></div>
+     <p>Nintendo Responds to Leaks: "Not Official"</p>
+     </a>
+    </div>
+
+	<div class="grid-item">
+      <a href="page4.html">
+        <div class="thumbnail" style="background-image: url('Assets/960x0 (1).webp');"></div>
+        <p>What's going on with the Switch 2 leaks?</p>
+      </a>
+    </div>
+
+	<div class="grid-item">
+      <a href="page4.html">
+        <div class="thumbnail" style="background-image: url('Assets/SSKTJL/suicide-squad.jpg');"></div>
+        <p>Disappointees 2024</p>
       </a>
     </div>
   </div>
