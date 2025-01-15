@@ -1,4 +1,10 @@
-/* Main styles */
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Black Navigation Bar */
 .navbar {
   background-color: black;
   display: flex;
@@ -7,6 +13,7 @@
   height: 60px;
 }
 
+/* Menu Styling */
 .menu {
   display: flex;
   list-style-type: none;
@@ -29,48 +36,31 @@
   color: gray;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .menu {
-    flex-direction: column; /* Stack menu items vertically */
-    gap: 10px; /* Add space between items */
-  }
-}
-
 /* Grid Styling */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts number of columns based on screen size */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto; /* Centers the grid container */
+  max-width: 1200px; /* Optional: Adjust this based on your preferred grid width */
+  margin: 0 auto; /* This will center the grid horizontally */
 }
 
-/* Grid Items */
 .grid-item {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Ensure the content is centered */
 }
 
-/* Thumbnail Images */
 .thumbnail {
-  width: 100%; /* Ensures images take up the full width of their grid item */
-  height: 200px; /* Maintains aspect ratio */
-  max-height: 250px; /* Limits the height of the image */
-  object-fit: contain; /* Ensures the image maintains its aspect ratio */
-  display: block; /* Ensures image is treated as block-level element to avoid stretching */
-  margin: 0 auto; /* Centers the image within the grid item */
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Limit height */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
 }
 
-/* Text under the image */
 .grid-item p {
   padding: 10px;
   background-color: #333;
@@ -87,7 +77,8 @@
   opacity: 0.8;
 }
 
+/* Header styling */
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: center; /* Centers the h1 text */
+  margin-bottom: 20px; /* Adds space below the h1 */
 }
