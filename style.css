@@ -73,13 +73,13 @@ body {
   flex-grow: 1; /* Allow the paragraph to grow and fill available space */
 }
 
-.grid-item a {
-  text-decoration: none;
-  color: inherit;
+..grid-item a {
+  text-decoration: none;  /* Remove default underlining */
+  color: inherit;  /* Ensures the color is inherited from the parent */
 }
 
 .grid-item a:hover {
-  opacity: 0.8;
+  opacity: 0.8;  /* Adds a hover effect */
 }
 
 /* Header styling */
