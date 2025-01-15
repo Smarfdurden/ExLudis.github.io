@@ -60,14 +60,14 @@ body {
 
 .thumbnail {
   width: 100%;
-  height: auto;
-  max-height: 300px; /* Limit height */
+  height: 200px;
   object-fit: cover; /* Ensure the image covers the space without distortion */
+  display: inline-block;
 }
 
 ..grid-item p {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   background-color: #333;
   color: white;
   flex-grow: 1; /* Allow the paragraph to grow and fill available space */
