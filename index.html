@@ -1,13 +1,48 @@
-<nav>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="style.css">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Black Bar Menu</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Centered Menu</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Black Navigation Bar */
+    .navbar {
+      background-color: black;
+      display: flex; /* Flexbox to align items */
+      justify-content: center; /* Centers items horizontally */
+      align-items: center; /* Centers items vertically */
+      height: 60px; /* Adjust height as needed */
+    }
+
+    /* Menu Styling */
+    .menu {
+      display: flex; /* Flexbox for horizontal layout */
+      list-style-type: none; /* Remove bullet points */
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 0 20px; /* Space between menu items */
+    }
+
+    .menu a {
+      text-decoration: none; /* Remove underline */
+      color: white; /* White text */
+      font-size: 16px;
+      transition: color 0.3s; /* Smooth hover effect */
+    }
+
+    .menu a:hover {
+      color: gray; /* Change color on hover */
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
