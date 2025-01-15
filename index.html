@@ -63,17 +63,13 @@
      flex-direction: column;
      justify-content: space-between;  /* Makes sure the content is spread out evenly */
      height: 100%;  /* Ensures the grid item takes up full height */
+	 align-items: stretch; /* Ensures the items fill the available space */
     }
 
     .thumbnail {
-	background-color: black;
-      width: 250px;
-      height: 200px;
-      display: inline-block; 
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat
-    }
+     width: 100%; /* Make sure the image fills the container */
+     height: 200px; /* Fixed height */
+     object-fit: cover; /* Ensure the image covers the area without distortion */
 
     .grid-item p {
      padding: 20px;
@@ -82,7 +78,6 @@
      margin: 0;
 	 flex-grow: 1; /* Ensures the paragraph grows to fill available space */
 }
-    }
 
     .grid-item a {
       text-decoration: none;
@@ -98,6 +93,7 @@
       text-align: center;
       margin-bottom: 20px;
     }
+
   </style>
 </head>
 <body>
