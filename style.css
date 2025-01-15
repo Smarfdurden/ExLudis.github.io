@@ -67,7 +67,7 @@ body {
 
 ..grid-item p {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   background-color: #333;
   color: white;
   flex-grow: 1; /* Allow the paragraph to grow and fill available space */
