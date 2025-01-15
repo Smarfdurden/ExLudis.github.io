@@ -55,7 +55,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensures content is distributed evenly */
-  height: 100%; /* Take up full height of the grid item */
 }
 
 .thumbnail {
