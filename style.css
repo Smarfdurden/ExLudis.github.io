@@ -41,7 +41,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 0px;
   max-width: 1200px; /* Optional: Adjust this based on your preferred grid width */
   margin: 0 auto; /* This will center the grid horizontally */
 }
