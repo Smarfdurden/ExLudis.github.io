@@ -41,9 +41,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  padding: 0;
+  padding: 20px;
   max-width: 1200px; /* Optional: Adjust this based on your preferred grid width */
-  min-height: 100vh; /* Ensures the grid container takes up at least the full viewport height */
   margin: 0 auto; /* This will center the grid horizontally */
 }
 
@@ -56,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Ensures content is distributed evenly */
-  height: 100%; /* Take up full height of the grid item */
+  height: 200px; /* Take up full height of the grid item */
 }
 
 .thumbnail {
