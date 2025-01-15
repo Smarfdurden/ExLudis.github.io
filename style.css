@@ -65,9 +65,6 @@ body {
   background-repeat: no-repeat; /* Prevents tiling of the image */
   border-radius: 8px; /* Optional: Add rounded corners to match the grid-item */
 }
-
-}
-
 .grid-item p {
   margin: 0;
   padding: 20px;
