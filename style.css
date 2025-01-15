@@ -46,16 +46,15 @@ body {
   margin: 0 auto; /* This will center the grid horizontally */
 }
 
-.grid-item {
-	
-  height: auto; /* Allows items to expand based on content */
-  min-height: 200px; /* Ensures the grid items are not too small */
-  max-height: 500px; /* Prevents grid items from getting too tall */
+..grid-item {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space if needed */
 }
 
 .thumbnail {
@@ -65,12 +64,11 @@ body {
   object-fit: cover; /* Ensure the image covers the space without distortion */
 }
 
-.grid-item p {
-  padding: 10px;
+..grid-item p {
+  margin: 0; /* Remove margin */
+  padding: 10px; /* Adjust padding to desired amount */
   background-color: #333;
   color: white;
-  margin: 0;
-  line-height: 1.4; /* Adjust line height to reduce extra space */
 }
 
 .grid-item a {
