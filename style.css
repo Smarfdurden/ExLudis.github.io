@@ -47,6 +47,10 @@ body {
 }
 
 .grid-item {
+	
+  height: auto; /* Allows items to expand based on content */
+  min-height: 200px; /* Ensures the grid items are not too small */
+  max-height: 500px; /* Prevents grid items from getting too tall */
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   border-radius: 8px;
