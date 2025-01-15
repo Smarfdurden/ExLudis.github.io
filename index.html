@@ -42,6 +42,44 @@
     .menu a:hover {
       color: gray; /* Change color on hover */
     }
+
+    /* Grid Styling */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .grid-item {
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .grid-item p {
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      margin: 0;
+    }
+
+    .grid-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .grid-item a:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
@@ -53,5 +91,16 @@
       <li><a href="#contact me">Contact Me</a></li>
     </ul>
   </nav>
-</body>
-</html>
+
+  <h1>My Image Grid</h1>
+
+  <!-- Grid Container -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <a href="page1.html">
+        <img src="Assets/Marvel Rival/thumbnail1.jpg" alt="Thumbnail 1" class="thumbnail">
+        <p>Page 1</p>
+      </a>
+    </div>
+    <div class="grid-ite
+
