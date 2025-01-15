@@ -54,7 +54,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute space if needed */
+  height: 100%; /* Ensure grid item takes full height */
 }
 
 .thumbnail {
@@ -65,10 +65,11 @@ body {
 }
 
 ..grid-item p {
-  margin: 0; /* Remove margin */
-  padding: 10px; /* Adjust padding to desired amount */
+  margin: 0;
+  padding: 10px;
   background-color: #333;
   color: white;
+  flex-grow: 1; /* Allow the paragraph to grow and fill available space */
 }
 
 .grid-item a {
