@@ -46,7 +46,7 @@ body {
   margin: 0 auto; /* This will center the grid horizontally */
 }
 
-..grid-item {
+.grid-item {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -65,7 +65,7 @@ body {
   display: inline-block;
 }
 
-..grid-item p {
+.grid-item p {
   margin: 0;
   padding: 20px;
   background-color: #333;
@@ -73,7 +73,7 @@ body {
   flex-grow: 1; /* Allow the paragraph to grow and fill available space */
 }
 
-..grid-item a {
+.grid-item a {
   text-decoration: none;  /* Remove default underlining */
   color: inherit;  /* Ensures the color is inherited from the parent */
 }
