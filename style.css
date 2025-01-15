@@ -35,16 +35,52 @@
     flex-direction: column; /* Stack menu items vertically */
     gap: 10px; /* Add space between items */
   }
- /* Grid Container */
+ /* Grid Styling */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusts number of columns based on screen size */
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto; /* Centers the grid container */
 }
 
+/* Grid Items */
+.grid-item {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Thumbnail Images */
+.thumbnail {
+  width: 100%; /* Ensures images take up the full width of their grid item */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 300px; /* Optional: you can limit the height */
+  object-fit: cover; /* Ensures images fill their container without stretching */
+}
+
+/* Text under the image */
+.grid-item p {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  margin: 0;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid-item a:hover {
+  opacity: 0.8;
+}
 h1 {
   text-align: center; /* Centers the h1 text */
   margin-bottom: 20px; /* Adds space below the h1 */
