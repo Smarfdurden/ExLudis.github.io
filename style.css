@@ -35,5 +35,12 @@
     flex-direction: column; /* Stack menu items vertically */
     gap: 10px; /* Add space between items */
   }
+  /* Grid Layout Styles */
+.grid-container {
+  display: grid; /* Use CSS Grid */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dynamic columns */
+  gap: 20px; /* Space between grid items */
+  padding: 20px;
+}
 }
 
