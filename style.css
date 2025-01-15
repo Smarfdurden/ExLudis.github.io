@@ -58,10 +58,14 @@ body {
 }
 
 .thumbnail {
-  width: 100%;
-  height: 200px;
-  object-fit: cover; /* Ensure the image covers the space without distortion */
-  display: inline-block;
+  width: 100%; /* Makes the thumbnail responsive to the parent container */
+  height: 200px; /* Set the height of the thumbnail */
+  background-size: cover; /* Ensures the image covers the entire space without distortion */
+  background-position: center; /* Centers the image within the div */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+  border-radius: 8px; /* Optional: Add rounded corners to match the grid-item */
+}
+
 }
 
 .grid-item p {
