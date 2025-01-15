@@ -54,11 +54,15 @@
     }
 
     .grid-item {
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
+     background-color: #f4f4f4;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     overflow: hidden;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;  /* Makes sure the content is spread out evenly */
+     height: 100%;  /* Ensures the grid item takes up full height */
     }
 
     .thumbnail {
@@ -71,10 +75,12 @@
     }
 
     .grid-item p {
-      padding: 20;
-      background-color: #333;
-      color: white;
-      margin: 0;
+     padding: 20;
+     background-color: #333;
+     color: white;
+     margin: 0;
+	 flex-grow: 1; /* Ensures the paragraph grows to fill available space */
+}
     }
 
     .grid-item a {
