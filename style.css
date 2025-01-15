@@ -54,7 +54,8 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure grid item takes full height */
+  justify-content: space-between; /* Ensures content is distributed evenly */
+  height: 100%; /* Take up full height of the grid item */
 }
 
 .thumbnail {
