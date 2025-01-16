@@ -88,3 +88,54 @@ h1 {
   margin: 0; /* Adds space below the h1 */
   padding: 0;
 }
+
+.image-style {
+  display: block; /* Ensures the image behaves as a block-level element */
+  width: 20%; /* Adjust the width as needed, e.g., "100%" or "80%" */
+  max-width: 100px; /* Restrict the maximum width of the image */
+  margin: 0 auto; /* Center the image horizontally */
+  padding-top: 10px; /* Add spacing at the top if necessary */
+}
+
+.indented-text {
+  text-indent: 20px; /* Adjust the value as needed */
+}
+.centered-aligned-text {
+  text-align: center;
+  text-indent: -20px; /* Adjust the value as needed */
+  padding-left: 20px; /* Adjust the value to match the text-indent */
+}
+.text-container {
+  max-width: 800px; /* Adjust this value based on how wide you want the text */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px; /* Optional: adds some spacing around the text */
+}
+/* Centered container with limited width */
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px; /* Limit width to 800px, adjust as necessary */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Optionally, you can also limit width for individual text blocks if needed */
+.centered-text {
+  text-align: center;
+  margin: 10px 0;
+  max-width: 750px; /* Limit width of the text block */
+  margin: 0 auto; /* Centers individual paragraphs */
+}
+	@media (min-width: 768px) 
+		{ section { width: 70%; /* Adjust width for medium screens */ 
+		} 
+	}
+	
+	@media (min-width: 1024px) 
+	{ section { 
+		width: 50%; /* Adjust width for large screens */ 
+		} 
+	}
