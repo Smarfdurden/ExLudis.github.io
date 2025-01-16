@@ -104,6 +104,8 @@ h1 {
   text-align: center;
   text-indent: -20px; /* Adjust the value as needed */
   padding-left: 20px; /* Adjust the value to match the text-indent */
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 .text-container {
   max-width: 800px; /* Adjust this value based on how wide you want the text */
