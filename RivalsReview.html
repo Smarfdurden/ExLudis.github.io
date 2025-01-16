@@ -79,7 +79,7 @@
       text-align: center;
       margin: 15px 0;
       font-size: 1.1rem;
-      color: #555;
+      color: #333;
     }
 
     /* Paragraph Styling */
@@ -98,35 +98,41 @@
       width: 300%;auto /* Responsive width */
     }
 	
-	@media (max-width: 768px) {
-		body {
-			font-size: 14px;
+	/* General responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
+  section {
+    width: 90%; /* Adjust section width for small screens */
+  }
+}
 
-     @media (min-width: 784px) 
-		{ section { 
-			width: 75%; /* Adjust width for medium screens */ 
-		} 
-	}
-	
-	@media (min-width: 1200px) 
-	{ section { 
-		width: 50%; /* Adjust width for large screens */ 
-		} 
-	}
-  /* Styles for phones */
-	@media (max-width: 480px) {
-		body {
-			font-size: 12px;
-		}
+@media (min-width: 784px) {
+  section {
+    width: 75%; /* Adjust section width for medium screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    width: 50%; /* Adjust section width for large screens */
+  }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
   .navbar {
     flex-direction: column; /* Stack navigation menu items */
   }
-
   .menu li {
     margin: 10px 0;
   }
 }
+
   
   </style>
 </head>
