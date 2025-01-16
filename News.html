@@ -9,8 +9,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+	  transition: background-color 0.3s, color 0.3s;
     }
-
+	.dark-mode {
+      background-color: #333;
+      color: white;
+    }
+	
     /* Black Navigation Bar */
     .navbar {
       background-color: black;
@@ -43,7 +48,29 @@
       border-radius: 5px; /* Rounded corners for a softer look */
       transition: all 0.3s ease; /* Smooth transition for hover effect */
     }
+	
+	#toggle-dark-mode {
+    padding: 10px 20px; /* Increased padding for a larger button */
+    font-size: 16px; /* Larger font size */
+    background-color: #3498db; /* Bright color */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners for a smooth look */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
 
+    #toggle-dark-mode:hover {
+    background-color: #2980b9; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    }
+	
+	#toggle-dark-mode:focus {
+    outline: none; /* Remove the default outline on focus */
+    border: 2px solid #f39c12; /* Add a focus outline for better accessibility */
+}
     .menu a:hover {
     color: #333; /* Lighter color on hover */
     background-color: #ddd; /* Subtle background color change on hover */
@@ -140,6 +167,7 @@
       <li><a href="Reviews.html">Reviews</a></li>
       <li><a href="News.html">News</a></li>
       <li><a href="Contactme.html">Contact Me</a></li>
+	  <button id="toggle-dark-mode">Toggle Dark Mode</button>
     </ul>
 </nav>
 
@@ -185,6 +213,28 @@
         <p>What's going on with the Switch 2 leaks?</p>
       </a>
   </div>
+<!-- JavaScript at the end of the body -->
+  <script>
+    // JavaScript to toggle dark mode
+    document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+      // Toggle the dark mode class on the body
+      document.body.classList.toggle('dark-mode');
 
+      // Save the current theme to localStorage so it's persistent across sessions
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Check localStorage for the preferred theme on page load
+    window.addEventListener('load', function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    });
+  </script>
 </body>
 </html>

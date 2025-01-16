@@ -50,19 +50,27 @@
     }
 	
 	#toggle-dark-mode {
-      margin-left: 20px;
-      padding: 5px 10px;
-      background-color: #f39c12;
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
+    padding: 10px 20px; /* Increased padding for a larger button */
+    font-size: 16px; /* Larger font size */
+    background-color: #3498db; /* Bright color */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners for a smooth look */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
 
     #toggle-dark-mode:hover {
-      background-color: #e67e22;
+    background-color: #2980b9; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
     }
 	
+	#toggle-dark-mode:focus {
+    outline: none; /* Remove the default outline on focus */
+    border: 2px solid #f39c12; /* Add a focus outline for better accessibility */
+}
     .menu a:hover {
     color: #333; /* Lighter color on hover */
     background-color: #ddd; /* Subtle background color change on hover */
