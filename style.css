@@ -35,7 +35,7 @@ body {
 }
 
 .menu a:hover {
-  color: gray;
+  color: indigo;
 }
 
 /* Grid Styling */
@@ -141,7 +141,6 @@ h1 {
   max-width: 750px; /* Limit width of the text block */
   margin: 0 auto; /* Centers individual paragraphs */
 }
-
 a {
   text-decoration: none; /* Only apply general styles, omit color */
 }
