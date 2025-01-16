@@ -96,7 +96,15 @@
       text-align: center;
       margin-bottom: 20px;
     }
-
+	.image-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   .image-style {
+     max-width: 100%;
+     height: auto; /* Maintain aspect ratio */
+	}
   </style>
 </head>
 <body>
@@ -113,3 +121,11 @@
   <header>
     <h1>Contact Me</h1>
   </header>
+  
+  <div class="image-container">
+  <img src="Assets/Profile Photos/signal-2024-12-11-110802_002.jpeg" alt="SmarfDurden Profile Photo" class="image-style">
+</div>
+	<!-- Centered content -->
+  <div class="centered-container">
+    <h1><a href="https://bsky.app/profile/smarfdurden.com" target="_blank">Follow me on Bluesky!</a> </h1>
+  </div>
