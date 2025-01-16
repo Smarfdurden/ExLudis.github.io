@@ -92,11 +92,19 @@ h1 {
 .image-style {
   display: block; /* Ensures the image behaves as a block-level element */
   width: 20%; /* Adjust the width as needed, e.g., "100%" or "80%" */
-  max-width: 100px; /* Restrict the maximum width of the image */
+  max-width: 200px; /* Restrict the maximum width of the image */
   margin: 0 auto; /* Center the image horizontally */
   padding-top: 10px; /* Add spacing at the top if necessary */
+  height: auto;
 }
-
+.image-container {
+  display: flex;
+  justify-content: center;  /* Horizontally center the image */
+  align-items: center;      /* Vertically center the image */
+  height: 400px;            /* Set a height for the container (optional) */
+  width: 100%;
+  margin: 0 auto;
+}
 .indented-text {
   text-indent: 20px; /* Adjust the value as needed */
 }
@@ -130,4 +138,23 @@ h1 {
   margin: 10px 0;
   max-width: 750px; /* Limit width of the text block */
   margin: 0 auto; /* Centers individual paragraphs */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+}
+
+body.dark-mode .menu a {
+  color: white;
+}
+
+body.dark-mode .menu a:hover {
+  color: #ddd;
+  background-color: #555;
 }
