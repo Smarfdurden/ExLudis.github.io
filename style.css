@@ -129,13 +129,3 @@ h1 {
   max-width: 750px; /* Limit width of the text block */
   margin: 0 auto; /* Centers individual paragraphs */
 }
-	@media (min-width: 768px) 
-		{ section { width: 70%; /* Adjust width for medium screens */ 
-		} 
-	}
-	
-	@media (min-width: 1024px) 
-	{ section { 
-		width: 50%; /* Adjust width for large screens */ 
-		} 
-	}
