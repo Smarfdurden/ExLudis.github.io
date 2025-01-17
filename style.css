@@ -261,9 +261,11 @@ body.dark-mode a:hover {
 }
 #icon {
   font-size: 28px; 
-  display: inline-block;/* Ensure it behaves like an inline element */
+  Color: White;
 }
-
+#icon:hover {
+  color: lightblue; /* Color on hover, e.g., gold */
+}
 /* Responsive Design (Mobile View) */
 @media (max-width: 768px) {
 .navbar {
