@@ -1,208 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smarf's Top 5 Games of 2024</title>
-  <style>
-    /* General Reset */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4; /* Light background color */
-    }
+  <html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smarf's Top 5 Games of 2024</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	</style>
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    /* Black Navigation Bar */
-    .navbar {
-      background-color: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 60px;
-    }
+	<!-- Favicon -->
+	<link rel="icon" href="Assets/ProfilePhotos/favicon-16x16.png" type="image/png" sizes="16x16 32x32" />
+	</head>
 
-    /* Menu Styling */
-    .menu {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li {
-      margin: 0 20px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    .menu a:hover {
-      color: gray;
-    }
-
-    /* Styling for the image */
-    .image-style {
-      display: block;
-      width: 65%;
-      max-width: 1200px;
-      margin: 20px auto; /* Adjusted for spacing */
-      border-radius: 10px; /* Rounded corners for a polished look */
-    }
-
-    /* Section Header Styling */
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-top: 20px;
-      color: #333;
-    }
-
-    /* Centered Container */
-    .centered-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-      margin-bottom: 0;
-    }
-
-    /* Centered Text Styling */
-    .centered-text {
-      text-align: center;
-      margin: 15px 0;
-      font-size: 1.1rem;
-      color: #333;
-    }
-
-    /* Paragraph Styling */
-    p {
-      max-width: 800px; /* Limit paragraph width */
-      margin: 0 auto; /* Center paragraphs */
-    }
-
-    /* Section Styling */
-    section {
-      padding: 10px;
-      background-color: white;
-      margin: 10px auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      width: 90%;auto /* Responsive width */
-    }
-	
-	/* General responsive adjustments */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  section {
-    width: 90%; /* Adjust section width for small screens */
-  }
-}
-
-@media (min-width: 784px) {
-  section {
-    width: 75%; /* Adjust section width for medium screens */
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    font-size: 18px;
-  section {
-    width: 50%; /* Adjust section width for large screens */
-    max-width: 800px;
-  }
-}
-
-/* Styles for phones */
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-  .navbar {
-    flex-direction: column; /* Stack navigation menu items */
-  }
-  .menu li {
-    margin: 10px 0;
-  }
-}
-
-  
-  </style>
-</head>
-
-<body>
-  <nav class="navbar">
+	<body>
+	<!-- Navbar with toggle button -->
+	<nav class="navbar">
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contactme.html">Contact Me</a></li>
+      <li><a href="Reviews.html">Reviews</a></li>
+      <li><a href="News.html">News</a></li>
+      <li><a href="Contactme.html">Contact Me</a></li>
     </ul>
-  </nav>
-
-  <!-- Centered content -->
-  <div class="centered-container">
+    <button id="toggle-dark-mode">
+	<i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
+	</button>
+	</nav>
+  
+	<!-- Article content -->
+	<section class="boxed-section">
+    
+	<div class="centered-container">
     <h1>Smarf's Top 5 Games of 2024</h1>
-  </div>
+	</div>
   
-  <!-- Additional content -->
-  <section>
-    <p class="centered-aligned-text">This was a strange year for me when it comes to gaming. I was interested in very few of the new games coming out and didn’t necessarily want to spend money on them. The games that I did play, I managed to play because I rented them with Gamefly, but shipping speed put a damper on how quickly I could play them.</p>
+	<p class="centered-aligned-text">This was a strange year for me when it comes to gaming. I was interested in very few of the new games coming out and didn’t necessarily want to spend money on them. The games that I did play, I managed to play because I rented them with Gamefly, but shipping speed put a damper on how quickly I could play them.</p>
   
-  <br> 
+	<br> 
 
     <p class="centered-aligned-text">Honestly, it was a little difficult for me to come up with ten games that I liked enough to be in a “Game of the Year” list, so I lowered it to top 5. I may make a separate post on games I played that didn't come out this year, with this being the more "official" game of the year post. </p>
 
-  <br> 
+	<br> 
   
     <p class="centered-aligned-text">Without further ado, here’s the list… </p>
 	
   
-  <div class="centered-container">
+	<div class="centered-container">
 	<h2>5. Helldivers 2</h2>
-  </div>
+	</div>
   
-  <img src="Assets/Helldivers/VvK79UXJVGgSN8YCEVyhxn.jpg.webp" alt="Helldivers Header" class="image-style">
-  
+	<img src="Assets/Helldivers/VvK79UXJVGgSN8YCEVyhxn.jpg.webp" alt="Helldivers Header" class="image-style">
   
     <p class="centered-aligned-text">Helldivers 2 is one of the most fun co-op experiences I’ve played in a while. I love it when the competition in games isn’t between the players, but the players vs A.I and a Game Master. It’s one of those rare experiences where I don’t feel the need to constantly mute the chat because teammates are angry and yelling at each other.</p>
   
-   <br> 
+	<br> 
     <p class="centered-aligned-text">The difficulty can be too challenging sometimes which can lead to frustration with the constant ragdoll physics for your helldiver, but when you’re doing well it’s incredibly satisfying to unleash fire, missile strikes and bullets at mobs of bugs, robots and aliens charging after you. </p>
   
   
-  <div class="centered-container">
+	<div class="centered-container">
 	<h2>4. Marvel Rivals</h2>
-  </div>
+	</div>
   
-  <img src="Assets/Marvel Rivals/rivalsheader.jpg" alt="A Marvel Rival Header" class="image-style">
+	<img src="Assets/Marvel Rivals/rivalsheader.jpg" alt="A Marvel Rival Header" class="image-style">
   
   
     <p class="centered-aligned-text">I’ve never been a big Marvel fan. I’m familiar enough with some of the superheroes, but I haven’t watched most of the movies in the MCU and I’m not sure I’m ever going to. Despite this, I still find myself immensely enjoying Marvel Rivals. The art direction is the biggest highlight for me with its vibrant colors and modernized hero designs. </p>
   
-  <br> 
+	<br> 
   
     <p class="centered-aligned-text">The obvious comparison is Overwatch with similar game modes and an overall UI that’s incredibly similar, it seems poised to be a direct competitor. The player count seems to reflect this competition as Overwatch is now headed to an all-time low player count on steam. </p>
   
   
-  <div class="centered-container">
+	<div class="centered-container">
 	<h2>3. Metaphor: ReFantazio</h2>
-  </div>
+	</div>
   
-  <img src="Assets/metaphor/Metaphor-ReFantazio-6-1024x576.jpg" alt="Metaphor: ReFantazio Header" class="image-style">
+	<img src="Assets/metaphor/Metaphor-ReFantazio-6-1024x576.jpg" alt="Metaphor: ReFantazio Header" class="image-style">
   
     <p class="centered-aligned-text">I haven’t finished Metaphor yet, but 20 hours in, it’s already secured a strong spot on my list. With more time, it might even become my number one, but I wanted this ranking to truly reflect my 2024 experience so far, and this is where it currently stands. </p>
   
-  <br> 
+	<br> 
   
     <p class="centered-aligned-text">As a huge fan of the Persona series, I knew I had to play this game the moment I heard about it. The art style is incredible, with menu designs that are particularly stunning, and the animations during menu transitions never fail to amaze me. It’s a game that’s as much a joy to look at as it is to play. </p>
 	
@@ -214,9 +92,9 @@
 	
 	<div class="centered-container">
 	<h2>2. Astrobot</h2>
-  </div>
+	</div>
   
-  <img src="Assets/Astrobot/astro-bot-review-blog-1725456007634.jpg" alt="Astrobot Header" class="image-style">
+	<img src="Assets/Astrobot/astro-bot-review-blog-1725456007634.jpg" alt="Astrobot Header" class="image-style">
   
     <p class="centered-aligned-text">I’ve already written about Astrobot and mentioned that it would be entering my top 5, so this submission isn’t much of a surprise. If you want to read my full review, you can read it here. </p>
 	
@@ -224,11 +102,11 @@
 	
     <p class="centered-aligned-text">This is one of the few 3D platformers available on PlayStation and the only one directly supported by Sony - and they absolutely nailed it. While it doesn’t break new ground, it delivers a solid, enjoyable experience. I even went the extra mile to complete everything in the game, which is rare for me when it comes to… well, any game, really. </p>
   
-  <div class="centered-container">
+	<div class="centered-container">
 	<h2>1. Balatro</h2>
-  </div>
+	</div>
   
-  <img src="Assets/Balatro/maxresdefault.webp" alt="Balatro Header" class="image-style">
+	<img src="Assets/Balatro/maxresdefault.webp" alt="Balatro Header" class="image-style">
   
     <p class="centered-aligned-text">Balatro was one of the most addictive games I’ve played this year. I had no idea how to play poker before starting this, but it didn’t take me long to get the hang of it and begin banging my head against the boss blinds. </p>
 	
@@ -236,9 +114,48 @@
 	
     <p class="centered-aligned-text">This game is much more than just poker. There’s no actual gambling involved, and after each boss fight, you can choose from various cards to modify your deck based on your playstyle before facing the next boss. Alternatively, you can skip earlier bosses to earn one of 24 tags that can be spent at the next shop. </p>
   
-  <br> 
+	<br> 
   
     <p class="centered-aligned-text">This game gets a lot of deserved praise, and I highly recommend picking up a copy if you’re interested in a roguelike deck builder with a poker theme. Balatro came out on iOS and Android recently if you’d prefer to play it on your phone. </p>
 	</section>
-</body>
+	
+	<--javascript for dark mode-->
+	<script>
+	// JavaScript to toggle dark mode
+	const toggleButton = document.getElementById('toggle-dark-mode');
+	const icon = document.getElementById('icon');
+
+	// Function to apply dark mode from localStorage on page load
+	function applyDarkMode() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+	} else {
+      document.body.classList.remove('dark-mode');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+		}
+	}
+
+	// Apply dark mode when the page loads
+	applyDarkMode();
+
+	// Function to toggle dark/light mode
+	toggleButton.addEventListener('click', () => {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+    
+    // Update localStorage based on dark mode status
+    if (isDarkMode) {
+      localStorage.setItem('darkMode', 'enabled');
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon'); // Show moon icon for dark mode
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun'); // Show sun icon for light mode
+    }
+	});
+	</script>
+  </body>
 </html>
