@@ -268,23 +268,35 @@ body.dark-mode a:hover {
 }
 /* Responsive Design (Mobile View) */
 @media (max-width: 768px) {
-.navbar {
-  flex-direction: column;
-  padding: 10px 0;
-}
-.menu {
-  flex-direction: column;
-  align-items: center;
-}
-.menu li {
-  margin: 10px 0;
-}
-.menu a {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .menu a {
     font-size: 18px; /* Adjust font size for mobile */
     padding: 10px 20px; /* Increase clickable area */
   }
-  @media (min-width: 428px) and (max-width: 932px) {
-  /* Adjust styles here for iPhone 13 Pro Max */
 }
 
+@media (min-width: 428px) and (max-width: 932px) {
+  /* Adjust styles here specifically for iPhone 13 Pro Max or devices in this range */
+  .navbar {
+    /* Example: Adjust padding for larger devices */
+    padding: 15px 0;
+  }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  /* Styles for high-density screens like iPhone 13 Pro Max */
+  .menu a {
+    font-size: 20px; /* Example: Slightly larger text for high pixel density */
+  }
+}
+
