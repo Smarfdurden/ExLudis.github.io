@@ -108,7 +108,7 @@ body.dark-mode blockquote footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 0;
 }
 .grid-item p {
   margin: 0;
