@@ -5,212 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marvel Rivals Review - Smarf Durden</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* General Reset */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .dark-mode {
-      background-color: #333;
-      color: white;
-    }
-	body.dark-mode {
-      background-color: black;
-      color: white;
-    }
-	a {
-      color: darkblue;
-      text-decoration: none;
-    }
-	a:hover {
-      color: indigo;
-    }
-	
-	/* Dark mode link styles */
-    body.dark-mode a {
-      color: white;
-    }
-	
-    /* Black Navigation Bar */
-    .navbar {
-      background-color: black;
-      display: flex;
-      justify-content: Center; /* Adjust to spread out navbar items */
-      align-items: center;
-      height: 60px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      padding: 0 20px; /* Add padding for better spacing */
-    }
-
-    /* Menu Styling */
-    .menu {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li {
-      margin: 0 20px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: white;!important;
-      font-size: 18px;
-      transition: color 0.3s;
-      font-weight: bold; /* Make the text stand out */
-      padding: 10px 15px; /* Add padding for spacing */
-      border-radius: 5px; /* Rounded corners for a softer look */
-      transition: all 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-	#toggle-dark-mode {
-	padding: 10px;
-	font-size: 24px;
-	background-color: #B6A5F8; 
-	color: white;
-	border: none;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: all 0.3s ease; /* Smooth transition for hover effects */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px; /* Set width */
-	height: 50px; /* Set height */
-	}
-
-    #toggle-dark-mode:hover {
-	background-color: #4B0082; /* Darker color */
-	transform: translateY(-2px); /* Lift effect */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    }
-
-    #toggle-dark-mode:focus {
-      outline: none; /* Remove the default outline on focus */
-    }
-	
-	#toggle-dark-mode {
-      cursor: pointer;
-      padding: 10px 20px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-	
-    #icon {
-	font-size: 28px; /* Increase icon size */
-	display: inline-block; /* Ensure it behaves like an inline element */
-    }
-
-    .menu a:hover {
-      color: #FFFFFF; /* Lighter color on hover */
-      background-color: #4B0082; /* Subtle background color change on hover */
-      transform: translateY(-2px); /* Slight lift effect */
-    }
-
-    /* Grid Styling */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .grid-item {
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-
-    .thumbnail {
-      width: 100%;
-      height: 200px;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    .grid-item p {
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      margin: 0;
-      min-height: 2.5em; /* Flexible height for varying content */
-    }
-
-    .grid-item a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .grid-item a:hover {
-      opacity: 0.8;
-    }
-
-    /* Header styling */
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Responsive Design (Mobile View) */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        padding: 10px 0;
-      }
-
-      .menu {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .menu li {
-        margin: 10px 0;
-      }
-
-      .menu a {
-        font-size: 16px; /* Adjust font size for smaller screens */
-      }
-    }
-	.image-style {
-	max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
-	height: auto; /* Maintains aspect ratio */
-	display: block; /* Removes extra spacing below the image */
-	margin: 0 auto; /* Centers the image horizontally */
-	}
-	
-	.boxed-section {
-  background-color: #f4f4f4; /* Light background color */
-  border: 1px solid #ccc; /* Subtle border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Space inside the box */
-  margin: 20px auto; /* Space outside the box and centering */
-  max-width: 800px; /* Limit the width of the box */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  body.dark-mode .boxed-section {
-  background-color: #444; /* Darker background for dark mode */
-  border: 1px solid #666; /* Subtle border in dark mode */
-  color: #ddd; /* Softer text color for better readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark mode */
-	}
   </style>
 
   <!-- Font Awesome CDN -->
@@ -218,6 +14,7 @@
 
 <!-- Favicon -->
   <link rel="icon" href="Assets/ProfilePhotos/favicon-16x16.png" type="image/png" sizes="16x16 32x32" />
+
 </head>
 
 <body>
@@ -247,44 +44,34 @@
   </div>
   
   <!-- Additional content -->
-  <section>
-    <p class="centered-aligned-text">I’ll be honest, I’ve never been much of a Marvel fan. The main culprit is the art; I’ve just never really enjoyed looking at it very much. I’ve only watched a handful of the movies, and I thought they were okay, but I felt they were never worth my time or effort to watch them. I did enjoy Guardians of the Galaxy, Deadpool, and Dr. Strange so it’s not like I’m incapable of enjoying Marvel properties. It's just never really clicked with me.</p>
+  <section  class="boxed-section">
+    <p>I’ll be honest, I’ve never been much of a Marvel fan. The main culprit is the art; I’ve just never really enjoyed looking at it very much. I’ve only watched a handful of the movies, and I thought they were okay, but I felt they were never worth my time or effort to watch them. I did enjoy Guardians of the Galaxy, Deadpool, and Dr. Strange so it’s not like I’m incapable of enjoying Marvel properties. It's just never really clicked with me.</p>
 
   <img src="Assets/Marvel Rivals/signal-2025-01-07-204324_002.jpeg" alt="Mantis in training" class="image-style">
   
 
-    <p class="centered-aligned-text">Certain walls and objects can be broken, which seemed like a fun twist at first, but it feels very underutilized in Marvel Rivals. I like that it’s still included, but I would have liked more of it to make the gameplay more strategic. As it is now, wall destruction is a thing that exists that you don’t really think much about. This could change as a more defined meta emerges, but it’s something that I’ve barely thought about in my 30 hours of playtime. </p>
+    <p>Certain walls and objects can be broken, which seemed like a fun twist at first, but it feels very underutilized in Marvel Rivals. I like that it’s still included, but I would have liked more of it to make the gameplay more strategic. As it is now, wall destruction is a thing that exists that you don’t really think much about. This could change as a more defined meta emerges, but it’s something that I’ve barely thought about in my 30 hours of playtime. </p>
   
-  <br>
-  
-    <p class="centered-aligned-text">The art style of Marvel Rivals is a real highlight for me with its vibrant colors and modernized hero designs. The arenas you fight in are equally well-done, providing a lot of cover to dodge snipers and plenty of flank routes for sneakier characters like Spider-Man. Certain hallways have low ceilings that will force flying players down towards the ground, further emphasizing the need for positional awareness. Each of them is a decent size; not too big and not too small. </p>
-  
-  <br>
+    <p>The art style of Marvel Rivals is a real highlight for me with its vibrant colors and modernized hero designs. The arenas you fight in are equally well-done, providing a lot of cover to dodge snipers and plenty of flank routes for sneakier characters like Spider-Man. Certain hallways have low ceilings that will force flying players down towards the ground, further emphasizing the need for positional awareness. Each of them is a decent size; not too big and not too small. </p>
   
   <img src="Assets/Marvel Rivals/signal-2025-01-07-203032_006.jpeg" alt="Mantis in training" class="image-style">
   
-  
-    <p class="centered-aligned-text">Heroes are split between the classic trifecta of tank, healer, DPS – referred to as vanguard, duelist, and strategist – with the game conveniently recommending a category when you’re at the mission select screen. Each character has a star rating to indicate how difficult it is, which I found to be a good enough indicator of what to play as a new player. </p>
-  
+    <p>Heroes are split between the classic trifecta of tank, healer, DPS – referred to as vanguard, duelist, and strategist – with the game conveniently recommending a category when you’re at the mission select screen. Each character has a star rating to indicate how difficult it is, which I found to be a good enough indicator of what to play as a new player. </p>
   
   <img src="Assets/Marvel Rivals/squirrelgirl.png" alt="Mantis in training" class="image-style">
   
+    <p>As a Junkrat main, I really gravitated towards Squirrel Girl with her slingshot that lobs explosive acorns off surfaces similarly to junkrats grenade launcher and can leap into the air to escape or reach higher surfaces. Her new character design in this game looks significantly better than the old ones, which I’m thankful for because they could get pretty weird looking. </p>
   
-    <p class="centered-aligned-text">As a Junkrat main, I really gravitated towards Squirrel Girl with her slingshot that lobs explosive acorns off surfaces similarly to junkrats grenade launcher and can leap into the air to escape or reach higher surfaces. Her new character design in this game looks significantly better than the old ones, which I’m thankful for because they could get pretty weird looking. </p>
-  
-  <br>
-  
-    <p class="centered-aligned-text">Jeff the landshark is hated by a sizable portion of the community and it’s not because he’s bad - He's so damn good, and his ultimate seemed designed to specifically boil the blood of the players he spits into the abyss. I’m sure when he gets nerfed in the upcoming patch, all will be forgiven, and we can go back to gushing over how cute he is. </p>
+    <p>Jeff the landshark is hated by a sizable portion of the community and it’s not because he’s bad - He's so damn good, and his ultimate seemed designed to specifically boil the blood of the players he spits into the abyss. I’m sure when he gets nerfed in the upcoming patch, all will be forgiven, and we can go back to gushing over how cute he is. </p>
   
   
   <img src="Assets/Marvel Rivals/signal-2025-01-07-203032_011.jpeg" alt="Mantis in training" class="image-style">
   
   
-    <p class="centered-aligned-text">There are some characters that I don't see in matches often like Black Panther and Black Widow - which honestly fills the same sniper role as Hawkeye but she's worse at it. Storm is another character that is overall lacking since she’s squishy, always in the air, and easy to target for ranged characters. </p>
+    <p>There are some characters that I don't see in matches often like Black Panther and Black Widow - which honestly fills the same sniper role as Hawkeye but she's worse at it. Storm is another character that is overall lacking since she’s squishy, always in the air, and easy to target for ranged characters. </p>
   
-  <br>
   
-    <p class="centered-aligned-text">As for microtransactions, the game follows a fairly typical freemium model. It has a battle pass and a rotating store with cosmetics. The battle pass is filled with fillers like nameplates, sprays and emotes that you’re required to unlock to get the stuff you really want – the character skins. If spending large sums of money on character skins is your thing, then Marvel Rivals has quite a few good-looking skins. </p>
+    <p>As for microtransactions, the game follows a fairly typical freemium model. It has a battle pass and a rotating store with cosmetics. The battle pass is filled with fillers like nameplates, sprays and emotes that you’re required to unlock to get the stuff you really want – the character skins. If spending large sums of money on character skins is your thing, then Marvel Rivals has quite a few good-looking skins. </p>
   
   
   <img src="Assets/Marvel Rivals/signal-2025-01-07-203032_007.jpeg" alt="Mantis in training" class="image-style">
@@ -292,17 +79,17 @@
   
     <p class="centered-aligned-text">Despite how great the game looks and feels, it’s rife with filthy cheaters using aimbots gleefully ruining everyone’s fun - as is typical of most PvP games. I haven’t encountered this on casual mode, but it's something to be mindful of if you’re planning to play ranked where most of the cheaters congregate. </p>
   
-  <br>
-  
-    <p class="centered-aligned-text">Marvel Rivals does have an issue with its heavy reliance on frame rate for core mechanics, causing players to dash shorter distances, jump lower, or attack more slowly just because they're on a weaker PC. Let’s hope that they fix that issue soon because for a game like this, that is a glaring issue. </p>
+    <p>Marvel Rivals does have an issue with its heavy reliance on frame rate for core mechanics, causing players to dash shorter distances, jump lower, or attack more slowly just because they're on a weaker PC. Let’s hope that they fix that issue soon because for a game like this, that is a glaring issue. </p>
   
   
   <img src="Assets/Marvel Rivals/signal-2025-01-07-203032_012.jpeg" alt="Mantis in training" class="image-style">
   
-    <p class="centered-aligned-text">I’ve really enjoyed my time with Marvel Rivals. I'll probably stick with it for a little while longer until something else catches my interest. I hope Iron Fist gets stuck in my ass the next time he uppercuts me. Fuck him. </p>
+    <p>I’ve really enjoyed my time with Marvel Rivals. I'll probably stick with it for a little while longer until something else catches my interest. I hope Iron Fist gets stuck in my ass the next time he uppercuts me. Fuck him. </p>
   <section>
+  
     <p class="centered-text">7/10</p>
   </section>
+  
   <script>
   // JavaScript to toggle dark mode
   const toggleButton = document.getElementById('toggle-dark-mode');

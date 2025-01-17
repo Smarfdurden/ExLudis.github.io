@@ -5,212 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>5 New Heroes Discovered in Marvel Rivals Game Files</title>
   <style>
-    /* General Reset */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .dark-mode {
-      background-color: #333;
-      color: white;
-    }
-	body.dark-mode {
-      background-color: black;
-      color: white;
-    }
-	a {
-      color: darkblue;
-      text-decoration: none;
-    }
-	a:hover {
-      color: indigo;
-    }
-	
-	/* Dark mode link styles */
-    body.dark-mode a {
-      color: white;
-    }
-	
-    /* Black Navigation Bar */
-    .navbar {
-      background-color: black;
-      display: flex;
-      justify-content: Center; /* Adjust to spread out navbar items */
-      align-items: center;
-      height: 60px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      padding: 0 20px; /* Add padding for better spacing */
-    }
-
-    /* Menu Styling */
-    .menu {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li {
-      margin: 0 20px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: white;!important;
-      font-size: 18px;
-      transition: color 0.3s;
-      font-weight: bold; /* Make the text stand out */
-      padding: 10px 15px; /* Add padding for spacing */
-      border-radius: 5px; /* Rounded corners for a softer look */
-      transition: all 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-	#toggle-dark-mode {
-	padding: 10px;
-	font-size: 24px;
-	background-color: #B6A5F8; 
-	color: white;
-	border: none;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: all 0.3s ease; /* Smooth transition for hover effects */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px; /* Set width */
-	height: 50px; /* Set height */
-	}
-
-    #toggle-dark-mode:hover {
-	background-color: #4B0082; /* Darker color */
-	transform: translateY(-2px); /* Lift effect */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    }
-
-    #toggle-dark-mode:focus {
-      outline: none; /* Remove the default outline on focus */
-    }
-	
-	#toggle-dark-mode {
-      cursor: pointer;
-      padding: 10px 20px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-	
-    #icon {
-	font-size: 28px; /* Increase icon size */
-	display: inline-block; /* Ensure it behaves like an inline element */
-    }
-
-    .menu a:hover {
-      color: #FFFFFF; /* Lighter color on hover */
-      background-color: #4B0082; /* Subtle background color change on hover */
-      transform: translateY(-2px); /* Slight lift effect */
-    }
-
-    /* Grid Styling */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .grid-item {
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-
-    .thumbnail {
-      width: 100%;
-      height: 200px;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    .grid-item p {
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      margin: 0;
-      min-height: 2.5em; /* Flexible height for varying content */
-    }
-
-    .grid-item a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .grid-item a:hover {
-      opacity: 0.8;
-    }
-
-    /* Header styling */
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Responsive Design (Mobile View) */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        padding: 10px 0;
-      }
-
-      .menu {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .menu li {
-        margin: 10px 0;
-      }
-
-      .menu a {
-        font-size: 16px; /* Adjust font size for smaller screens */
-      }
-    }
-	.image-style {
-	max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
-	height: auto; /* Maintains aspect ratio */
-	display: block; /* Removes extra spacing below the image */
-	margin: 0 auto; /* Centers the image horizontally */
-	}
-	.boxed-section {
-  background-color: #f4f4f4; /* Light background color */
-  border: 1px solid #ccc; /* Subtle border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Space inside the box */
-  margin: 20px auto; /* Space outside the box and centering */
-  max-width: 800px; /* Limit the width of the box */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  body.dark-mode .boxed-section {
-  background-color: #444; /* Darker background for dark mode */
-  border: 1px solid #666; /* Subtle border in dark mode */
-  color: #ddd; /* Softer text color for better readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark mode */
-	}
-
   </style>
+  <link rel="stylesheet" href="style.css">
 <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -240,20 +36,19 @@
     <h1>5 New Heroes Discovered in Marvel Rivals Game Files</h1>
   </div>
 
-  <section>
-    
-	<p class="centered-aligned-text">A leaker known as X0XLEAK posted on X that 5 new heroes were found in the game files. The heroes are:</p>
+  <section class="boxed-section">
+	<p>A leaker known as X0XLEAK posted on X that <a href="https://x.com/X0X_LEAK/status/1877868849728479345">5 new heroes were found in the game files.</a> The heroes are:</p>
     <li>Professor X (Support)</li>
 	<li>Jia Jing (Support) (Support)</li>
 	<li>Paste Pot Pete (Damage)</li>
 	<li>Colossus (Tank)</li>
 	<li>Locus (Support)</li>
-	<br>
-	<p class="centered-aligned-text">This puts the number of unreleased heroes found in the games files at about 15, which would expand the games roster to 50 heroes. It's worth noting that Overwatch has a 42 hero roster and has been released for nearly 9 years.</p>
-    <br>
-	<p class="centered-aligned-text">Marvel Rivals might not surpass Overwatch in releasing heroes - as there’s no way to know when these heroes will debut - but it does highlight the strong start Marvel Rivals has made.</p>
-    <br>
-	<p class="centered-aligned-text">Previously leaked characters include:</p>
+
+	<p>This puts the number of unreleased heroes found in the games files at about 15, which would expand the games roster to 50 heroes. It's worth noting that Overwatch has a 42 hero roster and has been released for nearly 9 years.</p>
+    
+	<p>Marvel Rivals might not surpass Overwatch in releasing heroes - as there’s no way to know when these heroes will debut - but it does highlight the strong start Marvel Rivals has made.</p>
+    
+	<p><a href="https://x.com/X0X_LEAK/status/1872451730652422378">Previously leaked characters include:</a></p>
 	<li>Angela</li>
 	<li>Hit-Monkey</li>
 	<li>Deadpool</li>
@@ -261,19 +56,20 @@
 	<li>Emma Frost</li>
 	<li>Phoenix/Jean Grey</li>
 	<li>Modok</li>
-	<li>Ultron (Per RivalLeaks on X)</li>
-	<li>The Thing (Per RivalLeaks on X)</li>
-	<br>
-	<p class="centered-aligned-text">This is a pretty substantial roster considering we're also expecting the second half of the Fantastic Four to be released later this season. RivalLeaks tweeted that Ultron will be releasing "sooner then u might think".</p>
-	<br>
-	<p class="centered-aligned-text">The amount of momentum this game has gotten since release is staggering. As of yesterday on Season 1's release, the game hit the highest player count in the games history at 642,333 concurrent players and has achieved 20 million unique players combined.</p>
+	<li>Ultron (<a href="https://x.com/RivalsLeaks/status/1864338925164093603">Per RivalLeaks on X</a>)</li>
+	<li>The Thing (<a href="https://x.com/RivalsLeaks/status/1864338925164093603">Per RivalLeaks on X</a>)</li>
+	
+	<p>This is a pretty substantial roster considering we're also expecting the second half of the Fantastic Four to be released later this season. RivalLeaks tweeted that Ultron will be releasing "sooner then u might think".</p>
+	
+	<p>The amount of momentum this game has gotten since release is staggering. As of yesterday on Season 1's release, the game hit the highest player count in the games history at 642,333 concurrent players and has achieved 20 million unique players combined.</p>
 	
 	<img src="Assets/msedge_OJrNTcyt7Y.png" alt="Marvel Rivals Playercount" class="image-style">
 	
-	<p class="centered-aligned-text">I've been curious whether Marvel Rivals would be able to keep up its momentum - but considering the numerous heroes tucked away in the game files, it's starting to look like they'll be able to keep players engaged for quite some time.</p>
+	<p>I've been curious whether Marvel Rivals would be able to keep up its momentum - but considering the numerous heroes tucked away in the game files, it's starting to look like they'll be able to keep players engaged for quite some time.</p>
 	<br>
-	<p class="centered-aligned-text">I'll keep updating this page if any new heroes leak, so keep checking back for more updates!</p>
+	<p>I'll keep updating this page if any new heroes leak, so keep checking back for more updates!</p>
 	</section>
+	
 	<script>
   // JavaScript to toggle dark mode
   const toggleButton = document.getElementById('toggle-dark-mode');

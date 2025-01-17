@@ -1,26 +1,44 @@
 /* General Reset */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family:'Libre Franklin', sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  font-size: 18px; /* Default size for body text */
+  line-height: 1.6; /* Increase line height */
+}
+/* Default blockquote styling */
+blockquote {
+  font-style: italic;
+  border-left: 5px solid #4B0082;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.6;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: black;
-  color: white;
+blockquote p {
+  margin: 0;
 }
 
-/* General Link Styling */
-a {
-  text-decoration: none;
-  color: darkblue;
+blockquote footer {
+  font-size: 0.9em;
+  text-align: right;
+  color: #666;
 }
-a:hover {
-  color: indigo;
+
+/* Dark mode specific blockquote styling */
+body.dark-mode blockquote {
+  background-color: #3b4252; /* Darker background for blockquote in dark mode */
+  color: #ddd; /* Lighter text color for better readability */
+  border-left: 5px solid #B6A5F8; /* Lighter or different color for the border */
 }
-body.dark-mode a {
-  color: white;
+
+body.dark-mode blockquote footer {
+  color: #aaa; /* Lighter color for the citation in dark mode */
 }
 
 /* Black Navigation Bar */
@@ -44,20 +62,21 @@ body.dark-mode a {
 .menu li {
   margin: 0 20px;
 }
+
 .menu a {
-text-decoration: none;
-color: white;
-font-size: 18px;
-transition: color 0.3s;
-font-weight: bold; /* Make the text stand out */
-padding: 10px 15px; /* Add padding for spacing */
-border-radius: 5px; /* Rounded corners for a softer look */
-transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+  font-weight: bold; /* Make the text stand out */
+  padding: 10px 15px; /* Add padding for spacing */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .menu a:hover {
   color: white;
-  background-color: #4B0082;
+  background-color: #23252F;
   transform: translateY(-2px);
 }
 
@@ -94,7 +113,7 @@ transition: all 0.3s ease; /* Smooth transition for hover effect */
   background-color: #333;
   color: white;
   flex-grow: 1;
-  min-height: 2.5em; /* Flexible height for varying content */
+  min-height: 100%;
 }
 .grid-item a {
   text-decoration: none;
@@ -112,14 +131,14 @@ h1 {
 }
 
 /* Image Styling */
-.image-style {
+.image-style { 
   display: block;
-  width: 20%;
-  max-width: 200px;
+  width: 600px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Ensure image scales and crops proportionally */
   margin: 0 auto;
-  padding-top: 10px;
-  height: auto;
 }
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -172,11 +191,44 @@ h1 {
   max-width: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 body.dark-mode .boxed-section {
-  background-color: #444;
+  background-color: #23252F;
   border: 1px solid #666;
   color: #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+/* General Link Styling - applies to all links*/
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+a:hover {
+  color: #23252F;
+}
+/* Link styling ONLY for paragraphs */
+p a {
+  color: green; 
+}
+
+/* Dark Mode link styling ONLY for paragraphs */
+body.dark-mode p a {
+  color: #5e81ac; 
+}
+
+/* Dark Mode link styling */
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode a:hover {
+  color: lightblue; 
 }
 
 /* Toggle Dark Mode Button */
@@ -197,7 +249,7 @@ body.dark-mode .boxed-section {
   height: 50px;
 }
 #toggle-dark-mode:hover {
-  background-color: #4B0082;
+  background-color: #23252F;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -211,18 +263,18 @@ body.dark-mode .boxed-section {
 
 /* Responsive Design (Mobile View) */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px 0;
-  }
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu li {
-    margin: 10px 0;
-  }
-  .menu a {
-    font-size: 16px;
-  }
+.navbar {
+  flex-direction: column;
+  padding: 10px 0;
 }
+.menu {
+  flex-direction: column;
+  align-items: center;
+}
+.menu li {
+  margin: 10px 0;
+}
+.menu a {
+  font-size: 16px;
+}
+

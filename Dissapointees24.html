@@ -5,211 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dissapointees 2024</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* General Reset */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .dark-mode {
-      background-color: #333;
-      color: white;
-    }
-	body.dark-mode {
-      background-color: black;
-      color: white;
-    }
-	a {
-      color: darkblue;
-      text-decoration: none;
-    }
-	a:hover {
-      color: indigo;
-    }
-	
-	/* Dark mode link styles */
-    body.dark-mode a {
-      color: white;
-    }
-	
-    /* Black Navigation Bar */
-    .navbar {
-      background-color: black;
-      display: flex;
-      justify-content: Center; /* Adjust to spread out navbar items */
-      align-items: center;
-      height: 60px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      padding: 0 20px; /* Add padding for better spacing */
-    }
-
-    /* Menu Styling */
-    .menu {
-      display: flex;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li {
-      margin: 0 20px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: white;!important;
-      font-size: 18px;
-      transition: color 0.3s;
-      font-weight: bold; /* Make the text stand out */
-      padding: 10px 15px; /* Add padding for spacing */
-      border-radius: 5px; /* Rounded corners for a softer look */
-      transition: all 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-	#toggle-dark-mode {
-	padding: 10px;
-	font-size: 24px;
-	background-color: #B6A5F8; 
-	color: white;
-	border: none;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: all 0.3s ease; /* Smooth transition for hover effects */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px; /* Set width */
-	height: 50px; /* Set height */
-	}
-
-    #toggle-dark-mode:hover {
-	background-color: #4B0082; /* Darker color */
-	transform: translateY(-2px); /* Lift effect */
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-    }
-
-    #toggle-dark-mode:focus {
-      outline: none; /* Remove the default outline on focus */
-    }
-	
-	#toggle-dark-mode {
-      cursor: pointer;
-      padding: 10px 20px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-	
-    #icon {
-	font-size: 28px; /* Increase icon size */
-	display: inline-block; /* Ensure it behaves like an inline element */
-    }
-
-    .menu a:hover {
-      color: #FFFFFF; /* Lighter color on hover */
-      background-color: #4B0082; /* Subtle background color change on hover */
-      transform: translateY(-2px); /* Slight lift effect */
-    }
-
-    /* Grid Styling */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .grid-item {
-      background-color: #f4f4f4;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-
-    .thumbnail {
-      width: 100%;
-      height: 200px;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    .grid-item p {
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      margin: 0;
-      min-height: 2.5em; /* Flexible height for varying content */
-    }
-
-    .grid-item a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .grid-item a:hover {
-      opacity: 0.8;
-    }
-
-    /* Header styling */
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Responsive Design (Mobile View) */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        padding: 10px 0;
-      }
-
-      .menu {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .menu li {
-        margin: 10px 0;
-      }
-
-      .menu a {
-        font-size: 16px; /* Adjust font size for smaller screens */
-      }
-    }
-	.image-style {
-	max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
-	height: auto; /* Maintains aspect ratio */
-	display: block; /* Removes extra spacing below the image */
-	margin: 0 auto; /* Centers the image horizontally */
-	}
-	.boxed-section {
-  background-color: #f4f4f4; /* Light background color */
-  border: 1px solid #ccc; /* Subtle border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Space inside the box */
-  margin: 20px auto; /* Space outside the box and centering */
-  max-width: 800px; /* Limit the width of the box */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  body.dark-mode .boxed-section {
-  background-color: #444; /* Darker background for dark mode */
-  border: 1px solid #666; /* Subtle border in dark mode */
-  color: #ddd; /* Softer text color for better readability */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark mode */
-	}
   </style>
 <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -237,12 +34,10 @@
   </div>
   
   <!-- Additional content -->
-  <section>
-    <p class="centered-aligned-text">This is a new series that I'm going to do at the end of each year along with my Game of the Year list. There's always games that I felt could have been good, but just left me feeling disappointed. If I can think of any good ideas, I may even include a trophy to hand out to all of them. I was thinking something along the lines of a "Gold trophy filled to the brim with boiling sewage", but I'll workshop it.</p>
+  <section class="boxed-section">
+    <p>This is a new series that I'm going to do at the end of each year along with my Game of the Year list. There's always games that I felt could have been good, but just left me feeling disappointed. If I can think of any good ideas, I may even include a trophy to hand out to all of them. I was thinking something along the lines of a "Gold trophy filled to the brim with boiling sewage", but I'll workshop it.</p>
   
-	<br> 
-	
-    <p class="centered-aligned-text">Certain walls and objects can be broken, which seemed like a fun twist at first, but it feels very underutilized in Marvel Rivals. I like that it’s still included, but I would have liked more of it to make the gameplay more strategic. As it is now, wall destruction is a thing that exists that you don’t really think much about. This could change as a more defined meta emerges, but it’s something that I’ve barely thought about in my 30 hours of playtime. </p>
+    <p>Certain walls and objects can be broken, which seemed like a fun twist at first, but it feels very underutilized in Marvel Rivals. I like that it’s still included, but I would have liked more of it to make the gameplay more strategic. As it is now, wall destruction is a thing that exists that you don’t really think much about. This could change as a more defined meta emerges, but it’s something that I’ve barely thought about in my 30 hours of playtime. </p>
   
   <div class="centered-container">
     <h2>Suicide Squad: Kill the Justice League</h2>
@@ -251,15 +46,11 @@
   <img src="Assets/SSKTJL/suicide-squad.jpg" alt="Suicide Squad Header" class="image-style">
   
 
-    <p class="centered-aligned-text">Suicide Squad: Kill the justice League may not have been a game I was dying to play when I first saw previews, but I thought it looked like it could have been a good time. When I finally got my hands on it, it was okay. I wasn’t terribly thrilled about it, but the combat was fun enough. I’ve always been a sucker for games that let me fly around a city and in some ways gave me nostalgia for the days when I was playing Crackdown on my Xbox 360.</p>
+    <p>Suicide Squad: Kill the justice League may not have been a game I was dying to play when I first saw previews, but I thought it looked like it could have been a good time. When I finally got my hands on it, it was okay. I wasn’t terribly thrilled about it, but the combat was fun enough. I’ve always been a sucker for games that let me fly around a city and in some ways gave me nostalgia for the days when I was playing Crackdown on my Xbox 360.</p>
   
-	<br> 
+    <p>In the end, the story was… nonsensical, mostly. The dialogue could be grating (Amanda Waller, looking at you) and the games population was on life-support immediately after launch. The boss fights were pathetic. I couldn't believe that was the best a AAA studio could come up with - rotating out the same few boss fights over and over again for each brainiac that released. </p>
   
-    <p class="centered-aligned-text">In the end, the story was… nonsensical, mostly. The dialogue could be grating (Amanda Waller, looking at you) and the games population was on life-support immediately after launch. The boss fights were pathetic. I couldn't believe that was the best a AAA studio could come up with - rotating out the same few boss fights over and over again for each brainiac that released. </p>
-  
-	<br> 
-  
-    <p class="centered-aligned-text">I couldn't stand looking at the big, glowing purple boils on every. single. enemy. Those growths drastically increased the feeling of fatigue I felt playing the game. The entire game you fight the same enemies with the same purple glowing pustules and the enemy design wasn't even impressive to begin with. The overall quality of the game is surprising when you consider that it cost them $200 million to make. </p>
+    <p>I couldn't stand looking at the big, glowing purple boils on every. single. enemy. Those growths drastically increased the feeling of fatigue I felt playing the game. The entire game you fight the same enemies with the same purple glowing pustules and the enemy design wasn't even impressive to begin with. The overall quality of the game is surprising when you consider that it cost them $200 million to make. </p>
   
   <div class="centered-container">
     <h2>Dragon Age: The Veilguard</h2>
@@ -268,13 +59,11 @@
   <img src="Assets/Veilguard/dragon-age-veilguard-eacom-coming-soon-16x9.jpg.adapt.crop191x100.1200w.jpg" alt="Dragon Age: Veilguard Header" class="image-style">
   
 
-    <p class="centered-aligned-text">I’ve already written a review about Dragon Age, but it still deserves a shoutout here at the Dissapointees. I was a big fan of Dragon Age: Origins and Dragon Age: Inquisition, so I expected this game to be at least on par with those. That wasn’t the case, however, and it ended up being my least favorite of the Dragon Age games I’ve played. </p>
+    <p>I’ve already written a review about Dragon Age, but it still deserves a shoutout here at the Dissapointees. I was a big fan of Dragon Age: Origins and Dragon Age: Inquisition, so I expected this game to be at least on par with those. That wasn’t the case, however, and it ended up being my least favorite of the Dragon Age games I’ve played. </p>
   
+    <p>I won’t go as far as to say that it’s a bad video game, but it fits the criteria for disappointment well. The story was forgettable, and I didn’t particularly care about any of the companions or characters apart from Solas - which we saw much too little of. </p>
 	<br> 
-  
-    <p class="centered-aligned-text">I won’t go as far as to say that it’s a bad video game, but it fits the criteria for disappointment well. The story was forgettable, and I didn’t particularly care about any of the companions or characters apart from Solas - which we saw much too little of. </p>
-	<br> 
-    <p class="centered-aligned-text">Combat was the highlight of my experience with Dragon Age. I played a Mage, and it was a really good time until I figured out the “optimal” build and spent the last few hours effortless blasting through enemies. By the end of the game, combat was trivial because of how powerful I was. </p>
+    <p>Combat was the highlight of my experience with Dragon Age. I played a Mage, and it was a really good time until I figured out the “optimal” build and spent the last few hours effortless blasting through enemies. By the end of the game, combat was trivial because of how powerful I was. </p>
   
   <div class="centered-container">
     <h2>Concord</h2>
@@ -282,28 +71,25 @@
   
   <img src="Assets/Concord/GV26fwCXYAAamvO.jpg" alt="Concord Header" class="image-style">
   
-    <p class="centered-aligned-text">I never actually got to play Concord, which on its own is enough of a reason for it to be on this list. I honestly thought it looked pretty good, even if the trailers they put out made it seem like “Guardians of the Galaxy at home”. I've always been keen on hero shooters like Overwatch and Marvel Rivals, so Concord seemed like something I could really get into. </p>
+    <p>I never actually got to play Concord, which on its own is enough of a reason for it to be on this list. I honestly thought it looked pretty good, even if the trailers they put out made it seem like “Guardians of the Galaxy at home”. I've always been keen on hero shooters like Overwatch and Marvel Rivals, so Concord seemed like something I could really get into. </p>
+    
+    <p>I heard pretty good things about the gameplay, but it wasn’t enough to pull this game up from its premature death. It lasted two weeks before they shut the servers down for good and refunded everyone's money. I would have liked to at least try it out before it died, but at least Marvel Rivals came out soon after to fill that gap in my soul.</p>
   
-	<br> 
-	
-    <p class="centered-aligned-text">I heard pretty good things about the gameplay, but it wasn’t enough to pull this game up from its premature death. It lasted two weeks before they shut the servers down for good and refunded everyone's money. I would have liked to at least try it out before it died, but at least Marvel Rivals came out soon after to fill that gap in my soul.</p>
-  
-<div class="centered-container">
+    <div class="centered-container">
     <h2>Foamstars</h2>
-  </div>
+    </div>
   
   <img src="Assets/Foamstars/FOAMSTARS_Art.png-58n8oha3w.jpeg" alt="Foamstars Header" class="image-style">
   
-    <p class="centered-aligned-text">I really enjoyed this game, despite its lukewarm reception. As a huge fan of Splatoon, I was excited to see a fresh take on the formula, and I ended up having a good time with it - even though the low player base often meant waiting over 10 minutes for a match. </p>
+    <p>I really enjoyed this game, despite its lukewarm reception. As a huge fan of Splatoon, I was excited to see a fresh take on the formula, and I ended up having a good time with it - even though the low player base often meant waiting over 10 minutes for a match. </p>
+    
+    <p>The most notable difference between Foamstars and Splatoon is the ability to pile up the foam to block enemy line of sight, reach higher areas, and hide mines and other gadgets in the foam piles. It doesn’t sound like a big difference at first, but it adds a neat dynamic to the game. Splatoon 3 is still a much more polished experience with a lot more variety in weapons and maps so if you’re wanting to play a liquid shooter that would be my recommendation. </p>
   
 	<br> 
 	
-    <p class="centered-aligned-text">The most notable difference between Foamstars and Splatoon is the ability to pile up the foam to block enemy line of sight, reach higher areas, and hide mines and other gadgets in the foam piles. It doesn’t sound like a big difference at first, but it adds a neat dynamic to the game. Splatoon 3 is still a much more polished experience with a lot more variety in weapons and maps so if you’re wanting to play a liquid shooter that would be my recommendation. </p>
-  
-	<br> 
-	
-    <p class="centered-aligned-text">While Foamstars is still around, I don’t plan to return to it. Smash the Star and Happy Bath Survival modes were genuinely fun, but Happy Birthday Survival completely ruined the experience for me. Unfortunately, since ranked play forces you to cycle through each game type, it killed my motivation to keep playing. </p>
+    <p>While Foamstars is still around, I don’t plan to return to it. Smash the Star and Happy Bath Survival modes were genuinely fun, but Happy Birthday Survival completely ruined the experience for me. Unfortunately, since ranked play forces you to cycle through each game type, it killed my motivation to keep playing. </p>
   </section>
+  
   <script>
   // JavaScript to toggle dark mode
   const toggleButton = document.getElementById('toggle-dark-mode');
