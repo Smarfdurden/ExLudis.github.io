@@ -2,6 +2,25 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* General Link Styling */
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+a:hover {
+  color: indigo;
+}
+body.dark-mode a {
+  color: white;
 }
 
 /* Black Navigation Bar */
@@ -11,8 +30,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 0 20px; /* Add padding for better spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
 }
 
 /* Menu Styling */
@@ -22,20 +41,24 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .menu li {
   margin: 0 20px;
 }
-
 .menu a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: color 0.3s;
+text-decoration: none;
+color: white;
+font-size: 18px;
+transition: color 0.3s;
+font-weight: bold; /* Make the text stand out */
+padding: 10px 15px; /* Add padding for spacing */
+border-radius: 5px; /* Rounded corners for a softer look */
+transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .menu a:hover {
-  color: indigo;
+  color: white;
+  background-color: #4B0082;
+  transform: translateY(-2px);
 }
 
 /* Grid Styling */
@@ -44,10 +67,9 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
-  max-width: 1200px; /* Optional: Adjust this based on your preferred grid width */
-  margin: 0 auto; /* This will center the grid horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 .grid-item {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
@@ -56,73 +78,73 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures content is distributed evenly */
+  justify-content: space-between;
 }
-
 .thumbnail {
-  width: 100%; /* Makes the thumbnail responsive to the parent container */
-  height: 200px; /* Set the height of the thumbnail */
-  background-size: cover; /* Ensures the image covers the entire space without distortion */
-  background-position: center; /* Centers the image within the div */
-  background-repeat: no-repeat; /* Prevents tiling of the image */
-  border-radius: 8px; /* Optional: Add rounded corners to match the grid-item */
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
 }
 .grid-item p {
   margin: 0;
   padding: 20px;
   background-color: #333;
   color: white;
-  flex-grow: 1; /* Allow the paragraph to grow and fill available space */
+  flex-grow: 1;
+  min-height: 2.5em; /* Flexible height for varying content */
 }
-
 .grid-item a {
-  text-decoration: none;  /* Remove default underlining */
-  color: inherit;  /* Ensures the color is inherited from the parent */
+  text-decoration: none;
+  color: inherit;
 }
-
 .grid-item a:hover {
-  opacity: 0.8;  /* Adds a hover effect */
+  opacity: 0.8;
 }
 
-/* Header styling */
+/* Header Styling */
 h1 {
-  text-align: center; /* Centers the h1 text */
-  margin: 0; /* Adds space below the h1 */
+  text-align: center;
+  margin: 0 0 20px;
   padding: 0;
 }
 
+/* Image Styling */
 .image-style {
-  display: block; /* Ensures the image behaves as a block-level element */
-  width: 20%; /* Adjust the width as needed, e.g., "100%" or "80%" */
-  max-width: 200px; /* Restrict the maximum width of the image */
-  margin: 0 auto; /* Center the image horizontally */
-  padding-top: 10px; /* Add spacing at the top if necessary */
+  display: block;
+  width: 20%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding-top: 10px;
   height: auto;
 }
 .image-container {
   display: flex;
-  justify-content: center;  /* Horizontally center the image */
-  align-items: center;      /* Vertically center the image */
-  height: 400px;            /* Set a height for the container (optional) */
+  justify-content: center;
+  align-items: center;
+  height: 400px;
   width: 100%;
   margin: 0 auto;
 }
+
+/* Text Containers */
 .indented-text {
-  text-indent: 20px; /* Adjust the value as needed */
+  text-indent: 20px;
 }
 .centered-aligned-text {
   text-align: center;
-  text-indent: -20px; /* Adjust the value as needed */
-  padding-left: 20px; /* Adjust the value to match the text-indent */
+  text-indent: -20px;
+  padding-left: 20px;
   margin-bottom: 20px;
   line-height: 1.6;
 }
 .text-container {
-  max-width: 800px; /* Adjust this value based on how wide you want the text */
-  margin: 0 auto; /* Centers the container horizontally */
-  padding: 20px; /* Optional: adds some spacing around the text */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
-/* Centered container with limited width */
 .centered-container {
   display: flex;
   flex-direction: column;
@@ -130,18 +152,77 @@ h1 {
   align-items: center;
   text-align: center;
   padding: 20px;
-  max-width: 800px; /* Limit width to 800px, adjust as necessary */
-  margin: 0 auto; /* Centers the container */
+  max-width: 800px;
+  margin: 0 auto;
 }
-
-/* Optionally, you can also limit width for individual text blocks if needed */
 .centered-text {
   text-align: center;
   margin: 10px 0;
-  max-width: 750px; /* Limit width of the text block */
-  margin: 0 auto; /* Centers individual paragraphs */
-}
-a {
-  text-decoration: none; /* Only apply general styles, omit color */
+  max-width: 750px;
+  margin: 0 auto;
 }
 
+/* Boxed Section */
+.boxed-section {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body.dark-mode .boxed-section {
+  background-color: #444;
+  border: 1px solid #666;
+  color: #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Toggle Dark Mode Button */
+#toggle-dark-mode {
+  padding: 10px;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+#toggle-dark-mode:hover {
+  background-color: #4B0082;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+#toggle-dark-mode:focus {
+  outline: none;
+}
+#icon {
+  font-size: 28px; 
+  display: inline-block;/* Ensure it behaves like an inline element */
+}
+
+/* Responsive Design (Mobile View) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+}
