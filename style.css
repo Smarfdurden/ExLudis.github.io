@@ -283,4 +283,8 @@ body.dark-mode a:hover {
     font-size: 18px; /* Adjust font size for mobile */
     padding: 10px 20px; /* Increase clickable area */
   }
+  @media (min-width: 428px) and (max-width: 932px) {
+  /* Adjust styles here for iPhone 13 Pro Max */
+}
+
 }
