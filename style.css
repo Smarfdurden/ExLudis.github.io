@@ -47,6 +47,7 @@ body.dark-mode blockquote footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of menu items on smaller screens */
   height: 60px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0 20px;
@@ -55,7 +56,9 @@ body.dark-mode blockquote footer {
 /* Menu Styling */
 .menu {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -110,7 +113,7 @@ body.dark-mode blockquote footer {
 .grid-item p {
   margin: 0;
   padding: 20px;
-  background-color: #333;
+  background-color: #23252F;
   color: white;
   flex-grow: 1;
   min-height: 100%;
@@ -275,6 +278,7 @@ body.dark-mode a:hover {
   margin: 10px 0;
 }
 .menu a {
-  font-size: 16px;
+    font-size: 18px; /* Adjust font size for mobile */
+    padding: 10px 20px; /* Increase clickable area */
+  }
 }
-
