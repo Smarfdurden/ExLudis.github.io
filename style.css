@@ -60,14 +60,16 @@ body.dark-mode blockquote footer {
   z-index: 1000;
 }
 
+/* Navbar list items (desktop) */
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex; /* Align items in a row (horizontal) */
   justify-content: center;
+  width: 100%;
 }
-
+/* Menu items for navbar */
 .navbar li {
   margin: 0 15px;
 }
@@ -78,10 +80,10 @@ body.dark-mode blockquote footer {
   padding: 10px 15px;
 }
 
-/* Menu Styling */
+/* Menu Styling (Desktop version) */
 .menu {
-  display: none; /* Hide menu by default */
-  flex-direction: column;
+  display: flex; /* Hide menu by default */
+  flex-direction: row;
   align-items: center;
 }
 
