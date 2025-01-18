@@ -232,11 +232,18 @@ body.dark-mode a:hover {
   .menu-toggle {
     display: block; /* Show hamburger on small screens */
   }
+  .menu {
+    display: none;
+  }
+  .menu.open {
+    display: block;
+  }
 
   .navbar ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
+	display: none;
   }
 
   .menu li {
