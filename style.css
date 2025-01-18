@@ -134,6 +134,7 @@ body.dark-mode blockquote footer {
   margin: 0 auto;
 }
 
+/* Hover effects for grid items */
 .grid-item {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
@@ -143,15 +144,26 @@ body.dark-mode blockquote footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.thumbnail {
+.grid-item:hover {
+  transform: scale(1.05); /* Scale up the grid item */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.grid-item .thumbnail {
   width: 100%;
   height: 200px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 0;
+  transition: opacity 0.3s ease; /* Smooth opacity change */
+}
+
+.grid-item:hover .thumbnail {
+  opacity: 0.8; /* Reduce opacity of the image on hover */
 }
 
 .grid-item p {
@@ -168,9 +180,12 @@ body.dark-mode blockquote footer {
   color: inherit;
 }
 
+/* You can also style the text links */
 .grid-item a:hover {
-  opacity: 0.8;
+  opacity: 0.8; /* Slightly fade the text link when hovered */
 }
+
+
 
 .image-style {
 	max-width: 75%; /* Ensures the image doesn’t exceed the container's width */
