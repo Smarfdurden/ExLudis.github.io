@@ -169,7 +169,7 @@ body.dark-mode blockquote footer {
 .grid-item p {
   margin: 0;
   padding: 20px;
-  background-color: #23252F;
+  background-color: #4c566a;
   color: white;
   flex-grow: 1;
   min-height: 100%;
@@ -185,6 +185,22 @@ body.dark-mode blockquote footer {
   opacity: 0.8; /* Slightly fade the text link when hovered */
 }
 
+/* Dark Mode for grid items (bottom section) */
+body.dark-mode .grid-item p {
+  background-color: #23252F; /* Darker background for dark mode */
+  color: #ddd; /* Light text color for readability */
+}
+
+/* Optional: Change hover effect for dark mode */
+body.dark-mode .grid-item:hover {
+  background-color: #4c566a; /* A darker background when hovering in dark mode */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
+}
+
+/* Ensure thumbnail opacity effect is visible in dark mode */
+body.dark-mode .grid-item:hover .thumbnail {
+  opacity: 0.7; /* Slightly lower opacity on hover for better contrast */
+}
 
 
 .image-style {
