@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What's going on with the Switch 2 leaks?</title>
   <link rel="stylesheet" href="../../style.css">
-  <style>
-</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NX1DF89P5"></script>
 <script>
@@ -25,6 +23,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-8NX1DF89P5');
+
+  // Example: Event tracking for button clicks
+  document.addEventListener('DOMContentLoaded', () => {
+    const darkModeButton = document.getElementById('toggle-dark-mode');
+    if (darkModeButton) {
+      darkModeButton.addEventListener('click', () => {
+        gtag('event', 'button_click', {
+          'event_category': 'User Interaction',
+          'event_label': 'Dark Mode Toggle',
+        });
+      });
+    }
+  });
 </script>
   <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -37,16 +48,21 @@
 
 <body>
   <!-- Navbar with toggle button -->
-  <nav class="navbar">
+	<nav class="navbar">
+  <!-- Hamburger button (for mobile) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+  </div>
     <ul class="menu">
       <li><a href="../../index.html">Home</a></li>
       <li><a href="../../Reviews.html">Reviews</a></li>
       <li><a href="../../News.html">News</a></li>
       <li><a href="../../Contactme.html">Contact Me</a></li>
     </ul>
+<!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
-	<i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
-	</button>
+      <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
+    </button>
   </nav>
 <br>
 <br>
@@ -83,43 +99,6 @@
 	
     <p>I have no doubt that this successor will be a massive success like its predecessor, which is now the third best-selling console of all time with 146 million units sold. I’m not sure what Nintendo is waiting for, but hopefully, a Nintendo Direct is around the corner so we can finally see the real thing. Also, Nintendo, please let me play Splatoon 3 at 120 FPS. Thanks in advance! </p>
    </section>
-   
-   <script>
-  // JavaScript to toggle dark mode
-  const toggleButton = document.getElementById('toggle-dark-mode');
-  const icon = document.getElementById('icon');
-
-  // Function to apply dark mode from localStorage on page load
-  function applyDarkMode() {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    } else {
-      document.body.classList.remove('dark-mode');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
-  }
-
-  // Apply dark mode when the page loads
-  applyDarkMode();
-
-  // Function to toggle dark/light mode
-  toggleButton.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    
-    // Update localStorage based on dark mode status
-    if (isDarkMode) {
-      localStorage.setItem('darkMode', 'enabled');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon'); // Show moon icon for dark mode
-    } else {
-      localStorage.setItem('darkMode', 'disabled');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun'); // Show sun icon for light mode
-    }
-	});
-	</script>
+	<script src="../../script.js" defer></script>
 	</body>
 </html>

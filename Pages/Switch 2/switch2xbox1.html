@@ -15,15 +15,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-8NX1DF89P5');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NX1DF89P5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-8NX1DF89P5');
+  // Example: Event tracking for button clicks
+  document.addEventListener('DOMContentLoaded', () => {
+    const darkModeButton = document.getElementById('toggle-dark-mode');
+    if (darkModeButton) {
+      darkModeButton.addEventListener('click', () => {
+        gtag('event', 'button_click', {
+          'event_category': 'User Interaction',
+          'event_label': 'Dark Mode Toggle',
+        });
+      });
+    }
+  });
 </script>
   <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -37,17 +41,22 @@
 </head>
 
 <body>
-  <!-- Navbar with toggle button -->
-  <nav class="navbar">
+   <!-- Navbar with toggle button -->
+	<nav class="navbar">
+  <!-- Hamburger button (for mobile) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+  </div>
     <ul class="menu">
       <li><a href="../../index.html">Home</a></li>
       <li><a href="../../Reviews.html">Reviews</a></li>
       <li><a href="../../News.html">News</a></li>
       <li><a href="../../Contactme.html">Contact Me</a></li>
     </ul>
+<!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
-	<i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
-	</button>
+      <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
+    </button>
   </nav>
 
   <!-- Image at the top -->
@@ -95,43 +104,6 @@
 	  <li>At CES, <a href="https://www.videogameschronicle.com/news/a-nintendo-switch-2-replica-is-being-showcased-behind-closed-doors-at-ces/">Genki showed off a replica model of the Switch 2</a> that is said to feature the exact dimensions of the upcoming console.</li>
 	  </ul> </p>
 	</section>
-	
-	<script>
-  // JavaScript to toggle dark mode
-  const toggleButton = document.getElementById('toggle-dark-mode');
-  const icon = document.getElementById('icon');
-
-  // Function to apply dark mode from localStorage on page load
-  function applyDarkMode() {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    } else {
-      document.body.classList.remove('dark-mode');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
-  }
-
-  // Apply dark mode when the page loads
-  applyDarkMode();
-
-  // Function to toggle dark/light mode
-  toggleButton.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    
-    // Update localStorage based on dark mode status
-    if (isDarkMode) {
-      localStorage.setItem('darkMode', 'enabled');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon'); // Show moon icon for dark mode
-    } else {
-      localStorage.setItem('darkMode', 'disabled');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun'); // Show sun icon for light mode
-    }
-	});
-	</script>
+	<script src="../../script.js" defer></script>
 	</body>
 </html>

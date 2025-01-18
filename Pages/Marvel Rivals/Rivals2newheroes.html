@@ -15,6 +15,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-8NX1DF89P5');
+
+  // Example: Event tracking for button clicks
+  document.addEventListener('DOMContentLoaded', () => {
+    const darkModeButton = document.getElementById('toggle-dark-mode');
+    if (darkModeButton) {
+      darkModeButton.addEventListener('click', () => {
+        gtag('event', 'button_click', {
+          'event_category': 'User Interaction',
+          'event_label': 'Dark Mode Toggle',
+        });
+      });
+    }
+  });
 </script>
   <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -28,16 +41,21 @@
 
 <body>
   <!-- Navbar with toggle button -->
-  <nav class="navbar">
-     <ul class="menu">
+	<nav class="navbar">
+  <!-- Hamburger button (for mobile) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+  </div>
+    <ul class="menu">
       <li><a href="../../index.html">Home</a></li>
       <li><a href="../../Reviews.html">Reviews</a></li>
       <li><a href="../../News.html">News</a></li>
       <li><a href="../../Contactme.html">Contact Me</a></li>
     </ul>
+<!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
-	<i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
-	</button>
+      <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
+    </button>
   </nav>
 
   <!-- Image at the top -->
@@ -70,43 +88,6 @@
 	<p>Each season will introduce new buffs, and we can expect new maps eventually. Personally, I find new maps the most exciting aspect of games like this. Overwatch, for instance, has always felt lacking in map variety, and I care much less about the heroes. New maps bring a fresh feel to the game, unlike new heroes, and unfortunately, Overwatch seems content with its limited map roster, much to my disappointment.</p>
 	<p>Looking forward to all the new content all the same. I can see myself playing this for a long time.</p>
 	</section>
-	<script>
-	
-  // JavaScript to toggle dark mode
-  const toggleButton = document.getElementById('toggle-dark-mode');
-  const icon = document.getElementById('icon');
-
-  // Function to apply dark mode from localStorage on page load
-  function applyDarkMode() {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    } else {
-      document.body.classList.remove('dark-mode');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
-  }
-
-  // Apply dark mode when the page loads
-  applyDarkMode();
-
-  // Function to toggle dark/light mode
-  toggleButton.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    
-    // Update localStorage based on dark mode status
-    if (isDarkMode) {
-      localStorage.setItem('darkMode', 'enabled');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon'); // Show moon icon for dark mode
-    } else {
-      localStorage.setItem('darkMode', 'disabled');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun'); // Show sun icon for light mode
-    }
-	});
-	</script>
+	<script src="../../script.js" defer></script>
 	</body>
 </html>
