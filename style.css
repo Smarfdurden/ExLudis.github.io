@@ -1,11 +1,12 @@
 /* General Reset */
 body {
   margin: 0;
-  font-family:'Libre Franklin', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 18px; /* Default size for body text */
-  line-height: 1.6; /* Increase line height */
+  font-size: 1rem;
+  line-height: 1.6;
 }
+
 /* Default blockquote styling */
 blockquote {
   font-style: italic;
@@ -32,60 +33,78 @@ blockquote footer {
 
 /* Dark mode specific blockquote styling */
 body.dark-mode blockquote {
-  background-color: #3b4252; /* Darker background for blockquote in dark mode */
-  color: #ddd; /* Lighter text color for better readability */
-  border-left: 5px solid #B6A5F8; /* Lighter or different color for the border */
+  background-color: #3b4252;
+  color: #ddd;
+  border-left: 5px solid #B6A5F8;
 }
 
 body.dark-mode blockquote footer {
-  color: #aaa; /* Lighter color for the citation in dark mode */
+  color: #aaa;
 }
 
 /* Black Navigation Bar */
 .navbar {
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping of menu items on smaller screens */
+  flex-wrap: wrap;
   height: 60px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 0 20px;
-  Position: fixed;
+  padding: 10px 20px;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  padding: 10px 0;
   z-index: 1000;
 }
 
 .navbar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-	.navbar li {
-      margin: 0 15px;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-    }
-	
-/* Menu Styling */
-.menu {
-  display: flex;
-  flex-wrap: wrap;
   list-style-type: none;
-  justify-content: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
-.menu li {
-  margin: 0 20px;
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+/* Menu Styling */
+.menu {
+  display: none; /* Hide menu by default */
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu.active {
+  display: flex; /* Show the menu when active */
+  background-color: black;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default on larger screens */
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  z-index: 1001;
 }
 
 .menu a {
@@ -93,14 +112,12 @@ body.dark-mode blockquote footer {
   color: white;
   font-size: 18px;
   transition: color 0.3s;
-  font-weight: bold; /* Make the text stand out */
-  padding: 10px 15px; /* Add padding for spacing */
-  border-radius: 5px; /* Rounded corners for a softer look */
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .menu a:hover {
-  color: white;
   background-color: #23252F;
   transform: translateY(-2px);
 }
@@ -114,6 +131,7 @@ body.dark-mode blockquote footer {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .grid-item {
   background-color: #f4f4f4;
   border: 1px solid #ccc;
@@ -124,6 +142,7 @@ body.dark-mode blockquote footer {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .thumbnail {
   width: 100%;
   height: 200px;
@@ -132,6 +151,7 @@ body.dark-mode blockquote footer {
   background-repeat: no-repeat;
   border-radius: 0;
 }
+
 .grid-item p {
   margin: 0;
   padding: 20px;
@@ -140,101 +160,14 @@ body.dark-mode blockquote footer {
   flex-grow: 1;
   min-height: 100%;
 }
+
 .grid-item a {
   text-decoration: none;
   color: inherit;
 }
+
 .grid-item a:hover {
   opacity: 0.8;
-}
-
-/* Header Styling */
-h1 {
-  text-align: center;
-  margin: 0 0 20px;
-  padding: 0;
-}
-
-/* Image Styling */
-.image-style { 
-  display: block;
-  width: 600px; /* Fixed width */
-  height: 400px; /* Fixed height */
-  object-fit: cover; /* Ensure image scales and crops proportionally */
-  margin: 0 auto;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Text Containers */
-.indented-text {
-  text-indent: 20px;
-}
-.centered-aligned-text {
-  text-align: center;
-  text-indent: -20px;
-  padding-left: 20px;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-.text-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.centered-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.centered-text {
-  text-align: center;
-  margin: 10px 0;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-/* Boxed Section */
-.boxed-section {
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* List view styles */
-.list-view {
-  display: flex;
-  flex-direction: column;
-}
-
-.list-view .item {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ccc;
-  text-align: left;
-  border-radius: 5px;
-}
-
-#container {
-  display: grid;
-  gap: 10px;
-  margin-top: 20px;
 }
 
 /* Dark Mode */
@@ -249,35 +182,21 @@ body.dark-mode .boxed-section {
   color: #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-/* General Link Styling - applies to all links*/
-a {
-  text-decoration: none;
-  color: darkblue;
-}
-a:hover {
-  color: #23252F;
-}
-/* Link styling ONLY for paragraphs */
-p a {
-  color: green; 
-}
 
-/* Dark Mode link styling ONLY for paragraphs */
-body.dark-mode p a {
-  color: #5e81ac; 
-}
-
-/* Dark Mode link styling */
 body.dark-mode a {
   color: white;
 }
 
 body.dark-mode a:hover {
-  color: lightblue; 
+  color: lightblue;
 }
 
 /* Toggle Dark Mode Button */
 #toggle-dark-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
   padding: 10px;
   font-size: 24px;
   background-color: black;
@@ -287,69 +206,45 @@ body.dark-mode a:hover {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
 }
+
 #toggle-dark-mode:hover {
   background-color: #23252F;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
 #toggle-dark-mode:focus {
   outline: none;
 }
+
 #icon {
-  font-size: 28px; 
-  Color: White;
+  font-size: 28px;
+  color: white;
 }
+
 #icon:hover {
-  color: lightblue; /* Color on hover, e.g., gold */
+  color: lightblue;
 }
-/* Responsive Design (Mobile View) */
+
+/* Mobile Menu Styling */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px 0;
-	align-items: center;
+  .menu-toggle {
+    display: block; /* Show hamburger on small screens */
   }
-  .menu {
+
+  .navbar ul {
     flex-direction: column;
     align-items: center;
-	display: none;/* Hide menu initially */
+    width: 100%;
   }
-  
-  .menu.active {
-    display: flex; /* Show menu when active */
-	
+
   .menu li {
     margin: 10px 0;
   }
-  .menu-toggle {
-    display: block; /* Show hamburger icon */
-    cursor: pointer;
-  }
-  
+
   .menu a {
-    font-size: 18px; /* Adjust font size for mobile */
-    padding: 10px 20px; /* Increase clickable area */
+    padding: 10px 20px;
+    text-align: center;
   }
 }
-
-@media (min-width: 428px) and (max-width: 932px) {
-  /* Adjust styles here specifically for iPhone 13 Pro Max or devices in this range */
-  .navbar {
-    /* Example: Adjust padding for larger devices */
-    padding: 15px 0;
-  }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 3) {
-  /* Styles for high-density screens like iPhone 13 Pro Max */
-  .menu a {
-    font-size: 20px; /* Example: Slightly larger text for high pixel density */
-  }
-}
-
