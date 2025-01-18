@@ -313,14 +313,25 @@ body.dark-mode a:hover {
   .navbar {
     flex-direction: column;
     padding: 10px 0;
+	align-items: center;
   }
   .menu {
     flex-direction: column;
     align-items: center;
+	display: none;/* Hide menu initially */
   }
+  
+  .menu.active {
+    display: flex; /* Show menu when active */
+	
   .menu li {
     margin: 10px 0;
   }
+  .menu-toggle {
+    display: block; /* Show hamburger icon */
+    cursor: pointer;
+  }
+  
   .menu a {
     font-size: 18px; /* Adjust font size for mobile */
     padding: 10px 20px; /* Increase clickable area */
