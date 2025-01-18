@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assassin's Creed Shadows</title>
   <link rel="stylesheet" href="../../style.css">
-  <style>
-  </style>
+
   <!-- Open Graph Metadata -->
   <meta property="og:title" content="Everything you need to know about Assassin's Creed Shadows">
   <meta property="og:description" content="Get the latest details on exploration, combat, stealth, and parkour in Assassin's Creed Shadows.">
@@ -15,7 +14,7 @@
   <meta property="og:url" content="https://smarfdurden.com/Pages/Ubisoft/acshadows.html">
   <meta property="og:type" content="article">
   
-<!-- Google tag (gtag.js) -->
+	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NX1DF89P5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -23,6 +22,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-8NX1DF89P5');
+
+  // Example: Event tracking for button clicks
+  document.addEventListener('DOMContentLoaded', () => {
+    const darkModeButton = document.getElementById('toggle-dark-mode');
+    if (darkModeButton) {
+      darkModeButton.addEventListener('click', () => {
+        gtag('event', 'button_click', {
+          'event_category': 'User Interaction',
+          'event_label': 'Dark Mode Toggle',
+        });
+      });
+    }
+  });
 </script>
 
   <!-- Font Awesome CDN -->
@@ -38,16 +50,21 @@
 
 <body>
   <!-- Navbar with toggle button -->
-  <nav class="navbar">
+	<nav class="navbar">
+  <!-- Hamburger button (for mobile) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+  </div>
     <ul class="menu">
       <li><a href="../../index.html">Home</a></li>
       <li><a href="../../Reviews.html">Reviews</a></li>
       <li><a href="../../News.html">News</a></li>
       <li><a href="../../Contactme.html">Contact Me</a></li>
     </ul>
+<!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
-	<i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
-	</button>
+      <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
+    </button>
   </nav>
 <br>
 <br>
@@ -104,7 +121,7 @@
 	<p><ul>
 	
 	
-	<p> <a href="https://www.ubisoft.com/en-us/game/assassins-creed/news/1lmnk4XTnnqRh1foViGYPR">Stealth</a></p>
+	<h2> <a href="https://www.ubisoft.com/en-us/game/assassins-creed/news/1lmnk4XTnnqRh1foViGYPR">Stealth</a></h2>
 	
 	
 	  <li>Lack of a companion eagle allowing you to scout ahead and map out an entire location.</li>
@@ -131,7 +148,7 @@
 	  
 	  <img src="../../Assets/AC Shadows/stealth.avif" alt="Official stealth image" class="image-style">
 	  
-	  <p> <a href="https://www.ubisoft.com/en-us/game/assassins-creed/news/1zutGco21KjZ5PUe6EYnpf">Combat</a></p>
+	  <h2> <a href="https://www.ubisoft.com/en-us/game/assassins-creed/news/1zutGco21KjZ5PUe6EYnpf">Combat</a></h2>
 	  
 	  <li>Posture attacks allow you to hold the light or heavy attack button and charge it to significantly increase the damage. </li>
 	  
@@ -143,7 +160,7 @@
 	  
 	  <img src="../../Assets/AC Shadows/combat.avif" alt="Official combat image" class="image-style">
 	  
-	  <p> <a href="https://www.ubisoft.com/en-us/game/assassins-creed/news/4TA6gKaTvtOC1mOjZIxCZd">Parkour</a></p>
+	  <h2> <a href="https://www.ubisoft.com/en-us/game/assassins-creed/news/4TA6gKaTvtOC1mOjZIxCZd">Parkour</a></h2>
 	  
 	  <li>Viewpoints are still here.</li>
 	  
@@ -169,46 +186,7 @@
 	  <p>There's a very common theme among these - Naoe seems to get all of the best mechanics, while Yasuke appears to just be a heavy, bruiser type character. Looking at these blogs, I will be very surprised if I spend much time as Yasuke other than shoulder charging objects out of Naoe's way.</p>
 	  
 	  <p> I've been wanting a Japanese Assassin's Creed forever, so I'm still very much looking forward to play as Naoe and seeing for myself just how much Ubisoft has learned over these last few years.</p>
-	  
   </section>
-  
-  <script>
-  // JavaScript to toggle dark mode
-  const toggleButton = document.getElementById('toggle-dark-mode');
-  const icon = document.getElementById('icon');
-
-  // Function to apply dark mode from localStorage on page load
-  function applyDarkMode() {
-    if (localStorage.getItem('darkMode') === 'enabled') {
-      document.body.classList.add('dark-mode');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    } else {
-      document.body.classList.remove('dark-mode');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    }
-  }
-
-  // Apply dark mode when the page loads
-  applyDarkMode();
-
-  // Function to toggle dark/light mode
-  toggleButton.addEventListener('click', () => {
-    const isDarkMode = document.body.classList.toggle('dark-mode');
-    
-    // Update localStorage based on dark mode status
-    if (isDarkMode) {
-      localStorage.setItem('darkMode', 'enabled');
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon'); // Show moon icon for dark mode
-    } else {
-      localStorage.setItem('darkMode', 'disabled');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun'); // Show sun icon for light mode
-    }
-	});
-	</script>
-</body>
-
+   <script src="../../script.js" defer></script>
+  </body>
 </html>

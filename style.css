@@ -172,6 +172,65 @@ body.dark-mode blockquote footer {
   opacity: 0.8;
 }
 
+.image-style {
+	max-width: 75%; /* Ensures the image doesn’t exceed the container's width */
+	height: auto; /* Maintains aspect ratio */
+	display: block; /* Removes extra spacing below the image */
+	margin: 0 auto; /* Centers the image horizontally */
+	}
+	.centered-container {
+	text-align: center; /* Centers text inside the container */
+	margin: 20px auto; /* Adds spacing around the container and centers it */
+	width: 80%; /* Restricts width to prevent text from stretching across the screen */
+	}
+
+	.centered-text {
+	text-align: center; /* Ensures individual paragraphs are centered */
+	margin-bottom: 1em; /* Adds spacing between paragraphs */
+	}
+
+/* Boxed Section Styling */
+.boxed-section {
+  background-color: #fff; /* White background for the section */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  max-width: 800px; /* Reduced maximum width for a thinner box */
+  margin: 20px auto; /* Centers the section horizontally with margin for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
+  text-align: none; /* Centers text inside the section */
+}
+/* Increase line spacing */
+.boxed-section {
+  line-height: 1.8; /* Adjust the number to control the spacing (1.8 is a good starting point) */
+}
+
+/* Optional: Add dark mode styles */
+body.dark-mode .boxed-section {
+  background-color: #23252F; /* Dark background for dark mode */
+  border-color: #666; /* Darker border */
+  color: #ddd; /* Light text color for dark mode */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
+}
+
+/* Section Style for Centering and Constraining Width */
+.section {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Makes the section take up the full height of the viewport */
+  max-width: 1200px; /* Constrains the width of the section */
+  width: 100%; /* Ensures the section can scale with screen size */
+  margin: 0 auto; /* Centers the section horizontally */
+  padding: 20px; /* Optional: Adds some padding */
+  text-align: center; /* Centers the text within the section */
+}
+.section .content {
+  width: 100%; /* Ensures the content scales with screen size */
+  max-width: 1200px; /* Constrains the content to a maximum width */
+  margin: 0 auto; /* Centers the content horizontally */
+  padding: 20px; /* Adds padding to the content */
+}
 /* Dark Mode */
 body.dark-mode {
   background-color: black;
