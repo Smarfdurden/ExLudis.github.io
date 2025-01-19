@@ -493,7 +493,7 @@ body, html {
 
 @media screen and (max-width: 768px) {
   footer {
-   position: relative; /* Makes the footer flow with the page content */
+   position: fixed; /* Makes the footer flow with the page content */
     bottom: auto; /* Removes the fixed bottom positioning */
     transform: none; /* Removes the translation */
 	.sharethis-widget {
