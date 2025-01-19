@@ -467,10 +467,10 @@ body, html {
 
 @media screen and (max-width: 768px) {
   footer {
-    padding: 10px; /* Adjust padding on small screens */
-  }
-
-  .sharethis-widget {
+   position: relative; /* Makes the footer flow with the page content */
+    bottom: auto; /* Removes the fixed bottom positioning */
+    transform: none; /* Removes the translation */
+	.sharethis-widget {
     width: 100%; /* Allow widget to resize if necessary */
   }
 }
