@@ -200,7 +200,7 @@ body.dark-mode blockquote footer {
 	.centered-container {
 	text-align: center; /* Centers text inside the container */
 	margin: 20px auto; /* Adds spacing around the container and centers it */
-	width: 35%; /* Restricts width to prevent text from stretching across the screen */
+	width: 100%; /* Restricts width to prevent text from stretching across the screen */
 	}
 
 	.centered-text {
@@ -498,6 +498,28 @@ body, html {
     transform: none; /* Removes the translation */
 	.sharethis-widget {
     width: 100%; /* Allow widget to resize if necessary */
+  }
+}
+}
+header {
+  text-align: center; /* Center the image horizontally */
+}
+/* Default styling for top images */
+.top-image {
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center horizontally */
+  width: 80%; /* Optional: Adjust size */
+  max-width: 1200px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Shrink for mobile screens */
+@media (max-width: 768px) {
+  .top-image {
+    width: 80%; /* Shrink to 80% width */
+    max-width: 600px; /* Adjust maximum size */
   }
 }
 
