@@ -186,6 +186,10 @@ body.dark-mode blockquote footer {
 }
 
 
+    h1 {
+      text-align: center;
+    }
+  
 
 .image-style {
 	max-width: 75%; /* Ensures the image doesn’t exceed the container's width */
@@ -294,7 +298,6 @@ body.dark-mode a:hover {
 }
 
 }
-
 /* Hover effect for the button */
 #toggle-dark-mode:hover {
   background-color: #23252F; /* Hover background color */
