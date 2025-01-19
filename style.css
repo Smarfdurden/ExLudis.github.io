@@ -385,11 +385,23 @@ body.dark-mode #toggle-dark-mode:hover #icon {
     text-align: center;
   }
 }
+/* Ensure only one definition of .sharethis-sticky-share-buttons */
 .sharethis-sticky-share-buttons {
   display: block !important;
   visibility: visible !important;
-  position: relative !important;
-  z-index: 1000;
+  position: fixed !important; /* Ensure the position is fixed */
+  bottom: 60px; /* Position above the footer */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) !important; /* Adjust centering */
+  z-index: 1000; /* Ensure it stays above other content */
+  margin: 0; /* Reset any margin */
+  width: auto; /* Ensure the width is dynamic */
+}
+
+@media (max-width: 600px) {
+  .sharethis-sticky-share-buttons {
+    bottom: 70px; /* Adjust for smaller screens */
+  }
 }
 
 body, html {
@@ -399,28 +411,42 @@ body, html {
 }
 
 .content {
-  min-height: calc(100vh - 50px); /* Adjust the height to account for the footer height */
+  min-height: calc(100vh - 50px); /* Adjust the height to account for the footer */
   padding-bottom: 50px; /* Ensure content doesn't overlap the footer */
 }
 
+/* Footer styling */
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   padding: 10px 0;
-  height: auto; /* Adjust footer height as needed */
-  background-color: #f8f9fa; /* Optional styling */
+  height: auto;
+  background-color: #f8f9fa;
   text-align: center;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual clarity */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Ensure it's below ShareThis buttons */
 }
+
 /* Default light mode footer */
 .footer {
-  background-color: #f8f9fa; /* Light background */
-  color: #000; /* Light text color */
+  background-color: #f8f9fa;
+  color: #000;
 }
 
 /* Dark mode footer */
 .dark-mode .footer {
-  background-color: black; 
-  color: #fff; /* Dark text color */
+  background-color: black;
+  color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 10px; /* Adjust padding on small screens */
+  }
+
+  .sharethis-widget {
+    width: 100%; /* Allow widget to resize if necessary */
+  }
+}
+
