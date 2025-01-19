@@ -391,3 +391,36 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   position: relative !important;
   z-index: 1000;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content {
+  min-height: calc(100vh - 50px); /* Adjust the height to account for the footer height */
+  padding-bottom: 50px; /* Ensure content doesn't overlap the footer */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  height: auto; /* Adjust footer height as needed */
+  background-color: #f8f9fa; /* Optional styling */
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual clarity */
+}
+/* Default light mode footer */
+.footer {
+  background-color: #f8f9fa; /* Light background */
+  color: #000; /* Light text color */
+}
+
+/* Dark mode footer */
+.dark-mode .footer {
+  background-color: black; 
+  color: #fff; /* Dark text color */
+}
