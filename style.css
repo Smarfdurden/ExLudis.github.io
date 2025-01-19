@@ -195,6 +195,7 @@ body.dark-mode blockquote footer {
 	height: auto; /* Maintains aspect ratio */
 	display: block; /* Removes extra spacing below the image */
 	margin: 0 auto; /* Centers the image horizontally */
+	max-width: 100%;
 	}
 	.centered-container {
 	text-align: center; /* Centers text inside the container */
@@ -229,13 +230,6 @@ body.dark-mode blockquote footer {
   object-fit: cover; /* Keeps aspect ratio while covering the container */
 }
 
-/* For hero image container */
-.hero {
-  width: 50%%;
-  max-width: 50%; /* Make sure it's flexible */
-  overflow: hidden; /* Prevent overflow */
-}
-
 /* For section image container */
 .section {
   width: 100%;
@@ -245,7 +239,7 @@ body.dark-mode blockquote footer {
 
 /* Default size for large screens */
 .section-image {
-  width: 60%; /* Take up 60% of the container */
+  width: 50%; 
   max-width: 1200px;
 }
 
