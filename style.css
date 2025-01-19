@@ -136,7 +136,7 @@ body.dark-mode blockquote footer {
 
 /* Hover effects for grid items */
 .grid-item {
-  background-color: #f4f4f4;
+  background-color: none;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
