@@ -185,6 +185,7 @@ body.dark-mode blockquote footer {
   opacity: 0.8; /* Slightly fade the text link when hovered */
 }
 
+
     h1 {
       text-align: center;
     }
@@ -195,7 +196,6 @@ body.dark-mode blockquote footer {
 	height: auto; /* Maintains aspect ratio */
 	display: block; /* Removes extra spacing below the image */
 	margin: 0 auto; /* Centers the image horizontally */
-	max-width: 100%;
 	}
 	.centered-container {
 	text-align: center; /* Centers text inside the container */
@@ -207,62 +207,6 @@ body.dark-mode blockquote footer {
 	text-align: center; /* Ensures individual paragraphs are centered */
 	margin-bottom: 1em; /* Adds spacing between paragraphs */
 	}
-	
-/* For images at the top of the page */
-.hero-image img {
-  width: 50% !important; /* Ensure it spans the width of the page */
-  max-height: 600px !important; /* Adjust to your preference */
-  object-fit: cover !important; /* Ensures the image covers the area without distortion */
-}
-/* For images within sections */
-.section-image img {
-  width: 100% !important; /* Ensure the image fills the container */
-  max-width: 1200px !important; /* Restrict to a maximum width */
-  height: auto !important; /* Maintain aspect ratio */
-  margin: 0 auto !important; /* Center the image */
-  padding: 20px !important; /* Add space around the image if needed */
-}
-
-/* Maintain aspect ratio for images */
-.img-responsive {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Keeps aspect ratio while covering the container */
-}
-
-/* For section image container */
-.section {
-  width: 100%;
-  max-width: 100%; /* Ensure it's flexible */
-}
-
-
-/* Default size for large screens */
-.section-image {
-  width: 50%; 
-  max-width: 1200px;
-}
-
-/* Adjust size for smaller screens */
-@media screen and (max-width: 768px) {
-  .section-image {
-    width: 100%; /* Make it 100% on mobile */
-    max-width: 100%;
-  }
-}
-
-/* Adjust image size based on the container size */
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}
-
-.section-image {
-  max-width: 80%; /* Adjust the max-width as needed */
-  margin-bottom: 20px;
-}
 
 /* Boxed Section Styling */
 .boxed-section {
@@ -441,39 +385,55 @@ body.dark-mode #toggle-dark-mode:hover #icon {
     text-align: center;
   }
 }
-/* Ensure only one definition of .sharethis-sticky-share-buttons */
+.sharethis-inline-follow-buttons {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  position: relative;
+  margin: 0 auto; /* Ensure the widget is centered */
+  text-align: center;
+}
+
+
+/* Centering the ShareThis sticky share buttons */
 .sharethis-sticky-share-buttons {
   display: block !important;
   visibility: visible !important;
-  position: fixed !important; /* Ensure the position is fixed */
-  bottom: 60px; /* Position above the footer */
+  position: fixed !important; /* Keep it fixed */
+  bottom: 60px; /* Distance from the bottom */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%) !important; /* Adjust centering */
-  z-index: 1000; /* Ensure it stays above other content */
-  margin: 0; /* Reset any margin */
+  z-index: 1000; /* Ensure it's above other content */
+  margin: 0; /* Center the element */
   width: auto; /* Ensure the width is dynamic */
+  text-align: center; /* Align content inside the widget */
 }
 
+/* Responsive adjustments for small screens */
 @media (max-width: 600px) {
   .sharethis-sticky-share-buttons {
-    bottom: 70px; /* Adjust for smaller screens */
+    bottom: 70px; /* Adjust position for smaller screens */
   }
 }
 
+/* Body and HTML adjustments */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
+/* Content adjustment to avoid overlap */
 .content {
-  min-height: calc(100vh - 50px); /* Adjust the height to account for the footer */
-  padding-bottom: 50px; /* Ensure content doesn't overlap the footer */
+  min-height: calc(100vh - 50px); /* Content height minus footer */
+  padding-bottom: 50px; /* Avoid footer overlap */
 }
 
 /* Footer styling */
 .footer {
   position: fixed;
+  display: flexed;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically if needed */
   bottom: 0;
   width: 100%;
   padding: 10px 0;
@@ -481,20 +441,15 @@ body, html {
   background-color: #f8f9fa;
   text-align: center;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Ensure it's below ShareThis buttons */
+  z-index: 999; /* Ensure it's below the ShareThis widget */
 }
 
-/* Default light mode footer */
+/* Light mode footer */
 .footer {
   background-color: #f8f9fa;
   color: #000;
 }
-/* footer */
-@media (max-width: 768px) {
-  .footer {
-    padding: 15px;
-  }
-}
+
 
 /* Dark mode footer */
 .dark-mode .footer {
@@ -511,9 +466,4 @@ body, html {
     width: 100%; /* Allow widget to resize if necessary */
   }
 }
-a[href^="mailto:"] {
-  font-size: 1.2rem; /* Adjust size */
-  font-weight: bold; /* Makes the text bold */
-}
-
 
