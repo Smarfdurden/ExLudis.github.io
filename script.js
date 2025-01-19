@@ -8,6 +8,7 @@ toggle.addEventListener('click', () => {
   menu.classList.toggle('active'); // Toggle visibility of the menu
 });
 
+
 // Close the menu when a link is clicked
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
@@ -52,3 +53,6 @@ if (toggleButton) {
     }
   });
 }
+
+
+

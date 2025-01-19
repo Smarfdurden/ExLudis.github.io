@@ -385,3 +385,9 @@ body.dark-mode #toggle-dark-mode:hover #icon {
     text-align: center;
   }
 }
+.sharethis-sticky-share-buttons {
+  display: block !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 1000;
+}
