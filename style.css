@@ -169,7 +169,7 @@ body.dark-mode blockquote footer {
 .grid-item p {
   margin: 0;
   padding: 20px;
-  background-color: #4c566a;
+  background-color: #23252F;
   color: white;
   flex-grow: 1;
   min-height: 100%;
@@ -185,22 +185,6 @@ body.dark-mode blockquote footer {
   opacity: 0.8; /* Slightly fade the text link when hovered */
 }
 
-/* Dark Mode for grid items (bottom section) */
-body.dark-mode .grid-item p {
-  background-color: #23252F; /* Darker background for dark mode */
-  color: #ddd; /* Light text color for readability */
-}
-
-/* Optional: Change hover effect for dark mode */
-body.dark-mode .grid-item:hover {
-  background-color: #4c566a; /* A darker background when hovering in dark mode */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
-}
-
-/* Ensure thumbnail opacity effect is visible in dark mode */
-body.dark-mode .grid-item:hover .thumbnail {
-  opacity: 0.7; /* Slightly lower opacity on hover for better contrast */
-}
 
 
 .image-style {
@@ -289,6 +273,8 @@ body.dark-mode a:hover {
   top: 20px;
   right: 20px;
   z-index: 1001;
+  width: 50px;
+  height: 50px;
   padding: 10px;
   font-size: 24px;
   background-color: black;
@@ -311,8 +297,31 @@ body.dark-mode a:hover {
 }
 
 #icon {
-  font-size: 28px;
-  color: white;
+  ffont-size: 28px;
+  color: white; /* Default icon color */
+  pointer-events: none; /* Prevent icon from blocking hover effects */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+/* Specific styles for dark mode */
+body.dark-mode #toggle-dark-mode {
+  background-color: white; /* Change button background in dark mode */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
+}
+
+/* Hover effect for dark mode */
+body.dark-mode #toggle-dark-mode:hover {
+  background-color: #e0e0e0; /* Light gray background for dark mode hover */
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Adjust hover shadow */
+}
+
+/* Dark mode icon styling */
+body.dark-mode #icon {
+  color: black; /* Icon color in dark mode */
+}
+
+/* Hover effect for the icon in dark mode */
+body.dark-mode #toggle-dark-mode:hover #icon {
+  color: blue; /* Icon color when hovered in dark mode */
 }
 
 #icon:hover {
