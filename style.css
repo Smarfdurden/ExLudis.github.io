@@ -415,6 +415,11 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   }
 }
 
+body, .page-with-issue {
+  margin: 0;
+  padding: 0;
+}
+
 /* Body and HTML adjustments */
 body, html {
   margin: 0;
@@ -435,13 +440,16 @@ body, html {
   align-items: center;
   flex-direction: column; /* Stack items vertically if needed */
   bottom: 0;
+  left: 50%;
   width: 100%;
+  max-width: 100%;
   padding: 10px 0;
   height: auto;
   background-color: #f8f9fa;
   text-align: center;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 999; /* Ensure it's below the ShareThis widget */
+  transform: translateX(-50%);
 }
 
 /* Light mode footer */
