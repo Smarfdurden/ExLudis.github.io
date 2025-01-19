@@ -185,7 +185,6 @@ body.dark-mode blockquote footer {
   opacity: 0.8; /* Slightly fade the text link when hovered */
 }
 
-
     h1 {
       text-align: center;
     }
@@ -449,4 +448,9 @@ body, html {
     width: 100%; /* Allow widget to resize if necessary */
   }
 }
+a[href^="mailto:"] {
+  font-size: 1.2rem; /* Adjust size */
+  font-weight: bold; /* Makes the text bold */
+}
+
 
