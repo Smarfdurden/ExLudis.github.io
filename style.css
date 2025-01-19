@@ -206,6 +206,69 @@ body.dark-mode blockquote footer {
 	text-align: center; /* Ensures individual paragraphs are centered */
 	margin-bottom: 1em; /* Adds spacing between paragraphs */
 	}
+	
+/* For images at the top of the page */
+.hero-image img {
+  width: 50% !important; /* Ensure it spans the width of the page */
+  max-height: 600px !important; /* Adjust to your preference */
+  object-fit: cover !important; /* Ensures the image covers the area without distortion */
+}
+/* For images within sections */
+.section-image img {
+  width: 100% !important; /* Ensure the image fills the container */
+  max-width: 1200px !important; /* Restrict to a maximum width */
+  height: auto !important; /* Maintain aspect ratio */
+  margin: 0 auto !important; /* Center the image */
+  padding: 20px !important; /* Add space around the image if needed */
+}
+
+/* Maintain aspect ratio for images */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Keeps aspect ratio while covering the container */
+}
+
+/* For hero image container */
+.hero {
+  width: 50%%;
+  max-width: 50%; /* Make sure it's flexible */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* For section image container */
+.section {
+  width: 100%;
+  max-width: 100%; /* Ensure it's flexible */
+}
+
+
+/* Default size for large screens */
+.section-image {
+  width: 60%; /* Take up 60% of the container */
+  max-width: 1200px;
+}
+
+/* Adjust size for smaller screens */
+@media screen and (max-width: 768px) {
+  .section-image {
+    width: 100%; /* Make it 100% on mobile */
+    max-width: 100%;
+  }
+}
+
+/* Adjust image size based on the container size */
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.section-image {
+  max-width: 80%; /* Adjust the max-width as needed */
+  margin-bottom: 20px;
+}
 
 /* Boxed Section Styling */
 .boxed-section {
@@ -431,6 +494,12 @@ body, html {
 .footer {
   background-color: #f8f9fa;
   color: #000;
+}
+/* footer */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
 }
 
 /* Dark mode footer */
