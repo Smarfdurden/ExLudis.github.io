@@ -200,13 +200,39 @@ body.dark-mode blockquote footer {
 	.centered-container {
 	text-align: center; /* Centers text inside the container */
 	margin: 20px auto; /* Adds spacing around the container and centers it */
-	width: 80%; /* Restricts width to prevent text from stretching across the screen */
+	width: 35%; /* Restricts width to prevent text from stretching across the screen */
 	}
 
 	.centered-text {
 	text-align: center; /* Ensures individual paragraphs are centered */
 	margin-bottom: 1em; /* Adds spacing between paragraphs */
 	}
+
+section img {
+  width: 100%; /* Makes the image take up 100% of the viewport width */
+  max-width: 1000px;
+  height: 50vh; /* Makes the image take up 50% of the viewport height */
+  object-fit: cover;
+}
+
+
+@media (min-width: 1600px) {
+  section img {
+    width: 100%;
+    max-width: 80%; /* Limit the width on extra large screens */
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  section img {
+    width: 100%; /* Adjust to 80% of container width or any preferred size */
+    max-width: 1000px; /* Limit the size for very large screens */
+    margin: 0 auto; /* Center the image */
+  }
+}
+
 
 /* Boxed Section Styling */
 .boxed-section {
@@ -297,7 +323,7 @@ body.dark-mode a:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-}
+
 /* Hover effect for the button */
 #toggle-dark-mode:hover {
   background-color: #23252F; /* Hover background color */
