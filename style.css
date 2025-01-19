@@ -267,41 +267,70 @@ body.dark-mode a:hover {
   color: lightblue;
 }
 
-/* Toggle Dark Mode Button */
+/* General styles for the toggle button */
 #toggle-dark-mode {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1001;
-  width: 50px;
-  height: 50px;
-  padding: 10px;
-  font-size: 24px;
-  background-color: black;
-  color: white;
+  width: 50px; /* Button width */
+  height: 50px; /* Button height */
   border: none;
   border-radius: 50%;
+  background-color: black; /* Default background for light mode */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers the icon horizontally */
+  align-items: center; /* Centers the icon vertically */
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Hover effect for the button */
 #toggle-dark-mode:hover {
-  background-color: #23252F;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #23252F; /* Hover background color */
+  transform: translateY(-2px); /* Subtle hover movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-#toggle-dark-mode:focus {
-  outline: none;
 }
 
+/* Hover effect for the button */
+#toggle-dark-mode:hover {
+  background-color: #23252F; /* Hover background color */
+  transform: translateY(-2px); /* Subtle hover movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Mobile specific styles (for smaller screens) */
+@media (max-width: 768px) {
+  #toggle-dark-mode {
+    width: 45px; /* Slightly smaller button on mobile */
+    height: 45px;
+    right: 15px; /* Adjust position to give a bit of space from the edge */
+    top: 15px;
+  }
+
+  /* Ensure mobile press effect behaves similarly */
+  #toggle-dark-mode:active {
+    transform: translateY(0); /* Same immediate effect on click */
+    background-color: #1f2023; /* Darker background when pressed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Normal shadow */
+  }
+}
+/* Styles for the icon */
 #icon {
-  ffont-size: 28px;
+  font-size: 28px;
   color: white; /* Default icon color */
   pointer-events: none; /* Prevent icon from blocking hover effects */
   transition: color 0.3s ease; /* Smooth color transition */
 }
+
+/* Hover effect for the icon */
+#toggle-dark-mode:hover #icon {
+  color: #8B8000; /* Icon color on hover */
+}
+
 /* Specific styles for dark mode */
 body.dark-mode #toggle-dark-mode {
   background-color: white; /* Change button background in dark mode */
@@ -324,9 +353,6 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   color: blue; /* Icon color when hovered in dark mode */
 }
 
-#icon:hover {
-  color: lightblue;
-}
 
 /* Mobile Menu Styling */
 @media (max-width: 768px) {
