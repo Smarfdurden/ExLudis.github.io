@@ -785,6 +785,7 @@ body.dark-mode .magazine-container .magazine-item {
   max-width: 200px;
   margin: 50px auto;
   text-align: center;
+  padding: 20px
 }
 
 .contact-content {
@@ -799,19 +800,17 @@ body.dark-mode .magazine-container .magazine-item {
   margin-bottom: 30px;
 }
 
-/* Email Button */
-.email-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
+.email-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.email-btn:hover {
-  background-color: #0056b3;
+.email-button:hover {
+    background-color: #0056b3;
 }
+
