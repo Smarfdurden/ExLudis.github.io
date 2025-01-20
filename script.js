@@ -53,6 +53,30 @@ if (toggleButton) {
     }
   });
 }
+document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
+
+  // Update the icon if needed
+  const icon = document.getElementById('icon');
+  if (document.body.classList.contains('dark-mode')) {
+    icon.classList.replace('fa-sun', 'fa-moon'); // Change to moon icon
+  } else {
+    icon.classList.replace('fa-moon', 'fa-sun'); // Change to sun icon
+  }
+});
+// Save the preference
+const darkModeToggle = document.getElementById('toggle-dark-mode');
+darkModeToggle.addEventListener('click', function () {
+  const isDarkMode = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+});
+
+// Load the preference on page load
+window.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+  }
+});
 
 
 

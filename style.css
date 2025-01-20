@@ -1,10 +1,18 @@
 /* General Reset */
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   font-family: 'Libre Franklin', sans-serif;
   transition: background-color 0.3s, color 0.3s;
   font-size: 1rem;
   line-height: 1.6;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1; /* This makes the content area take up the remaining space */
 }
 
 /* Default blockquote styling */
@@ -219,7 +227,7 @@ section img {
 @media (min-width: 1600px) {
   section img {
     width: 100%;
-    max-width: 80%; /* Limit the width on extra large screens */
+    max-width: 100%; /* Limit the width on extra large screens */
     height: auto;
     margin: 0 auto;
   }
@@ -227,7 +235,7 @@ section img {
 
 @media (min-width: 1200px) {
   section img {
-    width: 100%; /* Adjust to 80% of container width or any preferred size */
+    width: 100%; 
     max-width: 1000px; /* Limit the size for very large screens */
     margin: 0 auto; /* Center the image */
   }
@@ -323,12 +331,38 @@ body.dark-mode a:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-
+/* SHARETHIS DARK MODE */
 /* Hover effect for the button */
 #toggle-dark-mode:hover {
   background-color: #23252F; /* Hover background color */
   transform: translateY(-2px); /* Subtle hover movement */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling ShareThis buttons in dark mode */
+body.dark-mode .sharethis-inline-follow-buttons {
+  background-color: inherit !important; /* Dark background for ShareThis buttons */
+  border-color: #444 !important; /* Darker border */
+  position: relative;
+  z-index: 1; /* Make sure it doesn't interfere with other elements */
+  margin: 0; /* Remove any margins causing the space */
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+}
+
+/* Optional: Customize button icons for dark mode */
+body.dark-mode .sharethis-inline-follow-buttons .st-button {
+  color: #fff !important; /* White icons */
+  background-color: #333 !important; /* Dark background for buttons */
+  border-color: #444 !important; /* Dark border */
+}
+
+body.dark-mode .sharethis-inline-follow-buttons .st-button:hover {
+  background-color: #444 !important; /* Hover state for dark mode */
+  border-color: #555 !important;
 }
 
 /* Mobile specific styles (for smaller screens) */
@@ -411,12 +445,64 @@ body.dark-mode #toggle-dark-mode:hover #icon {
     text-align: center;
   }
 }
+/* Centering ShareThis follow buttons or any other follow button */
 .sharethis-inline-follow-buttons {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  position: relative;
-  margin: 0 auto; /* Ensure the widget is centered */
-  text-align: center;
+  display: inline-block;;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width to make centering effective */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px 0; /* Optional padding for spacing */
+}
+
+/* Target only the follow button on the news page */
+.news-page .sharethis-inline-follow-buttons {
+  margin: 0 !important;   /* Reset margin to ensure no spacing */
+  padding: 0 !important;  /* Reset padding */
+  display: inline-block !important; /* Make sure it's treated as a block */
+  position: relative !important;    /* Remove any absolute positioning */
+}
+
+.follow-button-wrapper {
+  display: flex;             /* Enable flexbox */
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  position: absolute;        /* Allow positioning anywhere in the page */
+  top: 103%;                  /* Position from the top 50% */
+  left: 50%;                 /* Position from the left 50% */
+  transform: translate(-50%, -50%);  /* Adjust for exact centering */
+  width: 100%;               /* Ensure it takes the full width of the page */
+  height: 20%;              /* Ensure it takes the full height of the page */
+}
+
+
+.news-page .follow-button-container {
+  display: flex;                /* Use flexbox for centering */
+  justify-content: center;      /* Center horizontally */
+  align-items: center;          /* Center vertically */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;              /* Optional padding */
+}
+
+
+
+/* Adjust ShareThis button */
+.sharethis-inline-follow-buttons,
+.sharethis-sticky-share-buttons {
+  position: relative; /* Position relative to parent container */
+  bottom: auto; /* Remove fixed bottom positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+/* Make sure the buttons appear under the magazine container */
+.magazine-container {
+  position: relative; /* Ensure its child elements are placed relative to it */
+  padding-bottom: 100px; /* Ensure space for the ShareThis buttons if needed */
 }
 
 
@@ -441,6 +527,18 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   }
 }
 
+.page-with-issue {
+  display: flex;
+  justify-content: center; /* Align the content horizontally */
+  align-items: center; /* Optionally center it vertically */
+  width: 100%;
+}
+
+/* This will center the follow button container */
+.news-page {
+  text-align: center; /* Aligns children elements to the center */
+}
+
 body, .page-with-issue {
   margin: 0;
   padding: 0;
@@ -448,6 +546,7 @@ body, .page-with-issue {
 
 /* Body and HTML adjustments */
 body, html {
+  height: 100%;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -455,29 +554,27 @@ body, html {
 
 /* Content adjustment to avoid overlap */
 .content {
-  min-height: calc(100vh - 50px); /* Content height minus footer */
-  padding-bottom: 50px; /* Avoid footer overlap */
+  min-height: calc(100vh - 100px); /* Adjust the height minus navbar/footer height */
+  padding-bottom: 100px; /* Prevent footer overlap */
 }
 
 /* Footer styling */
-.footer {
-  position: fixed;
-  display: flexed;
-  align-items: center;
-  flex-direction: column; /* Stack items vertically if needed */
-  bottom: 0;
-  left: 50%;
-  width: 100%;
-  max-width: 100%;
-  padding: 10px 0;
-  height: auto;
-  background-color: #f8f9fa;
-  text-align: center;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Ensure it's below the ShareThis widget */
-  transform: translateX(-50%);
+footer {
+    background-color: #333; /* Optional background color */
+    color: white; /* Optional text color */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Centers the content */
+    position: relative;
+    width: 100%;
 }
 
+/* ShareThis button specific styles inside footer */
+footer .sharethis-inline-follow-buttons {
+    margin: 0 auto;
+    width: auto; /* Or define a specific width */
+    display: block;
+	padding: 0;
+}
 /* Light mode footer */
 .footer {
   background-color: #f8f9fa;
@@ -513,8 +610,6 @@ header {
   height: auto; /* Maintain aspect ratio */
 }
 
-
-
 /* Shrink for mobile screens */
 @media (max-width: 768px) {
   .top-image {
@@ -523,3 +618,181 @@ header {
   }
 }
 
+
+/* MAGAZINE STUFF */
+.magazine-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 1200px;  /* Set a maximum width */
+  margin: 0 auto; /* Center the container */
+}
+.magazine-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Magazine items */
+.magazine-container .magazine-item {
+  background-color: var(--item-bg-color); /* Use variable for dynamic background */
+  color: var(--item-text-color); /* Use variable for dynamic text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 1rem;
+  height: auto; /* Allow height to grow based on content */
+  min-height: 350px; /* Set a minimum height for consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Make sure content is spread evenly */
+}
+
+.magazine-container .magazine-item a {
+  color: inherit; /* Inherit text color */
+  text-decoration: none;
+}
+
+/* Make the first item span two rows */
+.magazine-item:nth-child(1) {
+  grid-column: span 2;
+}
+
+.magazine-item {
+  background-color: var(--item-bg-color);
+  color: var(--item-text-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 1rem;
+  height: auto; /* Allow height to grow based on content */
+}
+
+.magazine-item h2,
+.magazine-item p {
+  margin-bottom: 0.5rem; /* Control spacing between elements */
+}
+
+.magazine-item h2 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0.5rem 0;
+}
+
+.magazine-item p {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.magazine-item a {
+  display: inline-block; /* Ensures it doesn’t expand unnecessarily */
+  margin-top: 0.5rem; /* Control space above the link */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #007bff;
+}
+
+
+.magazine-item .thumbnail {
+  width: 100%;
+  height: auto; /* Let the height adjust based on content to prevent squishing */
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  aspect-ratio: 16/9; /* Maintain aspect ratio for better responsiveness */
+}
+
+
+/* Allow certain images to span multiple rows or columns */
+.magazine-item:nth-child(1) .thumbnail {
+  height: 400px; /* Feature image */
+}
+
+/* Default light mode */
+:root {
+  --bg-color: #ffffff; /* Light background */
+  --text-color: #000000; /* Light text */
+  --item-bg-color: #f8f9fa; /* Light magazine item background */
+  --item-text-color: #343a40; /* Light magazine item text color */
+}
+
+/* Dark mode */
+body.dark-mode {
+  --bg-color: #121212; /* Dark background */
+  --text-color: #ffffff; /* Dark text */
+  --item-bg-color: #1e1e1e; /* Dark magazine item background */
+  --item-text-color: #e0e0e0; /* Dark magazine item text color */
+}
+/* Dark mode styling for the magazine container */
+body.dark-mode .magazine-container {
+  background-color: transparent; /* Remove background in dark mode */
+  color: #ddd; /* Light text color for dark mode */
+}
+
+/* Dark mode styling for the magazine items */
+body.dark-mode .magazine-container .magazine-item {
+  background-color: #121212; /* Remove background in dark mode */
+  color: #ddd; /* Light text color for dark mode */
+  box-shadow: none; /* Remove the shadow if desired, or adjust it for dark mode */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .magazine-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More compact grid on smaller screens */
+  }
+
+  .magazine-container .magazine-item:nth-child(1) {
+    grid-column: span 1; /* First item takes up one column */
+    grid-row: span 1; /* First item doesn’t take up too much space */
+  }
+
+  .magazine-item .thumbnail {
+    height: auto; /* Ensure height adjusts based on content */
+    aspect-ratio: 4/3; /* Maintain a better aspect ratio on smaller screens */
+  }
+}
+/* CONTACT ME PAGE STUFF */
+/* Contact Container */
+.contact-container {
+  max-width: 200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.contact-content {
+  margin-top: 20px;
+}
+
+.profile-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Email Button */
+.email-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.email-btn:hover {
+  background-color: #0056b3;
+}
