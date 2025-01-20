@@ -508,7 +508,7 @@ header {
 .top-image {
   display: block; /* Make the image a block element */
   margin: 0 auto; /* Center horizontally */
-  width: 80%; /* Optional: Adjust size */
+  width: 70%; /* Optional: Adjust size */
   max-width: 1200px;
   height: auto; /* Maintain aspect ratio */
 }
