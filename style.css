@@ -459,6 +459,12 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   padding: 20px 0; /* Optional padding for spacing */
 }
 
+@media (max-width: 768px) {
+    .sharethis-inline-follow-buttons {
+        display: none;
+    }
+}
+
 /* Target only the follow button on the news page */
 .news-page .sharethis-inline-follow-buttons {
   margin: 0 !important;   /* Reset margin to ensure no spacing */
@@ -814,3 +820,6 @@ body.dark-mode .magazine-container .magazine-item {
     background-color: #0056b3;
 }
 
+.excerpt {
+  text-align: left;
+}
