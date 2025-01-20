@@ -711,9 +711,9 @@ header {
 }
 
 .magazine-item p {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.8;
   margin: 0 0 1rem 0;
 }
 
@@ -823,3 +823,22 @@ body.dark-mode .magazine-container .magazine-item {
 .excerpt {
   text-align: left;
 }
+
+a {
+  display: block; /* Makes the anchor tag behave like a block-level element */
+  text-align: right; /* Aligns the text to the right */
+}
+
+h2 {
+  text-align: left; /* Aligns the text to the left */
+}
+.line-break {
+  height: 20px; /* Creates a custom line break with a specific height */
+}
+
+
+
+
+
+
+
