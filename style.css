@@ -421,6 +421,7 @@ body.dark-mode #toggle-dark-mode:hover #icon {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* Show hamburger on small screens */
+	
   }
   .menu {
     display: none;
@@ -428,6 +429,8 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   .menu.open {
     display: block;
   }
+  
+  
 
   .navbar ul {
     flex-direction: column;
@@ -501,10 +504,25 @@ body.dark-mode #toggle-dark-mode:hover #icon {
 
 /* Make sure the buttons appear under the magazine container */
 .magazine-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
   position: relative; /* Ensure its child elements are placed relative to it */
   padding-bottom: 100px; /* Ensure space for the ShareThis buttons if needed */
 }
 
+/* For medium screens (like tablets) */
+@media (max-width: 1024px) {
+  .magazine-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+}
+
+/* For smaller screens (like phones) */
+@media (max-width: 768px) {
+  .magazine-container {
+    grid-template-columns: 1fr; /* One column */
+  }
+}
 
 /* Centering the ShareThis sticky share buttons */
 .sharethis-sticky-share-buttons {
