@@ -886,7 +886,24 @@ h3 {
     font-weight: bold;
     margin-bottom: 20px;
 }
+/* Styles for smaller screens (mobile devices) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+    }
 
+    h2 {
+        text-align: center; /* Change alignment for mobile if needed */
+    }
+
+    h3 {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+
+    .line-break {
+        height: 15px; /* Adjust line-break height for mobile */
+    }
+}
 
 
 
