@@ -195,13 +195,6 @@ body.dark-mode blockquote footer {
 }
 
 
-   h1 {
-    text-align: center;
-    font-size: 2.5vw; /* Standard size */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
 .image-style {
 	max-width: 75%; /* Ensures the image doesn’t exceed the container's width */
 	height: auto; /* Maintains aspect ratio */
@@ -873,6 +866,12 @@ a {
   display: inline; /* Makes the anchor tag behave like a block-level element */
 
 }
+h1 {
+    text-align: center;
+    font-size: 1.5vw; /* Standard size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 h2 {
   text-align: left; /* Aligns the text to the left */
@@ -881,6 +880,12 @@ h2 {
   height: 20px; /* Creates a custom line break with a specific height */
 }
 
+h3 {
+    text-align: center;
+    font-size: 2.0vw; /* Standard size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 
 
