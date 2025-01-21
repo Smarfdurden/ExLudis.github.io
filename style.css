@@ -211,11 +211,39 @@ body.dark-mode blockquote footer {
 	margin: 20px auto; /* Adds spacing around the container and centers it */
 	width: 100%; /* Restricts width to prevent text from stretching across the screen */
 	}
+	
+	.centered-container .dates {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #555; /* Subtle gray color for secondary information */
+    margin-top: 5px;
+    text-align: center; /* Center-align for consistency */
+}
 
+.centered-container .date-posted,
+.centered-container .date-updated {
+    margin: 2px 0; /* Small margin between dates */
+}
+
+.centered-container .dates time {
+    font-weight: bold; /* Highlight dates for better visibility */
+}
+
+.image-container {
+    text-align: center; /* Centers the image horizontally */
+}
 	.centered-text {
 	text-align: center; /* Ensures individual paragraphs are centered */
 	margin-bottom: 1em; /* Adds spacing between paragraphs */
 	}
+	
+	.small-image {
+    display: block; /* Makes the image a block-level element */
+    margin: 0 auto; /* Automatically centers the image horizontally */
+    width: 300px;
+    height: auto;
+}
+
+
 
 section img {
   width: 100%; /* Makes the image take up 100% of the viewport width */
@@ -741,6 +769,21 @@ header {
   height: 400px; /* Feature image */
 }
 
+.magazine-item .read-more {
+  display: block; /* Ensure it takes its own line */
+  text-align: right; /* Align the text to the right */
+  margin-top: 10px; /* Optional: Adds space above the link */
+  font-weight: bold; /* Optional: Makes the link bold */
+  color: #007BFF; /* Optional: Customizes link color */
+  text-decoration: none; /* Optional: Removes underline */
+}
+
+.magazine-item .read-more:hover {
+  text-decoration: underline; /* Adds underline on hover */
+  color: #0056b3; /* Darker hover color */
+}
+
+
 /* Default light mode */
 :root {
   --bg-color: #ffffff; /* Light background */
@@ -825,8 +868,8 @@ body.dark-mode .magazine-container .magazine-item {
 }
 
 a {
-  display: block; /* Makes the anchor tag behave like a block-level element */
-  text-align: right; /* Aligns the text to the right */
+  display: inline; /* Makes the anchor tag behave like a block-level element */
+
 }
 
 h2 {
