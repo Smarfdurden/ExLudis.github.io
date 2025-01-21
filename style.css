@@ -280,7 +280,7 @@ section img {
   max-width: 800px; /* Reduced maximum width for a thinner box */
   margin: 20px auto; /* Centers the section horizontally with margin for spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
-  text-align: none; /* Centers text inside the section */
+  text-align: left; 
 }
 /* Increase line spacing */
 .boxed-section {
