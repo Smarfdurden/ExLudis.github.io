@@ -34,10 +34,10 @@ blockquote p {
 }
 
 blockquote footer {
-	background: inherit;
+  background: inherit;
   font-size: 0.9em;
   text-align: right;
-  color: #666;
+  color: #F0F7EE;
 }
 
 /* Dark mode specific blockquote styling */
@@ -53,7 +53,7 @@ body.dark-mode blockquote footer {
 
 /* Black Navigation Bar */
 .navbar {
-  background-color: black;
+  background-color: #011a24;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +84,7 @@ body.dark-mode blockquote footer {
 }
 
 .navbar a {
-  color: white;
+  color: #F0F7EE;
   text-decoration: none;
   padding: 10px 15px;
 }
@@ -111,7 +111,7 @@ body.dark-mode blockquote footer {
   display: none; /* Hidden by default on larger screens */
   font-size: 24px;
   cursor: pointer;
-  color: white;
+  color: #F0F7EE;
   padding: 10px 15px;
   border: none;
   background: none;
@@ -120,17 +120,12 @@ body.dark-mode blockquote footer {
 
 .menu a {
   text-decoration: none;
-  color: white;
+  color: #F0F7EE;
   font-size: 18px;
   transition: color 0.3s;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px;
-}
-
-.menu a:hover {
-  background-color: #23252F;
-  transform: translateY(-2px);
 }
 
 /* Grid Styling */
@@ -286,7 +281,7 @@ section img {
 body.dark-mode .boxed-section {
   background-color: #23252F; /* Dark background for dark mode */
   border-color: #666; /* Darker border */
-  color: #ddd; /* Light text color for dark mode */
+  color: #F0F7EE; /* Light text color for dark mode */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
 }
 
@@ -310,8 +305,8 @@ body.dark-mode .boxed-section {
 }
 /* Dark Mode */
 body.dark-mode {
-  background-color: black;
-  color: white;
+  background-color: #00070c;
+  color: #F0F7EE; /* Mint Cream */
 }
 
 body.dark-mode .boxed-section {
@@ -339,7 +334,7 @@ body.dark-mode a:hover {
   height: 50px; /* Button height */
   border: none;
   border-radius: 50%;
-  background-color: black; /* Default background for light mode */
+  background-color: inherit; /* Default background for light mode */
   display: flex; /* Enables flexbox */
   justify-content: center; /* Centers the icon horizontally */
   align-items: center; /* Centers the icon vertically */
@@ -350,7 +345,7 @@ body.dark-mode a:hover {
 
 /* Hover effect for the button */
 #toggle-dark-mode:hover {
-  background-color: #23252F; /* Hover background color */
+  background-color: #F0EFF4; /* Hover background color */
   transform: translateY(-2px); /* Subtle hover movement */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
@@ -379,8 +374,8 @@ body {
 
 /* Optional: Customize button icons for dark mode */
 body.dark-mode .sharethis-inline-follow-buttons .st-button {
-  color: #fff !important; /* White icons */
-  background-color: #333 !important; /* Dark background for buttons */
+  color: #F0F7EE !important; /* White icons */
+  background-color: inherit !important; /* Dark background for buttons */
   border-color: #444 !important; /* Dark border */
 }
 
@@ -408,37 +403,23 @@ body.dark-mode .sharethis-inline-follow-buttons .st-button:hover {
 /* Styles for the icon */
 #icon {
   font-size: 28px;
-  color: white; /* Default icon color */
+  color: #F0F7EE;
   pointer-events: none; /* Prevent icon from blocking hover effects */
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
-/* Hover effect for the icon */
-#toggle-dark-mode:hover #icon {
-  color: #8B8000; /* Icon color on hover */
-}
-
 /* Specific styles for dark mode */
 body.dark-mode #toggle-dark-mode {
-  background-color: white; /* Change button background in dark mode */
+  background-color: inherit; /* Change button background in dark mode */
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
 }
 
-/* Hover effect for dark mode */
-body.dark-mode #toggle-dark-mode:hover {
-  background-color: #e0e0e0; /* Light gray background for dark mode hover */
-  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Adjust hover shadow */
-}
 
 /* Dark mode icon styling */
 body.dark-mode #icon {
-  color: black; /* Icon color in dark mode */
+  color: #FFF8F0; /* Icon color in dark mode */
 }
 
-/* Hover effect for the icon in dark mode */
-body.dark-mode #toggle-dark-mode:hover #icon {
-  color: blue; /* Icon color when hovered in dark mode */
-}
 
 
 /* Mobile Menu Styling */
@@ -528,7 +509,7 @@ body.dark-mode #toggle-dark-mode:hover #icon {
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
-  background-color: #fff;
+  background-color: inherit;
   z-index: 1000;
 }
 
@@ -745,7 +726,7 @@ header {
   margin-top: 0.5rem; /* Control space above the link */
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #007bff;
+  color: #F0F7EE;
 }
 
 
@@ -781,7 +762,7 @@ header {
 
 /* Default light mode */
 :root {
-  --bg-color: #ffffff; /* Light background */
+  --bg-color: #F0F7EE; /* Light background */
   --text-color: #000000; /* Light text */
   --item-bg-color: #f8f9fa; /* Light magazine item background */
   --item-text-color: #343a40; /* Light magazine item text color */
@@ -790,20 +771,20 @@ header {
 /* Dark mode */
 body.dark-mode {
   --bg-color: #121212; /* Dark background */
-  --text-color: #ffffff; /* Dark text */
+  --text-color: #F0F7EE; /* Dark text */
   --item-bg-color: #1e1e1e; /* Dark magazine item background */
-  --item-text-color: #e0e0e0; /* Dark magazine item text color */
+  --item-text-color: #F0F7EE; /* Dark magazine item text color */
 }
 /* Dark mode styling for the magazine container */
 body.dark-mode .magazine-container {
   background-color: transparent; /* Remove background in dark mode */
-  color: #ddd; /* Light text color for dark mode */
+  color: #F0F7EE; /* Light text color for dark mode */
 }
 
 /* Dark mode styling for the magazine items */
 body.dark-mode .magazine-container .magazine-item {
-  background-color: #121212; /* Remove background in dark mode */
-  color: #ddd; /* Light text color for dark mode */
+  background-color: #011A24; /* Remove background in dark mode */
+  color: #FFFFF3; /* Light text color for dark mode */
   box-shadow: none; /* Remove the shadow if desired, or adjust it for dark mode */
 }
 
