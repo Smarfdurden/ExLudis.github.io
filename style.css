@@ -195,10 +195,12 @@ body.dark-mode blockquote footer {
 }
 
 
-    h1 {
-      text-align: center;
-    }
-  
+   h1 {
+    text-align: center;
+    font-size: 2.5vw; /* Standard size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 .image-style {
 	max-width: 75%; /* Ensures the image doesn’t exceed the container's width */
