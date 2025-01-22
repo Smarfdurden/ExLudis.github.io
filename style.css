@@ -15,8 +15,6 @@ body {
   flex-grow: 1; /* This makes the content area take up the remaining space */
 }
 
-
-
 /* Default blockquote styling */
 blockquote {
   font-style: italic;
@@ -811,9 +809,9 @@ header {
 /* Default light mode */
 :root {
   --bg-color: #F0F7EE; /* Light background */
-  --text-color: #F0F7EE; /* Light text */
+  --text-color: #001021; /* Light text */
   --item-bg-color: #f8f9fa; /* Light magazine item background */
-  --item-text-color: #343a40; /* Light magazine item text color */
+  --item-text-color: #001021; /* Light magazine item text color */
 }
 
 /* Dark mode */
