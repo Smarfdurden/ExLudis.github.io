@@ -51,7 +51,7 @@ body.dark-mode blockquote footer {
   color: #aaa;
 }
 
-/* Black Navigation Bar */
+
 .navbar {
   background-color: #011a24;
   display: flex;
@@ -98,7 +98,7 @@ body.dark-mode blockquote footer {
 
 .menu.active {
   display: flex; /* Show the menu when active */
-  background-color: black;
+  background-color: #011a24;
   position: absolute;
   top: 60px;
   left: 0;
@@ -191,46 +191,46 @@ body.dark-mode blockquote footer {
 
 
 .image-style {
-	max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
-	height: auto; /* Maintains aspect ratio */
-	display: block; /* Removes extra spacing below the image */
-	margin: 0 auto; /* Centers the image horizontally */
-	}
-	.centered-container {
-	text-align: center; /* Centers text inside the container */
-	margin: 20px auto; /* Adds spacing around the container and centers it */
-	width: 100%; /* Restricts width to prevent text from stretching across the screen */
-	}
+  max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes extra spacing below the image */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+.centered-container {
+  text-align: center; /* Centers text inside the container */
+  margin: 20px auto; /* Adds spacing around the container and centers it */
+  width: 100%; /* Restricts width to prevent text from stretching across the screen */
+}
 	
-	.centered-container .dates {
-    font-size: 0.9em; /* Slightly smaller font size */
-    color: #555; /* Subtle gray color for secondary information */
-    margin-top: 5px;
-    text-align: center; /* Center-align for consistency */
+.centered-container .dates {
+  font-size: 0.9em; /* Slightly smaller font size */
+  color: #555; /* Subtle gray color for secondary information */
+  margin-top: 5px;
+  text-align: center; /* Center-align for consistency */
 }
 
 .centered-container .date-posted,
 .centered-container .date-updated {
-    margin: 2px 0; /* Small margin between dates */
+  margin: 2px 0; /* Small margin between dates */
 }
 
 .centered-container .dates time {
-    font-weight: bold; /* Highlight dates for better visibility */
+  font-weight: bold; /* Highlight dates for better visibility */
 }
 
 .image-container {
     text-align: center; /* Centers the image horizontally */
 }
-	.centered-text {
-	text-align: center; /* Ensures individual paragraphs are centered */
-	margin-bottom: 1em; /* Adds spacing between paragraphs */
-	}
-	
-	.small-image {
-    display: block; /* Makes the image a block-level element */
-    margin: 0 auto; /* Automatically centers the image horizontally */
-    width: 300px;
-    height: auto;
+.centered-text {
+  text-align: center; /* Ensures individual paragraphs are centered */
+margin-bottom: 1em; /* Adds spacing between paragraphs */
+}
+
+.small-image {
+  display: block; /* Makes the image a block-level element */
+  margin: 0 auto; /* Automatically centers the image horizontally */
+  width: 300px;
+  height: auto;
 }
 
 
@@ -310,7 +310,7 @@ body.dark-mode {
 }
 
 body.dark-mode .boxed-section {
-  background-color: #23252F;
+  background-color: #011a24;
   border: 1px solid #666;
   color: #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
