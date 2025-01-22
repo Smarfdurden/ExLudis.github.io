@@ -89,6 +89,10 @@ body.dark-mode blockquote footer {
   color: #F0F7EE;
   text-decoration: none;
   padding: 10px 15px;
+  display: block;
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
 }
 
 /* Menu Styling (Desktop version) */
@@ -500,13 +504,13 @@ body.dark-mode #icon {
     display: block;
   }
   
-  
-
   .navbar ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
 	display: none;
+	margin: 0;
+	padding: 0;
   }
 
   .menu li {
@@ -518,6 +522,25 @@ body.dark-mode #icon {
     text-align: center;
   }
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center the stacked items */
+  }
+
+.navbar a {
+  padding: 15px 20px; /* Adjust padding for better visibility */
+  text-decoration: none;
+  color: #fff; /* Adjust text color */
+  padding: 10px 20px; /* Add padding to links for easier clicking */
+  display: block;
+  text-align: center; /* Ensure text is centered in each button */
+}
+  }
+}
+
 /* Centering ShareThis follow buttons or any other follow button */
 .sharethis-inline-follow-buttons {
   display: inline-block;;
