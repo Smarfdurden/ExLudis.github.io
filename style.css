@@ -51,7 +51,6 @@ body.dark-mode blockquote footer {
   color: #aaa;
 }
 
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -59,7 +58,7 @@ body.dark-mode blockquote footer {
   flex-wrap: wrap;
   height: 60px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
+  padding: 8px;
   position: fixed;
   top: 0;
   left: 0;
@@ -86,6 +85,7 @@ body.dark-mode blockquote footer {
 }
 
 .navbar a {
+  display: block;/* Treat links as block elements */
   color: #F0F7EE;
   text-decoration: none;
   padding: 10px 15px;
@@ -93,7 +93,7 @@ body.dark-mode blockquote footer {
   text-align: center; /* Center text inside the button */
   transition: background-color 0.3s ease; /* Smooth hover effect */
 }
-}
+
 
 /* Menu Styling (Desktop version) */
 .menu {
@@ -132,50 +132,6 @@ body.dark-mode blockquote footer {
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px;
-}
-
-/* Style the side navbar container */
-.side-navbar {
-  position: fixed; /* Sticks it to the left side */
-  top: 50%; /* Center it vertically */
-  left: 10px; /* Distance from the left edge */
-  transform: translateY(-50%); /* Adjust to ensure it's fully centered */
-  width: 80px; /* Width of the oval menu */
-  height: 400px; /* Height of the oval menu */
-  background-color: #011a24; /* Background color */
-  border-radius: 40px; /* Creates the oval shape */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add some depth */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-/* Style the menu list */
-.side-navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-/* Style the menu items */
-.side-navbar li {
-  margin: 20px 0; /* Spacing between items */
-}
-
-/* Style the links */
-.side-navbar a {
-  color: #F0F7EE; /* Text color */
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-/* Hover effect for links */
-.side-navbar a:hover {
-  color: #FFC300; /* Change to your preferred hover color */
 }
 
 /* Grid Styling */
@@ -238,7 +194,6 @@ body.dark-mode blockquote footer {
 .grid-item a:hover {
   opacity: 0.8; /* Slightly fade the text link when hovered */
 }
-
 
 .image-style {
   max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
@@ -380,7 +335,6 @@ body.dark-mode a:hover {
   top: 20px;
   right: 20px;
   bottom: 20px; /* Distance from the bottom of the viewport */
-  right: 20px; /* Distance from the right side of the viewport */
   z-index: 1000;
   width: 50px; /* Button width */
   height: 50px; /* Button height */
@@ -396,7 +350,14 @@ body.dark-mode a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Adjust for desktop screens */
+@media (min-width: 1024px) {
+  #toggle-dark-mode {
+    top: 15px; /* Adjust vertical positioning */
+    right: 25px; /* Adjust horizontal positioning */
+    transform: translateY(-5px); /* Move button 10px higher on desktop */
+  }
+}
 
 #toggle-dark-mode:hover {
   transform: scale(1.1); /* Enlarges the button slightly on hover */
@@ -410,7 +371,6 @@ body.dark-mode a:hover {
     padding: 10px; /* Smaller padding */
   }
 }
-
 
 /* Hover effect for the button */
 #toggle-dark-mode:hover {
@@ -438,7 +398,6 @@ body.dark-mode .sharethis-inline-follow-buttons {
 
 body {
   overflow-x: hidden; /* Prevent horizontal overflow */
-}
 }
 
 /* Optional: Customize button icons for dark mode */
@@ -489,80 +448,50 @@ body.dark-mode #icon {
   color: #FFF8F0; /* Icon color in dark mode */
 }
 
-
-
-/* Mobile Menu Styling */
+/* Mobile Menu Styling */ 
 @media (max-width: 768px) {
   .menu-toggle {
     display: block; /* Show hamburger on small screens */
-	
   }
+
   .menu {
-    display: none;
-  }
-  .menu.open {
-    display: block;
+    display: none; /* Hide menu by default */
+	text-align: center; /* Center menu content */
   }
   
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-	display: none;
-	margin: 0;
-	padding: 0;
+  .menu.open {
+    display: block; /* Show menu when open */
   }
 
-  .menu li {
-    margin: 10px 0;
-  }
-
-  .menu a {
-    padding: 10px 20px;
-    text-align: center;
-  }
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
   .navbar ul {
     flex-direction: column; /* Stack items vertically */
     align-items: center;    /* Center the stacked items */
+	justify-content: center;
+    width: 100%;            /* Full width for mobile */
+    display: none;          /* Hide by default */
+    margin: 0;              /* Remove default margins */
+    padding: 0;             /* Remove default padding */
   }
 
-.navbar a {
-  padding: 15px 20px; /* Adjust padding for better visibility */
-  text-decoration: none;
-  color: #fff; /* Adjust text color */
-  padding: 10px 20px; /* Add padding to links for easier clicking */
-  display: block;
-  text-align: center; /* Ensure text is centered in each button */
-}
+  .menu li {
+    margin: 10px 0; /* Add spacing between menu items */
+  }
+  
+  /* Hover effect to adjust spacing dynamically */
+  .menu li:hover {
+    transform: translateY(-3px); /* Slightly less movement on hover for effect */
   }
 }
 
-/* Centering ShareThis follow buttons or any other follow button */
-.sharethis-inline-follow-buttons {
-  display: inline-block;;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Full width to make centering effective */
-  margin: 0 auto; /* Center horizontally */
-  padding: 20px 0; /* Optional padding for spacing */
-}
-
-@media (max-width: 768px) {
-    .sharethis-inline-follow-buttons {
-        display: none;
-    }
-}
-
-/* Target only the follow button on the news page */
-.news-page .sharethis-inline-follow-buttons {
-  margin: 0 !important;   /* Reset margin to ensure no spacing */
-  padding: 0 !important;  /* Reset padding */
-  display: inline-block !important; /* Make sure it's treated as a block */
-  position: relative !important;    /* Remove any absolute positioning */
+  .menu a, .navbar a {
+    padding: 10px 20px;    /* Consistent padding for links */
+    text-align: center;    /* Center the text */
+    text-decoration: none; /* Remove underlines */
+    color: #fff;           /* Adjust text color */
+    display: block;        /* Block-level links for better layout */
+    font-size: 14px;       /* Smaller text for mobile */
+	margin: 0 auto;
+  }
 }
 
 .follow-button-wrapper {
@@ -586,8 +515,6 @@ body.dark-mode #icon {
   margin: 0 auto;
   padding: 20px 0;              /* Optional padding */
 }
-
-
 
 /* Adjust ShareThis button */
 .sharethis-inline-follow-buttons,
@@ -696,6 +623,7 @@ footer .sharethis-inline-follow-buttons {
   }
 }
 }
+
 header {
   text-align: center; /* Center the image horizontally */
 }
