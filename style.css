@@ -65,8 +65,8 @@ body.dark-mode blockquote footer {
   right: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 0.5px solid #024f68; /* Light border for separation */
-  background-color: #011a24; /* Semi-transparent */
+  border-bottom: 0.5px solid #024f68; 
+  background-color: #011a24;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -93,7 +93,6 @@ body.dark-mode blockquote footer {
   text-align: center; /* Center text inside the button */
   transition: background-color 0.3s ease; /* Smooth hover effect */
 }
-
 
 /* Menu Styling (Desktop version) */
 .menu {
@@ -134,67 +133,6 @@ body.dark-mode blockquote footer {
   border-radius: 5px;
 }
 
-/* Grid Styling */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Hover effects for grid items */
-.grid-item {
-  background-color: none;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item:hover {
-  transform: scale(1.05); /* Scale up the grid item */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-.grid-item .thumbnail {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 0;
-  transition: opacity 0.3s ease; /* Smooth opacity change */
-}
-
-.grid-item:hover .thumbnail {
-  opacity: 0.8; /* Reduce opacity of the image on hover */
-}
-
-.grid-item p {
-  margin: 0;
-  padding: 20px;
-  background-color: #23252F;
-  color: white;
-  flex-grow: 1;
-  min-height: 100%;
-}
-
-.grid-item a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* You can also style the text links */
-.grid-item a:hover {
-  opacity: 0.8; /* Slightly fade the text link when hovered */
-}
-
 .image-style {
   max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
   height: auto; /* Maintains aspect ratio */
@@ -224,7 +162,7 @@ body.dark-mode blockquote footer {
 }
 
 .image-container {
-    text-align: center; /* Centers the image horizontally */
+  text-align: center; /* Centers the image horizontally */
 }
 .centered-text {
   text-align: center; /* Ensures individual paragraphs are centered */
@@ -238,8 +176,6 @@ body.dark-mode blockquote footer {
   height: auto;
 }
 
-
-
 section img {
   width: 100%; /* Makes the image take up 100% of the viewport width */
   max-width: 1000px;
@@ -247,24 +183,22 @@ section img {
   object-fit: cover;
 }
 
-
 @media (min-width: 1600px) {
   section img {
-    width: 100%;
-    max-width: 100%; /* Limit the width on extra large screens */
-    height: auto;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 100%; /* Limit the width on extra large screens */
+  height: auto;
+  margin: 0 auto;
   }
 }
 
 @media (min-width: 1200px) {
   section img {
-    width: 100%; 
-    max-width: 1000px; /* Limit the size for very large screens */
-    margin: 0 auto; /* Center the image */
+  width: 100%; 
+  max-width: 1000px; /* Limit the size for very large screens */
+  margin: 0 auto; /* Center the image */
   }
 }
-
 
 /* Boxed Section Styling */
 .boxed-section {
@@ -277,6 +211,7 @@ section img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
   text-align: left; 
 }
+
 /* Increase line spacing */
 .boxed-section {
   line-height: 1.8; /* Adjust the number to control the spacing (1.8 is a good starting point) */
@@ -308,6 +243,15 @@ body.dark-mode .boxed-section {
   margin: 0 auto; /* Centers the content horizontally */
   padding: 20px; /* Adds padding to the content */
 }
+
+/* Default light mode */
+:root {
+  --bg-color: #F0F7EE; /* Light background */
+  --text-color: #001021; /* Light text */
+  --item-bg-color: #f8f9fa; /* Light magazine item background */
+  --item-text-color: #001021; /* Light magazine item text color */
+}
+
 /* Dark Mode */
 body.dark-mode {
   background-color: #00070c;
@@ -326,7 +270,7 @@ body.dark-mode a {
 }
 
 body.dark-mode a:hover {
-  color: lightblue;
+  color: #07b3f8;
 }
 
 /* General styles for the toggle button */
@@ -340,7 +284,7 @@ body.dark-mode a:hover {
   height: 50px; /* Button height */
   border: none;
   border-radius: 50%;
-  background-color: inherit; /* Default background for light mode */
+  background-color: transparent; /* Default background for light mode */
   display: flex; /* Enables flexbox */
   justify-content: center; /* Centers the icon horizontally */
   align-items: center; /* Centers the icon vertically */
@@ -352,31 +296,20 @@ body.dark-mode a:hover {
 
 /* Adjust for desktop screens */
 @media (min-width: 1024px) {
-  #toggle-dark-mode {
-    top: 15px; /* Adjust vertical positioning */
-    right: 25px; /* Adjust horizontal positioning */
-    transform: translateY(-5px); /* Move button 10px higher on desktop */
+#toggle-dark-mode {
+  top: 15px; /* Adjust vertical positioning */
+  right: 25px; /* Adjust horizontal positioning */
+  transform: translateY(-5px); /* Move button 10px higher on desktop */
   }
-}
-
-#toggle-dark-mode:hover {
-  transform: scale(1.1); /* Enlarges the button slightly on hover */
 }
 
 @media (max-width: 600px) {
   #toggle-dark-mode {
-    bottom: 10px; /* Reduced bottom spacing */
-    right: 10px; /* Reduced right spacing */
-    font-size: 14px; /* Slightly smaller font */
-    padding: 10px; /* Smaller padding */
+  bottom: 10px; /* Reduced bottom spacing */
+  right: 10px; /* Reduced right spacing */
+  font-size: 14px; /* Slightly smaller font */
+  padding: 10px; /* Smaller padding */
   }
-}
-
-/* Hover effect for the button */
-#toggle-dark-mode:hover {
-  background-color: inherit; /* Hover background color */
-  transform: scale(1.1); /* Slightly enlarge on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 /* SHARETHIS DARK MODE */
@@ -389,8 +322,8 @@ body.dark-mode a:hover {
 
 /* Styling ShareThis buttons in dark mode */
 body.dark-mode .sharethis-inline-follow-buttons {
-  background-color: inherit !important; /* Dark background for ShareThis buttons */
-  border-color: #444 !important; /* Darker border */
+  background-color: inherit; /* Dark background for ShareThis buttons */
+  border-color: #444; /* Darker border */
   position: relative;
   z-index: 1; /* Make sure it doesn't interfere with other elements */
   margin: 0; /* Remove any margins causing the space */
@@ -402,38 +335,37 @@ body {
 
 /* Optional: Customize button icons for dark mode */
 body.dark-mode .sharethis-inline-follow-buttons .st-button {
-  color: #F0F7EE !important; /* White icons */
-  background-color: inherit !important; /* Dark background for buttons */
-  border-color: #444 !important; /* Dark border */
+  color: #F0F7EE; /* White icons */
+  background-color: inherit; /* Dark background for buttons */
+  border-color: #444; /* Dark border */
 }
 
 body.dark-mode .sharethis-inline-follow-buttons .st-button:hover {
-  background-color: #444 !important; /* Hover state for dark mode */
-  border-color: #555 !important;
+  background-color: #444; /* Hover state for dark mode */
+  border-color: #555;
 }
 
 /* Mobile specific styles (for smaller screens) */
 @media (max-width: 768px) {
   #toggle-dark-mode {
-    width: 45px; /* Slightly smaller button on mobile */
-    height: 45px;
-    right: 15px; /* Adjust position to give a bit of space from the edge */
-    top: 15px;
-  }
+  width: 45px; /* Slightly smaller button on mobile */
+  height: 45px;
+  right: 15px; /* Adjust position to give a bit of space from the edge */
+  top: 15px;
+}
 
-  /* Ensure mobile press effect behaves similarly */
-  #toggle-dark-mode:active {
-    transform: translateY(0); /* Same immediate effect on click */
-    background-color: #1f2023; /* Darker background when pressed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Normal shadow */
+/* Ensure mobile press effect behaves similarly */
+#toggle-dark-mode:active {
+  transform: translateY(0); /* Same immediate effect on click */
+  background-color: #1f2023; /* Darker background when pressed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Normal shadow */
   }
 }
+
 /* Styles for the icon */
 #icon {
   font-size: 28px;
-  color: #F0F7EE;
-  pointer-events: none; /* Prevent icon from blocking hover effects */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: #F0F7EE; 
 }
 
 /* Specific styles for dark mode */
@@ -442,55 +374,68 @@ body.dark-mode #toggle-dark-mode {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
 }
 
+/* Specific styles for light mode */
+body.light-mode #toggle-dark-mode {
+  background-color: transparent; /* Ensures no white background in light mode */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for light mode */
+  color: #333; /* Optional: Light mode text or icon color */
+}
 
-/* Dark mode icon styling */
-body.dark-mode #icon {
-  color: #FFF8F0; /* Icon color in dark mode */
+/* Disable hover effect for light mode button */
+body.light-mode #toggle-light-mode:hover {
+  background-color: transparent; /* Or your desired style */
 }
 
 /* Mobile Menu Styling */ 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Show hamburger on small screens */
-  }
+.menu-toggle {
+  display: block; /* Show hamburger on small screens */
+}
 
-  .menu {
-    display: none; /* Hide menu by default */
-	text-align: center; /* Center menu content */
-  }
+.menu-toggle span {
+  background-color: #F0F7EE;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.menu {
+  display: none; /* Hide menu by default */
+  text-align: center; /* Center menu content */
+}
   
-  .menu.open {
-    display: block; /* Show menu when open */
-  }
+.menu.open {
+  display: block; /* Show menu when open */
+}
 
-  .navbar ul {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;    /* Center the stacked items */
-	justify-content: center;
-    width: 100%;            /* Full width for mobile */
-    display: none;          /* Hide by default */
-    margin: 0;              /* Remove default margins */
-    padding: 0;             /* Remove default padding */
-  }
+.navbar ul {
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center the stacked items */
+  justify-content: center;
+  width: 100%;            /* Full width for mobile */
+  display: none;          /* Hide by default */
+  margin: 0;              /* Remove default margins */
+  padding: 0;             /* Remove default padding */
+}
 
-  .menu li {
-    margin: 10px 0; /* Add spacing between menu items */
-  }
+.menu li {
+  margin: 10px 0; /* Add spacing between menu items */
+}
   
-  /* Hover effect to adjust spacing dynamically */
-  .menu li:hover {
-    transform: translateY(-3px); /* Slightly less movement on hover for effect */
+/* Hover effect to adjust spacing dynamically */
+.menu li:hover {
+  transform: translateY(-3px); /* Slightly less movement on hover for effect */
   }
 }
 
-  .menu a, .navbar a {
-    padding: 10px 20px;    /* Consistent padding for links */
-    text-align: center;    /* Center the text */
-    text-decoration: none; /* Remove underlines */
-    color: #fff;           /* Adjust text color */
-    display: block;        /* Block-level links for better layout */
-    font-size: 14px;       /* Smaller text for mobile */
-	margin: 0 auto;
+.menu a, .navbar a {
+  padding: 10px 20px;    /* Consistent padding for links */
+  text-align: center;    /* Center the text */
+  text-decoration: none; /* Remove underlines */
+  color: #fff;           /* Adjust text color */
+  display: block;        /* Block-level links for better layout */
+  font-size: 14px;       /* Smaller text for mobile */
+  margin: 0 auto;
   }
 }
 
@@ -505,7 +450,6 @@ body.dark-mode #icon {
   width: 100%;               /* Ensure it takes the full width of the page */
   height: 20%;              /* Ensure it takes the full height of the page */
 }
-
 
 .news-page .follow-button-container {
   display: flex;                /* Use flexbox for centering */
@@ -545,19 +489,19 @@ body.dark-mode #icon {
 
 /* For smaller screens (like phones) */
 @media (max-width: 768px) {
-  .magazine-container {
-    grid-template-columns: 1fr; /* One column */
+.magazine-container {
+  grid-template-columns: 1fr; /* One column */
   }
 }
 
 /* Centering the ShareThis sticky share buttons */
 .sharethis-sticky-share-buttons {
-  display: block !important;
-  visibility: visible !important;
-  position: fixed !important; /* Keep it fixed */
+  display: block;
+  visibility: visible;
+  position: fixed; /* Keep it fixed */
   bottom: 60px; /* Distance from the bottom */
   left: 50%; /* Center horizontally */
-  transform: translateX(-50%) !important; /* Adjust centering */
+  transform: translateX(-50%); /* Adjust centering */
   z-index: 1000; /* Ensure it's above other content */
   margin: 0; /* Center the element */
   width: auto; /* Ensure the width is dynamic */
@@ -566,8 +510,8 @@ body.dark-mode #icon {
 
 /* Responsive adjustments for small screens */
 @media (max-width: 600px) {
-  .sharethis-sticky-share-buttons {
-    bottom: 70px; /* Adjust position for smaller screens */
+.sharethis-sticky-share-buttons {
+  bottom: 70px; /* Adjust position for smaller screens */
   }
 }
 
@@ -575,7 +519,6 @@ body.dark-mode #icon {
 .news-page {
   text-align: center; /* Aligns children elements to the center */
 }
-
 
 /* Content adjustment to avoid overlap */
 .content {
@@ -585,27 +528,27 @@ body.dark-mode #icon {
 
 /* Footer styling */
 footer {
-    background-color: #333; /* Optional background color */
-    color: white; /* Optional text color */
-    padding: 20px 0; /* Padding for spacing */
-    text-align: center; /* Centers the content */
-    position: relative;
-    width: 100%;
+  background-color: #333; /* Optional background color */
+  color: white; /* Optional text color */
+  padding: 20px 0; /* Padding for spacing */
+  text-align: center; /* Centers the content */
+  position: relative;
+  width: 100%;
 }
 
 /* ShareThis button specific styles inside footer */
 footer .sharethis-inline-follow-buttons {
-    margin: 0 auto;
-    width: auto; /* Or define a specific width */
-    display: block;
-	padding: 0;
+  margin: 0 auto;
+  width: auto; /* Or define a specific width */
+  display: block;
+  padding: 0;
 }
 /* Light mode footer */
+
 .footer {
   background-color: #f8f9fa;
   color: #000;
 }
-
 
 /* Dark mode footer */
 .dark-mode .footer {
@@ -615,11 +558,12 @@ footer .sharethis-inline-follow-buttons {
 
 @media screen and (max-width: 768px) {
   footer {
-   position: relative; /* Makes the footer flow with the page content */
-    bottom: auto; /* Removes the fixed bottom positioning */
-    transform: none; /* Removes the translation */
-	.sharethis-widget {
-    width: 100%; /* Allow widget to resize if necessary */
+  position: relative; /* Makes the footer flow with the page content */
+  bottom: auto; /* Removes the fixed bottom positioning */
+  transform: none; /* Removes the translation */
+  
+.sharethis-widget {
+  width: 100%; /* Allow widget to resize if necessary */
   }
 }
 }
@@ -638,12 +582,11 @@ header {
 
 /* Shrink for mobile screens */
 @media (max-width: 768px) {
-  .top-image {
-    width: 80%; /* Shrink to 80% width */
-    max-width: 600px; /* Adjust maximum size */
+.top-image {
+  width: 80%; /* Shrink to 80% width */
+  max-width: 600px; /* Adjust maximum size */
   }
 }
-
 
 /* MAGAZINE STUFF */
 .magazine-container {
@@ -726,7 +669,6 @@ header {
   color: #F0F7EE;
 }
 
-
 .magazine-item .thumbnail {
   width: 100%;
   height: auto; /* Let the height adjust based on content to prevent squishing */
@@ -735,7 +677,6 @@ header {
   border-radius: 5px;
   aspect-ratio: 16/9; /* Maintain aspect ratio for better responsiveness */
 }
-
 
 /* Allow certain images to span multiple rows or columns */
 .magazine-item:nth-child(1) .thumbnail {
@@ -757,14 +698,6 @@ header {
 }
 
 
-/* Default light mode */
-:root {
-  --bg-color: #F0F7EE; /* Light background */
-  --text-color: #001021; /* Light text */
-  --item-bg-color: #f8f9fa; /* Light magazine item background */
-  --item-text-color: #001021; /* Light magazine item text color */
-}
-
 /* Dark mode */
 body.dark-mode {
   --bg-color: #121212; /* Dark background */
@@ -772,6 +705,7 @@ body.dark-mode {
   --item-bg-color: #1e1e1e; /* Dark magazine item background */
   --item-text-color: #F0F7EE; /* Dark magazine item text color */
 }
+
 /* Dark mode styling for the magazine container */
 body.dark-mode .magazine-container {
   background-color: transparent; /* Remove background in dark mode */
@@ -789,20 +723,21 @@ body.dark-mode .magazine-container .magazine-item {
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
-  .magazine-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More compact grid on smaller screens */
+.magazine-container {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More compact grid on smaller screens */
   }
 
-  .magazine-container .magazine-item:nth-child(1) {
-    grid-column: span 1; /* First item takes up one column */
-    grid-row: span 1; /* First item doesn’t take up too much space */
-  }
+.magazine-container .magazine-item:nth-child(1) {
+  grid-column: span 1; /* First item takes up one column */
+  grid-row: span 1; /* First item doesn’t take up too much space */
+}
 
-  .magazine-item .thumbnail {
-    height: auto; /* Ensure height adjusts based on content */
-    aspect-ratio: 4/3; /* Maintain a better aspect ratio on smaller screens */
+.magazine-item .thumbnail {
+  height: auto; /* Ensure height adjusts based on content */
+  aspect-ratio: 4/3; /* Maintain a better aspect ratio on smaller screens */
   }
 }
+
 /* CONTACT ME PAGE STUFF */
 /* Contact Container */
 .contact-container {
@@ -825,17 +760,17 @@ body.dark-mode .magazine-container .magazine-item {
 }
 
 .email-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: #F0F7EE;
-    text-decoration: none;
-    border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: #F0F7EE;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .email-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .excerpt {
@@ -846,11 +781,12 @@ a {
   display: inline; /* Makes the anchor tag behave like a block-level element */
 
 }
+
 h1 {
-    text-align: center;
-    font-size: 2.3vw; /* Standard size */
-    font-weight: bold;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.3vw; /* Standard size */
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -861,28 +797,29 @@ h2 {
 }
 
 h3 {
-    text-align: center;
-    font-size: 2.0vw; /* Standard size */
-    font-weight: bold;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.0vw; /* Standard size */
+  font-weight: bold;
+  margin-bottom: 20px;
 }
+
 /* Styles for smaller screens (mobile devices) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 5vw; /* Adjust font size for smaller screens */
-    }
+h1 {
+  font-size: 5vw; /* Adjust font size for smaller screens */
+}
 
-    h2 {
-        text-align: center; /* Change alignment for mobile if needed */
-    }
+h2 {
+  text-align: center; /* Change alignment for mobile if needed */
+}
 
-    h3 {
-        font-size: 6vw; /* Adjust font size for smaller screens */
-    }
+h3 {
+  font-size: 6vw; /* Adjust font size for smaller screens */
+}
 
-    .line-break {
-        height: 15px; /* Adjust line-break height for mobile */
-    }
+.line-break {
+  height: 15px; /* Adjust line-break height for mobile */
+  }
 }
 
 
