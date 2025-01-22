@@ -206,7 +206,7 @@ section img {
   border: 1px solid #ddd; /* Light gray border */
   border-radius: 8px; /* Rounded corners */
   padding: 20px; /* Padding inside the box */
-  max-width: 800px; /* Reduced maximum width for a thinner box */
+  max-width: 650px; /* Reduced maximum width for a thinner box */
   margin: 20px auto; /* Centers the section horizontally with margin for spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
   text-align: left; 
