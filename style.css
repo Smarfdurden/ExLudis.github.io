@@ -15,6 +15,8 @@ body {
   flex-grow: 1; /* This makes the content area take up the remaining space */
 }
 
+
+
 /* Default blockquote styling */
 blockquote {
   font-style: italic;
@@ -67,11 +69,9 @@ body.dark-mode blockquote footer {
   width: 100%;
   z-index: 1000;
   border-bottom: 2px solid #024f68; /* Light border for separation */
-  background-color: rgba(1, 26, 36, 0.8); /* Semi-transparent */
-  backdrop-filter: blur(10px); /* Blurs content behind navbar */
+  background-color: #011a24; /* Semi-transparent */
+  
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  
-  
 }
 
 /* Navbar list items (desktop) */
@@ -131,6 +131,50 @@ body.dark-mode blockquote footer {
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px;
+}
+
+/* Style the side navbar container */
+.side-navbar {
+  position: fixed; /* Sticks it to the left side */
+  top: 50%; /* Center it vertically */
+  left: 10px; /* Distance from the left edge */
+  transform: translateY(-50%); /* Adjust to ensure it's fully centered */
+  width: 80px; /* Width of the oval menu */
+  height: 400px; /* Height of the oval menu */
+  background-color: #011a24; /* Background color */
+  border-radius: 40px; /* Creates the oval shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add some depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Style the menu list */
+.side-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Style the menu items */
+.side-navbar li {
+  margin: 20px 0; /* Spacing between items */
+}
+
+/* Style the links */
+.side-navbar a {
+  color: #F0F7EE; /* Text color */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Hover effect for links */
+.side-navbar a:hover {
+  color: #FFC300; /* Change to your preferred hover color */
 }
 
 /* Grid Styling */
@@ -228,7 +272,7 @@ body.dark-mode blockquote footer {
 }
 .centered-text {
   text-align: center; /* Ensures individual paragraphs are centered */
-margin-bottom: 1em; /* Adds spacing between paragraphs */
+  margin-bottom: 1em; /* Adds spacing between paragraphs */
 }
 
 .small-image {
@@ -317,12 +361,12 @@ body.dark-mode {
 body.dark-mode .boxed-section {
   background-color: #011a24;
   border: 1px solid #666;
-  color: #ddd;
+  color: #F0F7EE;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 body.dark-mode a {
-  color: white;
+  color: #F0F7EE;
 }
 
 body.dark-mode a:hover {
@@ -334,7 +378,9 @@ body.dark-mode a:hover {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1001;
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right side of the viewport */
+  z-index: 1000;
   width: 50px; /* Button width */
   height: 50px; /* Button height */
   border: none;
@@ -343,15 +389,32 @@ body.dark-mode a:hover {
   display: flex; /* Enables flexbox */
   justify-content: center; /* Centers the icon horizontally */
   align-items: center; /* Centers the icon vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease; /* Add smooth hover effects */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+#toggle-dark-mode:hover {
+  transform: scale(1.1); /* Enlarges the button slightly on hover */
+}
+
+@media (max-width: 600px) {
+  #toggle-dark-mode {
+    bottom: 10px; /* Reduced bottom spacing */
+    right: 10px; /* Reduced right spacing */
+    font-size: 14px; /* Slightly smaller font */
+    padding: 10px; /* Smaller padding */
+  }
+}
+
+
 /* Hover effect for the button */
 #toggle-dark-mode:hover {
-  background-color: #F0EFF4; /* Hover background color */
-  transform: translateY(-2px); /* Subtle hover movement */
+  background-color: inherit; /* Hover background color */
+  transform: scale(1.1); /* Slightly enlarge on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
@@ -561,30 +624,11 @@ body.dark-mode #icon {
   }
 }
 
-.page-with-issue {
-  display: flex;
-  justify-content: center; /* Align the content horizontally */
-  align-items: center; /* Optionally center it vertically */
-  width: 100%;
-}
-
 /* This will center the follow button container */
 .news-page {
   text-align: center; /* Aligns children elements to the center */
 }
 
-body, .page-with-issue {
-  margin: 0;
-  padding: 0;
-}
-
-/* Body and HTML adjustments */
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 
 /* Content adjustment to avoid overlap */
 .content {
@@ -619,7 +663,7 @@ footer .sharethis-inline-follow-buttons {
 /* Dark mode footer */
 .dark-mode .footer {
   background-color: black;
-  color: #fff;
+  color: #F0F7EE;
 }
 
 @media screen and (max-width: 768px) {
