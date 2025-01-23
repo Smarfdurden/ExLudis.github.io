@@ -169,11 +169,52 @@ body.dark-mode blockquote footer {
   margin-bottom: 1em; /* Adds spacing between paragraphs */
 }
 
+.vertical-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr); /* 5 equally spaced rows */
+  gap: 10px; /* Space between grid items */
+  background-color: #e0e0e0; /* Background color for grid */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.vertical-grid div {
+  background-color: #ccc; /* Background color for each grid item */
+  text-align: center;
+  line-height: 50px;
+  height: 50px; /* Height for each grid item */
+  border: 1px solid #aaa;
+}
+
+/* Default: Show vertical grid */
+.vertical-grid {
+  display: grid;
+}
+
+/* Hide vertical grid on mobile (screen width 768px or smaller) */
+@media (max-width: 768px) {
+  .vertical-grid {
+    display: none;
+  }
+}
+
 .small-image {
   display: block; /* Makes the image a block-level element */
   margin: 0 auto; /* Automatically centers the image horizontally */
   width: 300px;
   height: auto;
+}
+
+/* Default: Show .container */
+.container {
+  display: block; /* Or whatever display style you are using */
+}
+
+/* Hide .container on mobile (screen width 768px or smaller) */
+@media (max-width: 768px) {
+  .vertical-grid {
+    display: none;
+  }
 }
 
 section img {
@@ -200,6 +241,8 @@ section img {
   }
 }
 
+
+
 /* Boxed Section Styling */
 .boxed-section {
   background-color: #fff; /* White background for the section */
@@ -211,6 +254,7 @@ section img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
   text-align: left; 
 }
+
 
 /* Increase line spacing */
 .boxed-section {
@@ -480,6 +524,11 @@ body.light-mode #toggle-light-mode:hover {
   padding-bottom: 100px; /* Ensure space for the ShareThis buttons if needed */
 }
 
+.magazine-item img {
+  width: 100%;
+  height: auto;  /* Maintains aspect ratio */
+  object-fit: cover;  /* Ensures the image covers the container without stretching */
+}
 /* For medium screens (like tablets) */
 @media (max-width: 1024px) {
   .magazine-container {
@@ -491,6 +540,16 @@ body.light-mode #toggle-light-mode:hover {
 @media (max-width: 768px) {
 .magazine-container {
   grid-template-columns: 1fr; /* One column */
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Style adjustments for the first magazine item */
+  .magazine-item:first-of-type img {
+    object-fit: contain;  /* Makes sure the whole image fits inside the container */
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -575,7 +634,7 @@ header {
 .top-image {
   display: block; /* Make the image a block element */
   margin: 0 auto; /* Center horizontally */
-  width: 80%; /* Optional: Adjust size */
+  width: 60%; /* Optional: Adjust size */
   max-width: 1200px;
   height: auto; /* Maintain aspect ratio */
 }
@@ -606,6 +665,7 @@ header {
 
 /* Magazine items */
 .magazine-container .magazine-item {
+  display: block;
   background-color: var(--item-bg-color); /* Use variable for dynamic background */
   color: var(--item-text-color); /* Use variable for dynamic text */
   padding: 20px;
@@ -615,6 +675,7 @@ header {
   margin-bottom: 1rem;
   height: auto; /* Allow height to grow based on content */
   min-height: 350px; /* Set a minimum height for consistency */
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Make sure content is spread evenly */
@@ -631,6 +692,7 @@ header {
 }
 
 .magazine-item {
+
   background-color: var(--item-bg-color);
   color: var(--item-text-color);
   padding: 20px;
