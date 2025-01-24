@@ -631,8 +631,14 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, color 0.3s;
   margin-bottom: 1rem;
-  height: auto; /* Allow height to grow based on content */
+  height: 300px; 
+  overflow: hidden; /* Prevents images from overflowing the container */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
+
+
 
 .magazine-item h2,
 .magazine-item p {
@@ -667,6 +673,7 @@ header {
   height: auto; /* Let the height adjust based on content to prevent squishing */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 5px;
   aspect-ratio: 16/9; /* Maintain aspect ratio for better responsiveness */
 }
@@ -700,8 +707,9 @@ header {
 
 .magazine-item img {
   width: 100%;
-  height: auto;  /* Maintains aspect ratio */
+  height: 100%;  /* Auto Maintains aspect ratio */
   object-fit: cover;  /* Ensures the image covers the container without stretching */
+  display: block; /* Removes any inline spacing around images */
 }
 /* For medium screens (like tablets) */
 @media (max-width: 1024px) {
