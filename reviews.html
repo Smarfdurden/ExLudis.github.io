@@ -28,8 +28,6 @@
   <meta name="fediverse:creator" content="@smarfdurden@mastodon.social">
   <title>Reviews - Smarf Durden</title>
   <link rel="stylesheet" href="style.css">
-<style>
-</style>
   <!-- Favicon -->
   <link rel="icon" href="Assets/ProfilePhotos/announcement.jpg" type="image/png" sizes="16x16 32x32" />
   <!-- Font Awesome CDN -->
@@ -41,6 +39,25 @@
 	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=678d088e6ba8ae00127779f9&product=sticky-share-buttons' async='async'></script>
 	<link rel="preload" href="style.css" as="style" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+  body {
+    background-color: #F0F7EE; /* Light mode background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #00070C; /* Dark mode background color */
+  }
+</style>
+
+<!-- Inline JavaScript to apply dark mode early -->
+<script>
+  (function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
 </head>
 <body>
   <!-- Navbar with toggle button -->
@@ -60,7 +77,7 @@
       <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
     </button>
   </nav>
-<br><br><br><br>
+  <div class="spacer"></div>
   <!-- Main Header -->
   <header>
     <h1>Game Reviews</h1>

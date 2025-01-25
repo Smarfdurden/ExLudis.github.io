@@ -23,14 +23,14 @@
     }
   });
 </script>
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Smarf Durden Video Game Reviews and Gaming News for PlayStation 5, Xbox Series X, Xbox Series S, Nintendo Switch 2, iOS and Android.">
 <meta name="fediverse:creator" content="@smarfdurden@mastodon.social">
 <title>Home - SmarfDurden</title>
 <link rel="stylesheet" href="style.css">
-  <style>
-  </style>
   
   <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -45,16 +45,30 @@
 	  
 <!-- Preload Multiversus Thumbnail -->
 <link rel="preload" as="image" href="Assets/WB/multiversus_artwork.webp" type="image/webp">
-
 <link rel="preload" href="style.css" as="style" />
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+  body {
+    background-color: #F0F7EE; /* Light mode background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #00070C; /* Dark mode background color */
+  }
+</style>
+
+<!-- Inline JavaScript to apply dark mode early -->
+<script>
+  (function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
 
     </head>
 	<body>
-
-    
 
 	 <!-- Navbar with toggle button -->
 	<nav class="navbar">
@@ -73,9 +87,9 @@
       <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
     </button>
   </nav>
-<br><br><br>
-  <!-- Main Header -->
-  <header class="main-header">
+
+<div class="spacer"></div>
+  <header>
     <h1>Video Game Reviews & News</h1>
   </header>
 

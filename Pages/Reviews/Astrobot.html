@@ -32,9 +32,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'event_category': 'User Interaction',
           'event_label': 'Dark Mode Toggle',
         });
-      });
-    }
-  });
+      }
+    });
 </script>
   <!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -54,6 +53,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://smarfdurden.com/Pages/Reviews/Astrobot.html">
   <meta property="og:type" content="article">
   
+  <link rel="preload" href="../../style.css" as="style" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+  body {
+    background-color: #F0F7EE; /* Light mode background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #00070C; /* Dark mode background color */
+  }
+</style>
+
+<!-- Inline JavaScript to apply dark mode early -->
+<script>
+  (function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
 	</head>
 
 	<body>
@@ -69,17 +89,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    </div>
     
    <ul class="menu">
-   <li><a href="index.html" class="load-page">Home</a></li>
-   <li><a href="reviews.html" class="load-page">Game Reviews</a></li>
-   <li><a href="news.html" class="load-page">Gaming News</a></li>
-   <li><a href="contactme.html" class="load-page">Contact Me</a></li>
- </ul>
+    <li><a href="../../index.html" class="load-page">Home</a></li>
+    <li><a href="../../reviews.html" class="load-page">Game Reviews</a></li>
+    <li><a href="../../news.html" class="load-page">Gaming News</a></li>
+    <li><a href="../../contactme.html" class="load-page">Contact Me</a></li>
+  </ul>
 <!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
       <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
     </button>
   </nav>
-<br><br><br>
+<div class="spacer"></div>
   <!-- Image at the top -->
 
   <img src="../../Assets/Astrobot/astro-bot-cast-in-front-of-game-logo-on-dark-blue-background-2x1-composite.avif" alt="Astrobot Official Artwork. Astrobot is available for PlayStation 5." class="top-image">
@@ -125,6 +145,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p class="centered-text"><strong>10/10</strong></p>
 	</section>
 	<script src="../../script.js" defer></script>
+  <script src="../../Assets/js/jquery-3.6.0.min.js" async></script>
+  <br>
 	<!-- ShareThis BEGIN --><div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
 	<a rel="me" href="https://mastodon.social/@smarfdurden"></a>
 </body>

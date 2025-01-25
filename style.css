@@ -20,8 +20,7 @@ body {
 }
 
 .spacer {
-  margin-top: 20px; /* Adjust the margin as needed */
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  height: 100px; /* Adjust the height as needed */
   width: 100%; /* Ensure it takes the full width of its container */
 }
 
@@ -461,14 +460,10 @@ body.light-mode #toggle-dark-mode {
 
 /* Adjust ShareThis button */
 .sharethis-inline-follow-buttons {
-  position: absolute; /* Position relative to parent container */
-  bottom: 20px; /* Consistent bottom positioning */
-  left: 50%;
-  width: auto;
-  transform: translateX(-50%);
-  padding: 10px;
-  background-color: hidden;
-  z-index: 1000;
+  background-color: inherit;
+  position: relative;
+  z-index: 1; /* Make sure it doesn't interfere with other elements */
+  margin: 0; /* Remove any margins causing the space */
 }
 
 .sharethis-sticky-share-buttons {

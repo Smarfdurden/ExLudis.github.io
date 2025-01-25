@@ -15,8 +15,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="fediverse:creator" content="@smarfdurden@mastodon.social">
   <title>Nintendo Responds to Leaks: "Not Official"</title>
   <link rel="stylesheet" href="../../style.css">
-  <style>
-</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NX1DF89P5"></script>
 <script>
@@ -53,12 +51,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ShareThis END -->
   
   <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Nintendo Responds to Leaks: 'Not Official'>
-  <meta property="og:description" content="Yesterday, I wrote an article covering all the Nintendo Switch 2 leaks from CES and online, and now Nintendo has finally released a statement addressing them.">
-  <meta property="og:image" content="../../Assets/Nintendo/Nintendo Logo.jpg">
+  <meta property="og:title" content="Nintendo Responds to Leaks: 'Not Official'">
+  <meta property="og:description" content='Yesterday, I wrote an article covering all the Nintendo Switch 2 leaks from CES and online, and now Nintendo has finally released a statement addressing them.'>
+  <meta property="og:image" content="../../Assets/Nintendo/Nintendo Logo.webp">
   <meta property="og:url" content="https://smarfdurden.com/Pages/Switch%202/Switch2NotOfficial.html">
   <meta property="og:type" content="article">
   
+  <link rel="preload" href="../../style.css" as="style" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+  body {
+    background-color: #F0F7EE; /* Light mode background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #00070C; /* Dark mode background color */
+  }
+</style>
+
+<!-- Inline JavaScript to apply dark mode early -->
+<script>
+  (function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
 </head>
 
 <body>
@@ -73,10 +92,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i class="fas fa-bars"></i> <!-- Hamburger icon -->
   </div>
   <ul class="menu">
-    <li><a href="index.html" class="load-page">Home</a></li>
-    <li><a href="reviews.html" class="load-page">Game Reviews</a></li>
-    <li><a href="news.html" class="load-page">Gaming News</a></li>
-    <li><a href="contactme.html" class="load-page">Contact Me</a></li>
+    <li><a href="../../index.html" class="load-page">Home</a></li>
+    <li><a href="../../reviews.html" class="load-page">Game Reviews</a></li>
+    <li><a href="../../news.html" class="load-page">Gaming News</a></li>
+    <li><a href="../../contactme.html" class="load-page">Contact Me</a></li>
   </ul>
 <!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
@@ -128,6 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ShareThis BEGIN --><div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
 	</section>
 	<script src="../../script.js" defer></script>
+  <script src="../../Assets/js/jquery-3.6.0.min.js" async></script>
 	<a rel="me" href="https://mastodon.social/@smarfdurden"></a>
 	<br>
 	</body>
