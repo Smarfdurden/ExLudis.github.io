@@ -19,6 +19,13 @@ body {
   --item-text-color: #001021; /* Light magazine item text color */
 }
 
+.spacer {
+  margin-top: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  width: 100%; /* Ensure it takes the full width of its container */
+}
+
+
 .main-content {
   flex-grow: 1; /* This makes the content area take up the remaining space */
 }
@@ -449,42 +456,29 @@ body.light-mode #toggle-dark-mode {
   font-size: 14px;       /* Smaller text for mobile */
   margin: 0 auto;
   }
-}
-
-.follow-button-wrapper {
-  display: flex;             /* Enable flexbox */
-  justify-content: center;   /* Center horizontally */
-  align-items: center;       /* Center vertically */
-  position: absolute;        /* Allow positioning anywhere in the page */
-  top: 103%;                  /* Position from the top 50% */
-  left: 50%;                 /* Position from the left 50% */
-  transform: translate(-50%, -50%);  /* Adjust for exact centering */
-  width: 100%;               /* Ensure it takes the full width of the page */
-  height: 100%;              
-}
-
-.news-page .follow-button-container {
-  display: flex;                /* Use flexbox for centering */
-  justify-content: center;      /* Center horizontally */
-  align-items: center;          /* Center vertically */
-  width: 100%;
-  bottom: 0;
-  margin: 0 auto;
-  padding: 20px 0;              /* Optional padding */
-}
 
 
 
 /* Adjust ShareThis button */
-.sharethis-inline-follow-buttons,
+.sharethis-inline-follow-buttons {
+  position: absolute; /* Position relative to parent container */
+  bottom: 20px; /* Consistent bottom positioning */
+  left: 50%;
+  width: auto;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: hidden;
+  z-index: 1000;
+}
+
 .sharethis-sticky-share-buttons {
   position: fixed; /* Position relative to parent container */
-  bottom: 0; /* Remove fixed bottom positioning */
+  bottom: 60px; /* Consistent bottom positioning */
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
   padding: 10px;
-  background-color: inherit;
+  background-color: hidden;
   z-index: 1000;
 }
 
@@ -641,8 +635,6 @@ header {
   background-position: center; /* Center the image within the container */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
-
-
 
 .magazine-item h2,
 .magazine-item p {
@@ -817,25 +809,31 @@ a {
 }
 
 h1 {
+  color: #000000; /* Black text color for light mode */
   text-align: center;
   font-size: 1.8vw; 
   font-weight: bold;
   position: relative;
 }
 
+/* Dark mode specific styling for h1 */
+body.dark-mode h1 {
+  color: #FFFFFF; /* White text color for dark mode */
+}
+
 /* h1 for small screens */
 @media (max-width: 768px) {
   h1 {
-  text-align: center;
-  padding: 0 20px; /* Add space on left and right sides */
-  margin: 0;       /* Remove default margin */
+    padding: 0 20px; /* Add space on left and right sides */
+    margin: 0;       /* Remove default margin */
+  }
 }
 
 @media (min-width: 1024px) {
   h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     font-size: 1.3vw; 
-    color: #F0F7EE; 
+    color: #000000; 
     text-align: center;
   }
 }
@@ -847,13 +845,13 @@ h1 {
   margin: 0;
 }
 
-
 h2 {
   text-align: left; /* Aligns the text to the left */
 }
+
 .line-break {
   height: 20px; /* Creates a custom line break with a specific height */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);v
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
@@ -865,27 +863,27 @@ h3 {
 
 /* Styles for smaller screens (mobile devices) */
 @media (max-width: 768px) {
-h1 {
-  font-size: 5vw; /* Adjust font size for smaller screens */
-}
+  h1 {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
 
-h2 {
-  text-align: center; /* Change alignment for mobile if needed */
-}
+  h2 {
+    text-align: center; /* Change alignment for mobile if needed */
+  }
 
-h3 {
-  font-size: 6vw; /* Adjust font size for smaller screens */
-}
+  h3 {
+    font-size: 6vw; /* Adjust font size for smaller screens */
+  }
 
-.line-break {
-  height: 15px; /* Adjust line-break height for mobile */
+  .line-break {
+    height: 15px; /* Adjust line-break height for mobile */
   }
 }
 
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
-  height: 0%;
+  height: 0;
   overflow: hidden;
   margin: 0 auto; /* Center the wrapper horizontally */
   max-width: 800px; 
@@ -905,7 +903,3 @@ h3 {
     margin-bottom: 20px; /* Adjust spacing for tablets and up */
   }
 }
-
-
-
-
