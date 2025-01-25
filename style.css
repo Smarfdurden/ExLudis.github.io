@@ -340,7 +340,7 @@ body.dark-mode a {
 /* SHARETHIS DARK MODE */
 /* Styling ShareThis buttons in dark mode */
 body.dark-mode .sharethis-inline-follow-buttons {
-  background-color: inherit; /* Dark background for ShareThis buttons */
+  background-color: inherit;
   border-color: #444; /* Darker border */
   position: relative;
   z-index: 1; /* Make sure it doesn't interfere with other elements */
@@ -460,7 +460,7 @@ body.light-mode #toggle-dark-mode {
   left: 50%;                 /* Position from the left 50% */
   transform: translate(-50%, -50%);  /* Adjust for exact centering */
   width: 100%;               /* Ensure it takes the full width of the page */
-  height: 20%;              /* Ensure it takes the full height of the page */
+  height: 100%;              
 }
 
 .news-page .follow-button-container {
@@ -468,16 +468,20 @@ body.light-mode #toggle-dark-mode {
   justify-content: center;      /* Center horizontally */
   align-items: center;          /* Center vertically */
   width: 100%;
+  bottom: 0;
   margin: 0 auto;
   padding: 20px 0;              /* Optional padding */
 }
 
+
+
 /* Adjust ShareThis button */
 .sharethis-inline-follow-buttons,
 .sharethis-sticky-share-buttons {
-  position: relative; /* Position relative to parent container */
-  bottom: auto; /* Remove fixed bottom positioning */
+  position: fixed; /* Position relative to parent container */
+  bottom: 0; /* Remove fixed bottom positioning */
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
   padding: 10px;
   background-color: inherit;
@@ -488,7 +492,7 @@ body.light-mode #toggle-dark-mode {
 .sharethis-sticky-share-buttons {
   display: block;
   visibility: visible;
-  position: fixed; /* Keep it fixed */
+  position: fixed; 
   bottom: 60px; /* Distance from the bottom */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust centering */
