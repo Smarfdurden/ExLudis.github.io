@@ -43,11 +43,17 @@
 	
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=678d088e6ba8ae00127779f9&product=sticky-share-buttons' async='async'></script>
 	  
-    <!-- preload multiversus thumbnail -->
-    <link rel="preload" as="image" href="Assets/WB/multiversus_artwork.webp" type="image/webp">
+<!-- preload multiversus thumbnail -->
+<link rel="preload" as="image" href="Assets/WB/multiversus_artwork.webp" type="image/webp">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     </head>
 	<body>
+
+      <!-- Step 2: Place this structure in the <body> -->
+  <div id="content"> <!-- This is where subpage content will load --> </div>
+
 	 <!-- Navbar with toggle button -->
 	<nav class="navbar">
   <!-- Hamburger button (for mobile) -->
@@ -55,17 +61,17 @@
     <i class="fas fa-bars"></i> 
   </div>
     <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="reviews.html">Game Reviews</a></li>
-      <li><a href="news.html">Gaming News</a></li>
-      <li><a href="contactme.html">Contact Me</a></li>
+      <li><a href="index.html" class="load-page">Home</a></li>
+      <li><a href="reviews.html" class="load-page">Game Reviews</a></li>
+      <li><a href="news.html" class="load-page">Gaming News</a></li>
+      <li><a href="contactme.html" class="load-page">Contact Me</a></li>
     </ul>
-
 <!-- Dark Mode Toggle Button -->
     <button id="toggle-dark-mode">
       <i id="icon" class="fas fa-sun"></i> <!-- Sun icon initially -->
     </button>
   </nav>
+
   <!-- Main Header -->
   <header><br><br><br><br>
     <h1>Video Game Reviews & News</h1>
@@ -270,9 +276,46 @@
       </a>
     </div>
   </div>
+
+	<a rel="me" href="https://mastodon.social/@smarfdurden"></a>
+
+  <!-- Include Scripts -->
+  <script>
+    $(document).ready(function () {
+      // Function to load subpages dynamically
+      function loadPage(url) {
+        $('#content').load(url, function (response, status, xhr) {
+          if (status == "error") {
+            $('#content').html("<p>Error loading page: " + xhr.status + " " + xhr.statusText + "</p>");
+          }
+        });
+      }
+
+      // Attach click event to nav links
+      $('.load-page').on('click', function (event) {
+        event.preventDefault(); // Prevent default navigation
+        var pageUrl = $(this).attr('href'); // Get URL from href
+        history.pushState({ path: pageUrl }, '', pageUrl); // Update browser history
+        loadPage(pageUrl); // Load the page
+      });
+
+      // Handle back/forward navigation
+      window.onpopstate = function (event) {
+        if (event.state) {
+          loadPage(event.state.path);
+        }
+      };
+    });
+
+    $(document).ready(function () {
+  // Load the correct page on refresh
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  loadPage(currentPath);
+});
+  </script>
+
   <!-- ShareThis BEGIN --><div class="sharethis-inline-follow-buttons"></div><!-- ShareThis END -->
      <script src="script.js"></script>
     <br><br><br> <!--for mobile -  dont touch-->
-	<a rel="me" href="https://mastodon.social/@smarfdurden"></a>
   </body>
 </html>

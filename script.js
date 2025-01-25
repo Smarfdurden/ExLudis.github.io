@@ -38,4 +38,17 @@ toggleButton.addEventListener('click', () => {
   updateDarkModeUI(isDarkMode);
 });
 
+$(document).ready(function () {
+  $('.load-page').on('click', function (event) {
+    event.preventDefault(); // Prevent default action
+    var pageUrl = $(this).attr('href') || $(this).data('url'); // Handle both links and buttons
+    $('#content').load(pageUrl, function (response, status, xhr) {
+      if (status === "error") {
+        $('#content').html("<p>Error loading page: " + xhr.status + " " + xhr.statusText + "</p>");
+      }
+    });
+  });
+});
+
+
 
