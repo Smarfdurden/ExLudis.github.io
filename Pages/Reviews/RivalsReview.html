@@ -61,6 +61,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <link rel="preload" href="../../style.css" as="style" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+  body {
+    background-color: #F0F7EE; /* Light mode background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #00070C; /* Dark mode background color */
+  }
+</style>
+
+<!-- Inline JavaScript to apply dark mode early -->
+<script>
+  (function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
 </head>
 
 <body>
@@ -86,8 +105,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
   </nav>
 
-
-<br><br><br>
+<div class="spacer"></div>
 <div class="centered-container">
   <!-- Image at the top -->
   <img src="../../Assets/Marvel Rivals/announcement.webp" alt="Marvel Rivals official artwork. Marvel Rivals is available on PC, Xbox Series X, Xbox Series S, and Playstation 5." class="top-image">
