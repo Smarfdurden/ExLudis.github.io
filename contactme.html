@@ -41,6 +41,26 @@
 	<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=678d088e6ba8ae00127779f9&product=sticky-share-buttons' async='async'></script>
 	<link rel="preload" href="style.css" as="style" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+  body {
+    background-color: #F0F7EE; /* Light mode background color */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark-mode {
+    background-color: #00070C; /* Dark mode background color */
+  }
+</style>
+
+<!-- Inline JavaScript to apply dark mode early -->
+<script>
+  (function() {
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
 </head>
 <body>
 
