@@ -1,4 +1,3 @@
-/* General Reset */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -11,25 +10,25 @@ body {
   flex-direction: column;
 }
 
-/* Default light mode */
+
 :root {
-  --bg-color: #F0F7EE; /* Light background */
-  --text-color: #001021; /* Light text */
-  --item-bg-color: #f8f9fa; /* Light magazine item background */
-  --item-text-color: #001021; /* Light magazine item text color */
+  --bg-color: #F0F7EE;
+  --text-color: #001021; 
+  --item-bg-color: #f8f9fa; 
+  --item-text-color: #001021; 
 }
 
 .spacer {
-  height: 100px; /* Adjust the height as needed */
-  width: 100%; /* Ensure it takes the full width of its container */
+  height: 100px;
+  width: 100%; 
 }
 
 
 .main-content {
-  flex-grow: 1; /* This makes the content area take up the remaining space */
+  flex-grow: 1; 
 }
 
-/* Default blockquote styling */
+
 blockquote {
   font-style: italic;
   border-left: 5px solid #4B0082;
@@ -53,10 +52,9 @@ blockquote footer {
   text-align: right;
   color: #F0F7EE;
   margin: 0;
-  padding-top: 2px; /* Add a little space above if needed */
+  padding-top: 2px; 
 }
 
-/* Dark mode specific blockquote styling */
 body.dark-mode blockquote {
   background-color: #3b4252;
   color: #ddd;
@@ -86,40 +84,40 @@ body.dark-mode blockquote footer {
   
 }
 
-/* Navbar list items (desktop) */
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Align items in a row (horizontal) */
+  display: flex; 
   justify-content: center;
   width: 100%;
 }
-/* Menu items for navbar */
+
 .navbar li {
   margin: 0 15px;
   position: center;
 }
 
 .navbar a {
-  display: block;/* Treat links as block elements */
+  display: block;
   color: #F0F7EE;
   text-decoration: none;
   padding: 10px 15px;
   display: block;
-  text-align: center; /* Center text inside the button */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  text-align: center; 
+  transition: background-color 0.3s ease; 
 }
 
-/* Menu Styling (Desktop version) */
+
 .menu {
-  display: flex; /* Hide menu by default */
+  display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .menu.active {
-  display: flex; /* Show the menu when active */
+  display: flex; 
   background-color: #011a24;
   position: absolute;
   top: 60px;
@@ -130,7 +128,7 @@ body.dark-mode blockquote footer {
 }
 
 .menu-toggle {
-  display: none; /* Hidden by default on larger screens */
+  display: none; 
   font-size: 24px;
   cursor: pointer;
   color: #F0F7EE;
@@ -151,42 +149,41 @@ body.dark-mode blockquote footer {
 }
 
 .image-style {
-  max-width: 100%; /* Ensures the image doesn’t exceed the container's width */
-  height: auto; /* Maintains aspect ratio */
-  display: block; /* Removes extra spacing below the image */
-  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
 }
 .centered-container {
-  text-align: center; /* Centers text inside the container */
-  margin: 20px auto; /* Adds spacing around the container and centers it */
-  width: 100%; /* Restricts width to prevent text from stretching across the screen */
+  text-align: center;
+  margin: 20px auto;
+  width: 100%; 
 }
 	
 .centered-container .dates {
-  font-size: 0.9em; /* Slightly smaller font size */
-  color: #555; /* Subtle gray color for secondary information */
+  font-size: 0.9em; 
+  color: #555; 
   margin-top: 5px;
-  text-align: center; /* Center-align for consistency */
+  text-align: center; 
 }
 
 .centered-container .date-posted,
 .centered-container .date-updated {
-  margin: 2px 0; /* Small margin between dates */
+  margin: 2px 0; 
 }
 
 .centered-container .dates time {
-  font-weight: bold; /* Highlight dates for better visibility */
+  font-weight: bold; 
 }
 
 .image-container {
-  text-align: center; /* Centers the image horizontally */
+  text-align: center; 
 }
 .centered-text {
-  text-align: center; /* Ensures individual paragraphs are centered */
-  margin-bottom: 1em; /* Adds spacing between paragraphs */
+  text-align: center; 
+  margin-bottom: 1em; 
 }
 
-/* Hide vertical grid on mobile (screen width 768px or smaller) */
 @media (max-width: 768px) {
   .vertical-grid {
     display: none;
@@ -194,18 +191,17 @@ body.dark-mode blockquote footer {
 }
 
 .small-image {
-  display: block; /* Makes the image a block-level element */
-  margin: 0 auto; /* Automatically centers the image horizontally */
+  display: block; 
+  margin: 0 auto; 
   width: 300px;
   height: auto;
 }
 
-/* Default: Show .container */
 .container {
-  display: block; /* Or whatever display style you are using */
+  display: block; 
 }
 
-/* Hide .container on mobile (screen width 768px or smaller) */
+
 @media (max-width: 768px) {
   .vertical-grid {
     display: none;
@@ -213,16 +209,16 @@ body.dark-mode blockquote footer {
 }
 
 section img {
-  width: 100%; /* Makes the image take up 100% of the viewport width */
+  width: 100%; 
   max-width: 1000px;
-  height: 50vh; /* Makes the image take up 50% of the viewport height */
+  height: 50vh;
   object-fit: cover;
 }
 
 @media (min-width: 1600px) {
   section img {
   width: 100%;
-  max-width: 100%; /* Limit the width on extra large screens */
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
   }
@@ -231,55 +227,55 @@ section img {
 @media (min-width: 1200px) {
   section img {
   width: 100%; 
-  max-width: 1000px; /* Limit the size for very large screens */
-  margin: 0 auto; /* Center the image */
+  max-width: 1000px; 
+  margin: 0 auto; 
   }
 }
 
-/* Boxed Section Styling */
+
 .boxed-section {
-  background-color: #fff; /* White background for the section */
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Padding inside the box */
-  max-width: 650px; /* Reduced maximum width for a thinner box */
-  margin: 20px auto; /* Centers the section horizontally with margin for spacing */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a lifted effect */
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 20px; 
+  max-width: 650px; 
+  margin: 20px auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left; 
 }
 
-/* Increase line spacing */
+
 .boxed-section {
-  line-height: 1.8; /* Adjust the number to control the spacing (1.8 is a good starting point) */
+  line-height: 1.8; 
 }
 
 body.dark-mode .boxed-section {
-  background-color: #23252F; /* Dark background for dark mode */
-  border-color: lightblue; /* Darker border */
-  color: #F0F7EE; /* Light text color for dark mode */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
+  background-color: #23252F; 
+  border-color: lightblue; 
+  color: #F0F7EE; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
-/* Section Style for Centering and Constraining Width */
+
 .section {
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  height: 100vh; /* Makes the section take up the full height of the viewport */
-  max-width: 1200px; /* Constrains the width of the section */
-  width: 100%; /* Ensures the section can scale with screen size */
-  margin: 0 auto; /* Centers the section horizontally */
-  padding: 20px; /* Optional: Adds some padding */
-  text-align: center; /* Centers the text within the section */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 20px; 
+  text-align: center;
 }
 .section .content {
-  width: 100%; /* Ensures the content scales with screen size */
-  max-width: 1200px; /* Constrains the content to a maximum width */
-  margin: 0 auto; /* Centers the content horizontally */
-  padding: 20px; /* Adds padding to the content */
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
 }
 
-/* Dark mode */
+
 body.dark-mode {
   --bg-color: #00070c; 
   --text-color: #F0F7EE;
@@ -298,33 +294,33 @@ body.dark-mode a {
   color: #F0F7EE;
 }
 
-/* General styles for the toggle button */
+
 #toggle-dark-mode {
   position: fixed;
   top: 20px;
   right: 20px;
-  bottom: 20px; /* Distance from the bottom of the viewport */
+  bottom: 20px; 
   z-index: 1000;
-  width: 50px; /* Button width */
-  height: 50px; /* Button height */
+  width: 50px; 
+  height: 50px; 
   border: none;
   border-radius: 50%;
-  background-color: inherit; /* Default background for light mode */
-  display: flex; /* Enables flexbox */
-  justify-content: center; /* Centers the icon horizontally */
-  align-items: center; /* Centers the icon vertically */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth */
+  background-color: inherit;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
   cursor: pointer;
-  transition: transform 0.2s ease; /* Add smooth hover effects */
+  transition: transform 0.2s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust for desktop screens */
+
 @media (min-width: 1024px) {
 #toggle-dark-mode {
-  top: 15px; /* Adjust vertical positioning */
-  right: 25px; /* Adjust horizontal positioning */
-  transform: translateY(-5px); /* Move button 5px higher on desktop */
+  top: 15px; 
+  right: 25px; 
+  transform: translateY(-5px); 
   }
 }
 
@@ -337,77 +333,76 @@ body.dark-mode a {
   }
 }
 
-/* Hover effect for the button */
 #toggle-dark-mode:hover {
-  transform: translateY(-2px); /* Subtle hover movement */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
-/* SHARETHIS DARK MODE */
-/* Styling ShareThis buttons in dark mode */
+
+
 body.dark-mode .sharethis-inline-follow-buttons {
   background-color: inherit;
-  border-color: #444; /* Darker border */
+  border-color: #444;
   position: relative;
-  z-index: 1; /* Make sure it doesn't interfere with other elements */
-  margin: 0; /* Remove any margins causing the space */
+  z-index: 1; 
+  margin: 0; 
 }
 
-/* Optional: Customize button icons for dark mode */
+
 body.dark-mode .sharethis-inline-follow-buttons .st-button {
-  color: #F0F7EE; /* White icons */
-  background-color: inherit; /* Dark background for buttons */
-  border-color: #444; /* Dark border */
+  color: #F0F7EE; 
+  background-color: inherit; 
+  border-color: #444; 
 }
 
 body.dark-mode .sharethis-inline-follow-buttons .st-button:hover {
-  background-color: #444; /* Hover state for dark mode */
+  background-color: #444; 
   border-color: #555;
 }
 
 body {
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: hidden;
 }
 
-/* Mobile specific styles (for smaller screens) */
+
 @media (max-width: 768px) {
   #toggle-dark-mode {
-  width: 45px; /* Slightly smaller button on mobile */
+  width: 45px; 
   height: 45px;
-  right: 15px; /* Adjust position to give a bit of space from the edge */
+  right: 15px; 
   top: 15px;
 }
 
-/* Ensure mobile press effect behaves similarly */
+
 #toggle-dark-mode:active {
-  transform: translateY(0); /* Same immediate effect on click */
-  background-color: #1f2023; /* Darker background when pressed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Normal shadow */
+  transform: translateY(0); 
+  background-color: #1f2023; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 }
 
-/* Styles for the icon */
+
 #icon {
   font-size: 20px;
   color: #F0F7EE; 
 }
 
-/* Specific styles for dark mode */
+
 body.dark-mode #toggle-dark-mode {
-  background-color: inherit; /* Change button background in dark mode */
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
+  background-color: inherit; 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
 }
 
-/* Specific styles for light mode */
+
 body.light-mode #toggle-dark-mode {
   background-color: inherit; 
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
 }
 
-/* Mobile Menu Styling */ 
+
 @media (max-width: 768px) {
 .menu-toggle {
-  display: block; /* Show hamburger on small screens */
+  display: block; 
 }
 
 .menu-toggle span {
@@ -418,57 +413,57 @@ body.light-mode #toggle-dark-mode {
 }
 
 .menu {
-  display: none; /* Hide menu by default */
-  text-align: center; /* Center menu content */
+  display: none; 
+  text-align: center; /
 }
   
 .menu.open {
-  display: block; /* Show menu when open */
+  display: block; 
 }
 
 .navbar ul {
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;    /* Center the stacked items */
+  flex-direction: column; 
+  align-items: center;    
   justify-content: center;
-  width: 100%;            /* Full width for mobile */
-  display: none;          /* Hide by default */
-  margin: 0;              /* Remove default margins */
-  padding: 0;             /* Remove default padding */
+  width: 100%;            
+  display: none;          
+  margin: 0;              
+  padding: 0;             
 }
 
 .menu li {
-  margin: 10px 0; /* Add spacing between menu items */
+  margin: 10px 0; 
 }
   
-/* Hover effect to adjust spacing dynamically */
+
 .menu li:hover {
-  transform: translateY(-3px); /* Slightly less movement on hover for effect */
+  transform: translateY(-3px);
   }
 }
 
 .menu a, .navbar a {
-  padding: 10px 20px;    /* Consistent padding for links */
-  text-align: center;    /* Center the text */
-  text-decoration: none; /* Remove underlines */
-  color: #fff;           /* Adjust text color */
-  display: block;        /* Block-level links for better layout */
-  font-size: 14px;       /* Smaller text for mobile */
+  padding: 10px 20px;   
+  text-align: center;   
+  text-decoration: none; 
+  color: #fff;           
+  display: block;        
+  font-size: 14px;      
   margin: 0 auto;
   }
 
 
 
-/* Adjust ShareThis button */
+
 .sharethis-inline-follow-buttons {
   background-color: inherit;
   position: relative;
-  z-index: 1; /* Make sure it doesn't interfere with other elements */
-  margin: 0; /* Remove any margins causing the space */
+  z-index: 1; 
+  margin: 0; 
 }
 
 .sharethis-sticky-share-buttons {
-  position: fixed; /* Position relative to parent container */
-  bottom: 60px; /* Consistent bottom positioning */
+  position: fixed;
+  bottom: 60px; 
   left: 50%;
   width: 100%;
   transform: translateX(-50%);
@@ -477,63 +472,61 @@ body.light-mode #toggle-dark-mode {
   z-index: 1000;
 }
 
-/* Centering the ShareThis sticky share buttons */
 .sharethis-sticky-share-buttons {
   display: block;
   visibility: visible;
   position: fixed; 
-  bottom: 60px; /* Distance from the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust centering */
-  z-index: 1000; /* Ensure it's above other content */
-  margin: 0; /* Center the element */
-  width: auto; /* Ensure the width is dynamic */
-  text-align: center; /* Align content inside the widget */
+  bottom: 60px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1000; 
+  margin: 0; 
+  width: auto;
+  text-align: center; 
 }
 
-/* Responsive adjustments for small screens */
+
 @media (max-width: 600px) {
 .sharethis-sticky-share-buttons {
-  bottom: 70px; /* Adjust position for smaller screens */
+  bottom: 70px; 
   }
 }
 
-/* This will center the follow button container */
+
 .news-page {
-  text-align: center; /* Aligns children elements to the center */
+  text-align: center; 
 }
 
-/* Content adjustment to avoid overlap */
+
 .content {
-  min-height: calc(100vh - 100px); /* Adjust the height minus navbar/footer height */
-  padding-bottom: 100px; /* Prevent footer overlap */
+  min-height: calc(100vh - 100px);
+  padding-bottom: 100px;
 }
 
-/* Footer styling */
+
 footer {
-  background-color: #333; /* Optional background color */
-  color: white; /* Optional text color */
-  padding: 20px 0; /* Padding for spacing */
-  text-align: center; /* Centers the content */
+  background-color: #333; 
+  color: white; 
+  padding: 20px 0; 
+  text-align: center; 
   position: relative;
   width: 100%;
 }
 
-/* ShareThis button specific styles inside footer */
+
 footer .sharethis-inline-follow-buttons {
   margin: 0 auto;
-  width: auto; /* Or define a specific width */
+  width: auto; 
   display: block;
   padding: 0;
 }
-/* Light mode footer */
 
 .footer {
   background-color: #f8f9fa;
   color: #000;
 }
 
-/* Dark mode footer */
+
 .dark-mode .footer {
   background-color: black;
   color: #F0F7EE;
@@ -541,76 +534,76 @@ footer .sharethis-inline-follow-buttons {
 
 @media screen and (max-width: 768px) {
   footer {
-  position: relative; /* Makes the footer flow with the page content */
-  bottom: auto; /* Removes the fixed bottom positioning */
-  transform: none; /* Removes the translation */
+  position: relative; 
+  bottom: auto; 
+  transform: none; 
   
 .sharethis-widget {
-  width: 100%; /* Allow widget to resize if necessary */
+  width: 100%; 
   }
 }
 }
 
 header {
-  text-align: center; /* Center the image horizontally */
-}
-/* Default styling for top images */
-.top-image {
-  display: block; /* Make the image a block element */
-  margin: 0 auto; /* Center horizontally */
-  width: 60%; /* Optional: Adjust size */
-  max-width: 1200px;
-  height: auto; /* Maintain aspect ratio */
+  text-align: center; 
 }
 
-/* Shrink for mobile screens */
+.top-image {
+  display: block; 
+  margin: 0 auto; 
+  width: 60%; 
+  max-width: 1200px;
+  height: auto; 
+}
+
+
 @media (max-width: 768px) {
 .top-image {
-  width: 80%; /* Shrink to 80% width */
-  max-width: 600px; /* Adjust maximum size */
+  width: 80%;
+  max-width: 600px; 
   }
 }
 
 /* MAGAZINE STUFF */
 .magazine-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 1rem;
   padding: 1rem;
   background-color: var(--bg-color);
   color: var(--text-color);
-  max-width: 1200px;  /* Set a maximum width */
-  margin: 0 auto; /* Center the container */
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 .magazine-container {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-/* Magazine items */
+
 .magazine-container .magazine-item {
   display: block;
-  background-color: var(--item-bg-color); /* Use variable for dynamic background */
-  color: var(--item-text-color); /* Use variable for dynamic text */
+  background-color: var(--item-bg-color); 
+  color: var(--item-text-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, color 0.3s;
   margin-bottom: 1rem;
-  height: auto; /* Allow height to grow based on content */
-  min-height: 350px; /* Set a minimum height for consistency */
+  height: auto; 
+  min-height: 350px;
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Make sure content is spread evenly */
+  justify-content: space-between; 
 }
 
 .magazine-container .magazine-item a {
-  color: inherit; /* Inherit text color */
+  color: inherit; 
   text-decoration: none;
 }
 
-/* Make the first item span two rows */
+
 .magazine-item:nth-child(1) {
   grid-column: span 2;
 }
@@ -625,15 +618,15 @@ header {
   transition: background-color 0.3s, color 0.3s;
   margin-bottom: 1rem;
   height: 300px; 
-  overflow: hidden; /* Prevents images from overflowing the container */
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Center the image within the container */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  overflow: hidden; 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .magazine-item h2,
 .magazine-item p {
-  margin-bottom: 0.5rem; /* Control spacing between elements */
+  margin-bottom: 0.5rem; 
 }
 
 .magazine-item h2 {
@@ -652,8 +645,8 @@ header {
 }
 
 .magazine-item a {
-  display: inline-block; /* Ensures it doesn’t expand unnecessarily */
-  margin-top: 0.5rem; /* Control space above the link */
+  display: inline-block; 
+  margin-top: 0.5rem; 
   padding: 0.5rem 1rem;
   text-decoration: none;
   color: #F0F7EE;
@@ -661,46 +654,46 @@ header {
 
 .magazine-item .thumbnail {
   width: 100%;
-  height: auto; /* Let the height adjust based on content to prevent squishing */
+  height: auto; 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5px;
-  aspect-ratio: 16/9; /* Maintain aspect ratio for better responsiveness */
+  aspect-ratio: 16/9; 
 }
 
-/* Allow certain images to span multiple rows or columns */
+
 .magazine-item:nth-child(1) .thumbnail {
-  height: 400px; /* Feature image */
+  height: 400px; 
 }
 
 .magazine-item .read-more {
-  display: block; /* Ensure it takes its own line */
-  text-align: right; /* Align the text to the right */
-  margin-top: 10px; /* Optional: Adds space above the link */
-  font-weight: bold; /* Optional: Makes the link bold */
-  color: #007BFF; /* Optional: Customizes link color */
-  text-decoration: none; /* Optional: Removes underline */
+  display: block;
+  text-align: right; 
+  margin-top: 10px; 
+  font-weight: bold; 
+  color: #007BFF; 
+  text-decoration: none; 
 }
 
 .magazine-item .read-more:hover {
-  text-decoration: underline; /* Adds underline on hover */
-  color: #0056b3; /* Darker hover color */
+  text-decoration: underline; 
+  color: #0056b3;
 }
 
-/* Make sure the buttons appear under the magazine container */
+
 .magazine-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  position: relative; /* Ensure its child elements are placed relative to it */
-  padding-bottom: 100px; /* Ensure space for the ShareThis buttons if needed */
+  grid-template-columns: repeat(3, 1fr); 
+  position: relative; 
+  padding-bottom: 100px; 
 }
 
 .magazine-item img {
   width: 100%;
-  height: 100%;  /* Auto Maintains aspect ratio */
-  object-fit: cover;  /* Ensures the image covers the container without stretching */
-  display: block; /* Removes any inline spacing around images */
+  height: 100%; 
+  object-fit: cover;  
+  display: block; 
 }
 /* For medium screens (like tablets) */
 @media (max-width: 1024px) {
@@ -709,58 +702,56 @@ header {
   }
 }
 
-/* For smaller screens (like phones) */
 @media (max-width: 768px) {
 .magazine-container {
-  grid-template-columns: 1fr; /* One column */
+  grid-template-columns: 1fr; 
   }
 }
 
-/* Mobile-specific styles */
+
 @media (max-width: 768px) {
-  /* Style adjustments for the first magazine item */
+
   .magazine-item:first-of-type img {
-    object-fit: contain;  /* Makes sure the whole image fits inside the container */
+    object-fit: contain;  
     width: 100%;
     height: auto;
   }
 }
 
 
-/* Dark mode styling for the magazine container */
+
 body.dark-mode .magazine-container {
-  background-color: transparent; /* Remove background in dark mode */
-  color: #F0F7EE; /* Light text color for dark mode */
+  background-color: transparent; 
+  color: #F0F7EE; 
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode styling for the magazine items */
+
 body.dark-mode .magazine-container .magazine-item {
-  background-color: #011A24; /* Remove background in dark mode */
-  color: #FFFFF3; /* Light text color for dark mode */
-  box-shadow: none; /* Remove the shadow if desired, or adjust it for dark mode */
-  border: 0.5px solid #024f68; /* Light border for separation */
+  background-color: #011A24; 
+  color: #FFFFF3; 
+  box-shadow: none; 
+  border: 0.5px solid #024f68; 
 }
 
-/* Mobile-specific adjustments */
+
 @media (max-width: 768px) {
 .magazine-container {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More compact grid on smaller screens */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
   }
 
 .magazine-container .magazine-item:nth-child(1) {
-  grid-column: span 1; /* First item takes up one column */
-  grid-row: span 1; /* First item doesn’t take up too much space */
+  grid-column: span 1; 
+  grid-row: span 1; 
 }
 
 .magazine-item .thumbnail {
-  height: auto; /* Ensure height adjusts based on content */
-  aspect-ratio: 4/3; /* Maintain a better aspect ratio on smaller screens */
+  height: auto; 
+  aspect-ratio: 4/3; 
   }
 }
 
 /* CONTACT ME PAGE STUFF */
-/* Contact Container */
 .contact-container {
   max-width: 200px;
   margin: 50px auto;
@@ -799,28 +790,27 @@ body.dark-mode .magazine-container .magazine-item {
 }
 
 a {
-  display: inline; /* Makes the anchor tag behave like a block-level element */
+  display: inline; 
 
 }
 
 h1 {
-  color: #000000; /* Black text color for light mode */
+  color: #000000; 
   text-align: center;
   font-size: 1.8vw; 
   font-weight: bold;
   position: relative;
 }
 
-/* Dark mode specific styling for h1 */
+
 body.dark-mode h1 {
-  color: #FFFFFF; /* White text color for dark mode */
+  color: #FFFFFF; 
 }
 
-/* h1 for small screens */
 @media (max-width: 768px) {
   h1 {
-    padding: 0 20px; /* Add space on left and right sides */
-    margin: 0;       /* Remove default margin */
+    padding: 0 20px; 
+    margin: 0;       
   }
 }
 
@@ -836,51 +826,50 @@ body.dark-mode h1 {
 .subtitle {
   font-size: 1rem;
   text-align: center;
-  color: #666; /* A lighter color for subtle appearance */
+  color: #666; 
   margin: 0;
 }
 
 h2 {
-  text-align: left; /* Aligns the text to the left */
+  text-align: left;
 }
 
 .line-break {
-  height: 20px; /* Creates a custom line break with a specific height */
+  height: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
   text-align: center;
-  font-size: 2.0vw; /* Standard size */
+  font-size: 2.0vw;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* Styles for smaller screens (mobile devices) */
 @media (max-width: 768px) {
   h1 {
-    font-size: 5vw; /* Adjust font size for smaller screens */
+    font-size: 5vw; 
   }
 
   h2 {
-    text-align: center; /* Change alignment for mobile if needed */
+    text-align: center; 
   }
 
   h3 {
-    font-size: 6vw; /* Adjust font size for smaller screens */
+    font-size: 6vw; 
   }
 
   .line-break {
-    height: 15px; /* Adjust line-break height for mobile */
+    height: 15px; 
   }
 }
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+  padding-bottom: 56.25%; 
   height: 0;
   overflow: hidden;
-  margin: 0 auto; /* Center the wrapper horizontally */
+  margin: 0 auto; 
   max-width: 800px; 
 }
 
@@ -890,11 +879,11 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  max-height: 450px; /* Optional: Constrain height for desktop */
+  max-height: 450px; 
 }
 
 @media (min-width: 768px) {
   .video-wrapper {
-    margin-bottom: 20px; /* Adjust spacing for tablets and up */
+    margin-bottom: 20px; 
   }
 }
