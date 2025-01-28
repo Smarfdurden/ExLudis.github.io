@@ -1,89 +1,58 @@
-// JavaScript to toggle menu visibility
+// JavaScript to toggle menu visibility on click
 const toggle = document.getElementById('menu-toggle');
 const menu = document.querySelector('.menu');
-const menuLinks = document.querySelectorAll('.menu a');
+const menuLinks = document.querySelectorAll('.menu a');  // Get all the links in the menu
 
-// Toggle menu visibility on hamburger click
+// Toggle the menu visibility when clicking the hamburger icon
 toggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
+  menu.classList.toggle('active'); // Toggle visibility of the menu
 });
 
-// Close menu when a link is clicked
+
+// Close the menu when a link is clicked
 menuLinks.forEach(link => {
   link.addEventListener('click', () => {
-    menu.classList.remove('active');
+    menu.classList.remove('active');  // Close the menu when a link is clicked
   });
 });
 
-// Dark mode toggle
+// JavaScript to toggle dark mode
 const toggleButton = document.getElementById('toggle-dark-mode');
 const icon = document.getElementById('icon');
 
-// Function to update dark mode UI
-function updateDarkModeUI(isDarkMode) {
-  document.body.classList.toggle('dark-mode', isDarkMode); // Add/remove dark-mode
-  localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled'); // Save preference
-  const oldIconClass = isDarkMode ? 'fa-sun' : 'fa-moon';
-  const newIconClass = isDarkMode ? 'fa-moon' : 'fa-sun';
-  icon.classList.replace(oldIconClass, newIconClass); // Update icon
-}
-
-// Load dark mode preference on page load
-document.addEventListener('DOMContentLoaded', () => {
-  const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-  updateDarkModeUI(isDarkMode);
-});
-
-// Toggle dark mode on button click
-toggleButton.addEventListener('click', () => {
-  const isDarkMode = !document.body.classList.contains('dark-mode');
-  updateDarkModeUI(isDarkMode);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Check if the user has a preference stored in localStorage
+// Function to apply dark mode from localStorage on page load
+function applyDarkMode() {
   if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  } else {
+    document.body.classList.remove('dark-mode');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
   }
+}
 
-  // Toggle dark mode on button click
-  $('#toggle-dark-mode').click(function () {
-    document.body.classList.toggle('dark-mode');
+// Apply dark mode when the page loads
+applyDarkMode();
 
-    // Save the user's preference in localStorage
-    if (document.body.classList.contains('dark-mode')) {
+// Function to toggle dark/light mode
+if (toggleButton) {
+  toggleButton.addEventListener('click', () => {
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+  
+    // Update localStorage based on dark mode status
+    if (isDarkMode) {
       localStorage.setItem('darkMode', 'enabled');
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon'); // Show moon icon for dark mode
     } else {
       localStorage.setItem('darkMode', 'disabled');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun'); // Show sun icon for light mode
     }
   });
-});
+}
 
-$(document).ready(function() {
-  // Check if dark mode is enabled
-  const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
-  if (isDarkMode) {
-    $('body').addClass('dark-mode');
-  } else {
-    $('body').removeClass('dark-mode');
-  }
 
-  // Apply the background color immediately
-  if ($('body').hasClass('dark-mode')) {
-    $('body').css('background-color', '#00070C'); // Dark mode background color
-  } else {
-    $('body').css('background-color', '#F0F7EE'); // Light mode background color
-  }
 
-  // Toggle dark mode on button click
-  $('#toggle-dark-mode').click(function() {
-    $('body').toggleClass('dark-mode');
-    const isDarkMode = $('body').hasClass('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
-    if (isDarkMode) {
-      $('body').css('background-color', '#00070C'); // Dark mode background color
-    } else {
-      $('body').css('background-color', '#F0F7EE'); // Light mode background color
-    }
-  });
-});
