@@ -10,7 +10,6 @@ body {
   flex-direction: column;
 }
 
-
 :root {
   --bg-color: #F0F7EE;
   --text-color: #001021; 
@@ -23,11 +22,9 @@ body {
   width: 100%; 
 }
 
-
 .main-content {
   flex-grow: 1; 
 }
-
 
 blockquote {
   font-style: italic;
@@ -551,7 +548,7 @@ header {
 .top-image {
   display: block; 
   margin: 0 auto; 
-  width: 60%; 
+  width: 30%; 
   max-width: 1200px;
   height: auto; 
 }
@@ -731,7 +728,6 @@ body.dark-mode .magazine-container .magazine-item {
   border: 0.5px solid #024f68; 
 }
 
-
 @media (max-width: 768px) {
 .magazine-container {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
@@ -806,7 +802,7 @@ body.dark-mode h1 {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 1.7vw; 
+    font-size: 1.0vw; 
     color: #000000; 
     text-align: center;
   }
@@ -836,7 +832,7 @@ h3 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 5vw; 
+    font-size: 3vw; 
     padding: 0 20px; 
     margin: 0;   
   }
