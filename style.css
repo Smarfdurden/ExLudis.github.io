@@ -629,7 +629,6 @@ header {
 }
 
 .magazine-item {
-
   background-color: var(--item-bg-color);
   color: var(--item-text-color);
   padding: 20px;
@@ -642,6 +641,15 @@ header {
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.magazine-item .date {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.1rem;
+  margin-top: 1rem;
+  display: block;
 }
 
 .magazine-item h2,
@@ -660,7 +668,7 @@ header {
 .magazine-item p {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 0.9rem;
-  line-height: 1.8;
+  line-height: 2.3;
   margin: 0 0 1rem 0;
 }
 
