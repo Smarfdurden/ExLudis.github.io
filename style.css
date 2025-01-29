@@ -181,28 +181,16 @@ body.dark-mode blockquote footer {
   margin-bottom: 1em; 
 }
 
-@media (max-width: 768px) {
-  .vertical-grid {
-    display: none;
-  }
-}
 
 .small-image {
   display: block; 
   margin: 0 auto; 
-  width: 300px;
+  width: 400px;
   height: auto;
 }
 
 .container {
   display: block; 
-}
-
-
-@media (max-width: 768px) {
-  .vertical-grid {
-    display: none;
-  }
 }
 
 section img {
@@ -448,9 +436,6 @@ body.light-mode #toggle-dark-mode {
   margin: 0 auto;
   }
 
-
-
-
 .sharethis-inline-follow-buttons {
   background-color: inherit;
   position: relative;
@@ -553,13 +538,51 @@ header {
   height: auto; 
 }
 
-
-@media (max-width: 768px) {
-.top-image {
-  width: 80%;
-  max-width: 600px; 
+@media (max-width: 375px) {
+  .top-image {
+    width: 100%; 
   }
 }
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .top-image {
+    width: 100%; 
+    max-width: 600px; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+  .top-image {
+    width: 80%; 
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1023px) {
+  .top-image {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1352px) {
+  .top-image {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1353px) and (max-width: 1919px) {
+  .top-image {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .top-image {
+    width: 30%;
+  }
+}
+
+
 
 /* MAGAZINE STUFF */
 .magazine-container {
@@ -787,26 +810,6 @@ a {
 
 }
 
-h1 {
-  color: #000000; 
-  text-align: center;
-  font-size: 1.7vw; 
-  font-weight: bold;
-  position: relative;
-}
-
-
-body.dark-mode h1 {
-  color: #FFFFFF; 
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 1.0vw; 
-    color: #000000; 
-    text-align: center;
-  }
-}
 
 .subtitle {
   font-size: 1rem;
@@ -830,25 +833,60 @@ h3 {
   margin-bottom: 20px;
 }
 
+
+h1 {
+  color: #000000; 
+  text-align: center;
+  font-size: 2vw; 
+  font-weight: bold;
+  position: relative;
+}
+
+body.dark-mode h1 {
+  color: #FFFFFF; 
+}
+
+@media (max-width: 1352px) {
+  h1 {
+    font-size: 1vw;
+  }
+}
+
+@media (max-width: 960px) {
+  h1 {
+    font-size: 1.5em; 
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 5vw; 
     padding: 0 20px; 
     margin: 0;   
   }
+}
 
-  h2 {
-    text-align: center; 
-  }
-
-  h3 {
-    font-size: 6vw; 
-  }
-
-  .line-break {
-    height: 15px; 
+@media (max-width: 479px) {
+  h1 {
+    font-size: 5vw; 
   }
 }
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 1.0vw; 
+    text-align: center;
+  }
+}
+/* iPhone SE?? */
+  
+
+
+
+.line-break {
+  height: 15px; 
+}
+
 
 .video-wrapper {
   position: relative;
