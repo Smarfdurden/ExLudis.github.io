@@ -705,7 +705,11 @@ header {
   }
 }
 
-
+@media (max-width: 430px) {
+  .magazine-item:nth-child(1) .thumbnail {
+    height: 200px; 
+  }
+}
 .magazine-item .read-more {
   display: block;
   text-align: right; 
