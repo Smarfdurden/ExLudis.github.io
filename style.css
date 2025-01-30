@@ -18,7 +18,7 @@ body {
 }
 
 .spacer {
-  height: 100px;
+  height: 75px;
   width: 100%; 
 }
 
@@ -81,6 +81,30 @@ body.dark-mode blockquote footer {
   
 }
 
+.navbar-center {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-brand {
+  display: none;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 768px) {
+  .navbar-center {
+    display: block; 
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: block; 
+    font-weight: bolder;
+  }
+}
 
 .navbar ul {
   list-style-type: none;
@@ -93,11 +117,9 @@ body.dark-mode blockquote footer {
 
 .navbar li {
   margin: 0 15px;
-  position: center;
 }
 
 .navbar a {
-  display: block;
   color: #F0F7EE;
   text-decoration: none;
   padding: 10px 15px;
@@ -151,10 +173,79 @@ body.dark-mode blockquote footer {
   display: block; 
   margin: 0 auto; 
 }
+
+.circle-image {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-right: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  margin: 0; 
+}
+
+.profile-text {
+  max-width: 300px;
+  text-align: center;
+}
+
+.profile-name {
+  margin: 0; 
+}
+
+.profile-description {
+  overflow: hidden;
+  max-height: 50px; 
+  transition: max-height 0.3s ease;
+  font-size: 0.9em;
+}
+
+.profile-section {
+  background-color: inherit; 
+  padding: 20px; 
+  max-width: 475px; 
+  margin: 20px auto; 
+  text-align: left; 
+}
+
+body.dark-mode .profile-section {
+  background-color: inherit; 
+}
+
+.profile-description.expanded {
+  max-height: 500px; 
+}
+
+.read-more-btn {
+  background-color: #024f68;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.read-more-btn:hover {
+  background-color: #013a4d;
+}
+
 .centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin: 20px auto;
   width: 100%; 
+  z-index: 1000;
 }
 	
 .centered-container .dates {
@@ -200,37 +291,12 @@ body.dark-mode blockquote footer {
   display: block; 
 }
 
-section img {
-  width: 100%; 
-  max-width: 1000px;
-  height: 50vh;
-  object-fit: cover;
-}
-
-@media (min-width: 1600px) {
-  section img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  section img {
-  width: 100%; 
-  max-width: 1000px; 
-  margin: 0 auto; 
-  }
-}
-
-
 .boxed-section {
   background-color: #fff; 
   border: 1px solid #ddd; 
   border-radius: 8px; 
   padding: 20px; 
-  max-width: 650px; 
+  max-width: 475px; 
   margin: 20px auto; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left; 
@@ -247,7 +313,6 @@ body.dark-mode .boxed-section {
   color: #F0F7EE; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
-
 
 .section {
   display: flex; 
@@ -267,7 +332,6 @@ body.dark-mode .boxed-section {
   padding: 20px; 
 }
 
-
 body.dark-mode {
   --bg-color: #00070c; 
   --text-color: #F0F7EE;
@@ -285,7 +349,6 @@ body.dark-mode .boxed-section {
 body.dark-mode a {
   color: #F0F7EE;
 }
-
 
 #toggle-dark-mode {
   position: fixed;
@@ -458,7 +521,7 @@ body.light-mode #toggle-dark-mode {
   transform: translateX(-50%);
   padding: 10px;
   background-color: hidden;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .sharethis-sticky-share-buttons {
@@ -468,7 +531,7 @@ body.light-mode #toggle-dark-mode {
   bottom: 60px; 
   left: 50%; 
   transform: translateX(-50%); 
-  z-index: 1000; 
+  z-index: 1; 
   margin: 0; 
   width: auto;
   text-align: center; 
@@ -494,7 +557,7 @@ body.light-mode #toggle-dark-mode {
 
 
 footer {
-  background-color: #333; 
+  background-color: #011a24; 
   color: white; 
   padding: 20px 0; 
   text-align: center; 
@@ -533,15 +596,52 @@ footer .sharethis-inline-follow-buttons {
 }
 }
 
-header {
-  text-align: center; 
+.article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 475px;
+  margin: 0 auto;
+  padding: 10px;
 }
+
+.article-header h1 {
+  margin: 0;
+  font-size: 28px;
+  width: 475px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.article-header .author-name,
+.article-header p {
+  margin: 5px 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  width: 100%;
+}
+
+.article-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-left: 10px;
+}
+
 
 .top-image {
   display: block; 
   margin: 0 auto; 
-  width: 30%; 
-  max-width: 1200px;
+  width: 100%; 
+  max-width: 475px;
   height: auto; 
 }
 
@@ -554,42 +654,40 @@ header {
 @media (min-width: 376px) and (max-width: 768px) {
   .top-image {
     width: 100%; 
-    max-width: 600px; 
+    max-width: 475px; 
   }
 }
 
 @media (min-width: 769px) and (max-width: 960px) {
   .top-image {
     width: 80%; 
-    max-width: 1200px;
+    
   }
 }
 
 @media (min-width: 961px) and (max-width: 1023px) {
   .top-image {
-    width: 60%;
+    max-width: 475px;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1352px) {
   .top-image {
-    width: 60%;
+    max-width: 475px;
   }
 }
 
 @media (min-width: 1353px) and (max-width: 1919px) {
   .top-image {
-    width: 50%;
+    max-width: 475px;
   }
 }
 
 @media (min-width: 1920px) {
   .top-image {
-    width: 30%;
+    max-width: 475px;
   }
 }
-
-
 
 /* MAGAZINE STUFF */
 .magazine-container {
@@ -776,21 +874,6 @@ body.dark-mode .magazine-container .magazine-item {
   border: 0.5px solid #024f68; 
 }
 
-@media (max-width: 768px) {
-.magazine-container {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-  }
-
-.magazine-container .magazine-item:nth-child(1) {
-  grid-column: span 1; 
-  grid-row: span 1; 
-}
-
-.magazine-item .thumbnail {
-  height: auto; 
-  aspect-ratio: 4/3; 
-  }
-}
 
 /* CONTACT ME PAGE STUFF */
 .contact-container {
@@ -864,19 +947,14 @@ h1 {
   font-size: 2vw; 
   font-weight: bold;
   position: relative;
+  margin: 0;
+  padding: 0 20px;
 }
 
 body.dark-mode h1 {
   color: #FFFFFF; 
 }
 
-
-
-@media (min-width: 1353px) and (max-width: 1919px) {
-  h1 {
-    font-size: 2vw; 
-  }
-}
 
 @media (min-width: 1920px) {
   h1 {

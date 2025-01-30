@@ -56,3 +56,18 @@ if (toggleButton) {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const readMoreBtn = document.querySelector('.read-more-btn');
+  const profileDescription = document.querySelector('.profile-description');
+
+  readMoreBtn.addEventListener('click', function() {
+    profileDescription.classList.toggle('expanded');
+    if (profileDescription.classList.contains('expanded')) {
+      readMoreBtn.textContent = 'Read Less';
+    } else {
+      readMoreBtn.textContent = 'Read More';
+    }
+  });
+});
+
+
