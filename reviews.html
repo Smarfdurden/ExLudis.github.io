@@ -35,7 +35,7 @@
 	<link rel="preload" href="style.css" as="style" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<!-- Inline JavaScript to apply dark mode early -->
+
 <script>
   (function() {
     if (localStorage.getItem('darkMode') === 'enabled') {
@@ -58,15 +58,17 @@
     <li><a href="news.html" class="load-page">Gaming News</a></li>
     <li><a href="contactme.html" class="load-page">Contact Me</a></li>
   </ul>
-
+  <div class="navbar-center">
+    <a href="index.html" class="navbar-brand">Smarf Durden</a>
+  </div>
     <button id="toggle-dark-mode">
       <i id="icon" class="fas fa-sun"></i> 
     </button>
   </nav>
   <div class="spacer"></div>
- 
+ <br>
   <header>
-    <h1> <span style="font-size: 2.3vw ;">Game Reviews</span></h></header>
+    <h1> <span style="font-size: 1rem ;">Game Reviews</span></h></header>
   </header>
 
 
@@ -127,6 +129,9 @@
 		<span class="read-more">Read More</span>
       </a>
   </div>
+  <footer>
+    <p>© 2025 Smarf Durden. All rights reserved.</p>
+    </footer>
 	<script src="script.js" defer></script>
   <script src="Assets/js/jquery-3.6.0.min.js" async></script>
 	<br>
