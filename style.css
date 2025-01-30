@@ -866,6 +866,8 @@ body.dark-mode h1 {
   color: #FFFFFF; 
 }
 
+
+
 @media (min-width: 1353px) and (max-width: 1919px) {
   h1 {
     font-size: 2vw; 
@@ -874,7 +876,7 @@ body.dark-mode h1 {
 
 @media (min-width: 1920px) {
   h1 {
-    font-size: 1vw; 
+    font-size: 2vw; 
     padding: 0 20px; 
     margin: 0; 
   }
@@ -891,7 +893,7 @@ body.dark-mode h1 {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 2vw; 
+    font-size: 2rem; 
     padding: 0 20px; 
     margin: 0; 
   }
@@ -899,7 +901,7 @@ body.dark-mode h1 {
 
 @media (max-width: 960px) {
   h1 {
-    font-size: 2.5vw; 
+    font-size: 1.8rem; 
     padding: 0 20px; 
     margin: 0; 
   }
@@ -907,7 +909,7 @@ body.dark-mode h1 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.8vw; 
+    font-size: 1.5rem; 
     padding: 0 20px; 
     margin: 0;   
   }
@@ -915,12 +917,13 @@ body.dark-mode h1 {
 
 @media (max-width: 479px) {
   h1 {
-    font-size: 3vw; 
+    font-size: 5vw; 
     padding: 0 20px; 
     margin: 0; 
   }
 }
 
+/* Galaxy s9+ */
 @media (max-width: 360px) {
   h1 {
     font-size: 6.5vw; 
