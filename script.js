@@ -54,8 +54,6 @@ if (toggleButton) {
   });
 }
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const readMoreBtn = document.querySelector('.read-more-btn');
   const profileDescription = document.querySelector('.profile-description');
@@ -69,5 +67,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-
