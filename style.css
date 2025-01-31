@@ -144,13 +144,29 @@ body.dark-mode blockquote footer {
   transition: color 0.3s;
   font-weight: bold;
   padding: 10px 15px;
-  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
   }
+
+  .menu {
+    flex-direction: column; 
+    align-items: flex-start; 
+    width: 250px; 
+    position: fixed; 
+    left: -250px; 
+    background-color: #011a24;
+    transition: left 0.3s ease; 
+    z-index: 1000;
+  }
+  
+  .menu.active {
+    left: 0; /* Slide the menu in from the left */
+  }
+
   .navbar ul {
     flex-direction: column;
     width: 100%;
