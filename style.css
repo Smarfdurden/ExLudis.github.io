@@ -94,7 +94,6 @@ body.dark-mode blockquote footer {
 .navbar li {
   margin: 0 15px;
 }
-
 .navbar a {
   color: #F0F7EE;
   text-decoration: none;
@@ -142,11 +141,6 @@ body.dark-mode blockquote footer {
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .navbar ul {
     flex-direction: column;
     width: 100%;
@@ -154,11 +148,13 @@ body.dark-mode blockquote footer {
 
   .navbar li {
     margin: 10px 0;
+    width: 100%;
   }
 
   .navbar a {
     text-align: left;
     padding: 10px 20px;
+    display: block;
   }
 
   .menu-toggle {
@@ -722,11 +718,15 @@ footer .sharethis-inline-follow-buttons {
 
 .magazine-item .date {
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.5rem;
+  color: #333; 
   margin-bottom: 0.1rem;
   margin-top: 1rem;
   display: block;
+}
+
+body.dark-mode .magazine-item .date {
+  color: #ccccccd8; 
 }
 
 .magazine-item h2,
