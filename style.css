@@ -76,6 +76,7 @@ body.dark-mode blockquote footer {
   left: 0;
   right: 0;
   width: 100%;
+  max-width: 100vw;
   z-index: 1000;
   border-bottom: 0.5px solid var(--primary-border-color);
   background-color: #011a24;
@@ -602,15 +603,17 @@ footer .sharethis-inline-follow-buttons {
   align-items: center;
   text-align: center;
   margin-bottom: 20px;
-  width: 475px;
+  width: 100%;
+  max-width: 475px;
   margin: 0 auto;
   padding: 10px;
 }
 
 .article-header h1 {
   margin: 0;
-  font-size: 28px;
-  width: 475px;
+  font-size: 24px;
+  width: 100%;
+  max-width: 475px;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -619,7 +622,7 @@ footer .sharethis-inline-follow-buttons {
 .article-header p {
   margin: 5px 0;
   width: 100%;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .article-meta {
@@ -633,7 +636,7 @@ footer .sharethis-inline-follow-buttons {
 .article-date {
   font-size: 0.8rem;
   color: #888;
-  margin-left: 10px;
+  margin-left: 250px;
 }
 
 
@@ -676,7 +679,6 @@ footer .sharethis-inline-follow-buttons {
   padding-bottom: 100px; 
 }
 
-
 .magazine-container .magazine-item {
   display: block;
   background-color: var(--item-bg-color); 
@@ -699,7 +701,6 @@ footer .sharethis-inline-follow-buttons {
   text-decoration: none;
 }
 
-
 .magazine-item:nth-child(1) {
   grid-column: span 2;
 }
@@ -717,7 +718,6 @@ footer .sharethis-inline-follow-buttons {
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
-
 }
 
 .magazine-item .date {
@@ -925,7 +925,6 @@ h3 {
   margin-bottom: 20px;
 }
 
-
 h1 {
   color: #000000; 
   text-align: center;
@@ -958,9 +957,9 @@ body.dark-mode h1 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   h1 {
-    font-size: 2vw; 
+    font-size: 1.5vw; 
     padding: 0 20px; 
     margin: 0;   
   }
