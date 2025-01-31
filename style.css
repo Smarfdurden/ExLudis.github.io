@@ -22,7 +22,7 @@ body {
   --text-color: #001021; 
   --item-bg-color: #f8f9fa; 
   --item-text-color: #001021;
-  --primary-border-color: #024f68;
+  --primary-border-color: #2F2F2F;
 }
 
 .spacer {
@@ -36,7 +36,7 @@ body {
 
 blockquote {
   font-style: italic;
-  border-left: 5px solid #4B0082;
+  border-left: 5px solid #627F7B;
   padding: 5px 15px;
   margin: 10px 0;
   background-color: #f9f9f9;
@@ -305,12 +305,26 @@ body.dark-mode .profile-section {
 
 
 .container {
-  display: block; 
+  display: block;
+
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 10px; 
+  background-color: var(--bg-color); 
+}
+
+.item {
+  padding: 5px; 
+  background-color: var(--bg-color); 
 }
 
 .boxed-section {
-  background-color: #fff; 
-  border: 1px solid #ddd; 
+  background-color: var(--bg-color); 
+  border: 1px solid var(--bg-color); 
   border-radius: 8px; 
   padding: 20px; 
   max-width: 475px; 
@@ -324,8 +338,7 @@ body.dark-mode .profile-section {
 }
 
 body.dark-mode .boxed-section {
-  background-color: #23252F; 
-  border-color: lightblue; 
+  background-color: #2F2F2F; 
   border-color: var(--primary-border-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
@@ -363,7 +376,7 @@ body.dark-mode {
 
 body.dark-mode .boxed-section {
   background-color: #011a24;
-  border: 0.5px solid #024f68;
+  border: 0.5px solid #2F2F2F;
   color: #F0F7EE;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
@@ -406,7 +419,7 @@ body.dark-mode a {
 
 body.dark-mode .sharethis-inline-follow-buttons {
   background-color: inherit;
-  border-color: #444;
+  border-color: #2F2F2F;
   position: relative;
   z-index: 1; 
   margin: 0; 
@@ -416,7 +429,7 @@ body.dark-mode .sharethis-inline-follow-buttons {
 body.dark-mode .sharethis-inline-follow-buttons .st-button {
   color: #F0F7EE; 
   background-color: inherit; 
-  border-color: #444; 
+  border-color: #2F2F2F; 
 }
 
 body.dark-mode .sharethis-inline-follow-buttons .st-button:hover {
@@ -814,7 +827,7 @@ body.dark-mode .magazine-container .magazine-item {
   background-color: #011A24; 
   color: #FFFFF3; 
   box-shadow: none; 
-  border: 0.5px solid #024f68; 
+  border: 0.2px solid #2F2F2F; 
 }
 
 
@@ -894,11 +907,12 @@ body.dark-mode .magazine-container .magazine-item {
 .email-button {
   display: inline-block;
   margin-top: 20px;
-  padding: 10px 15px;
+  padding: 5px 10px; 
   background-color: #007BFF;
   color: #F0F7EE;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 0.8rem; 
 }
 
 .email-button:hover {
