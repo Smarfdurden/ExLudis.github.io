@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -69,7 +76,7 @@ body.dark-mode blockquote footer {
   justify-content: space-between;
   flex-wrap: wrap;
   height: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
   padding: 8px;
   position: fixed;
   top: 0;
@@ -141,6 +148,9 @@ body.dark-mode blockquote footer {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
   .navbar ul {
     flex-direction: column;
     width: 100%;
@@ -155,6 +165,7 @@ body.dark-mode blockquote footer {
     text-align: left;
     padding: 10px 20px;
     display: block;
+    /* adding width knocks menu items off center */
   }
 
   .menu-toggle {
