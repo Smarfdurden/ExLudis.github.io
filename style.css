@@ -318,13 +318,13 @@ body.dark-mode .profile-section {
 }
 
 .item {
-  padding: 5px; 
+  padding: 10px; 
   background-color: var(--bg-color); 
 }
 
 .boxed-section {
   background-color: var(--bg-color); 
-  border: 1px solid var(--bg-color); 
+  border: 0.5px solid var(--bg-color); 
   border-radius: 8px; 
   padding: 20px; 
   max-width: 475px; 
@@ -906,13 +906,13 @@ body.dark-mode .magazine-container .magazine-item {
 
 .email-button {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 5px 10px; 
   background-color: #007BFF;
   color: #F0F7EE;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 0.8rem; 
+  font-size: 1.2rem; 
 }
 
 .email-button:hover {
