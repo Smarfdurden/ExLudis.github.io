@@ -35,7 +35,7 @@ body {
 }
 
 blockquote {
-  font-style: italic;
+  font-style: none;
   padding: 5px 15px;
   margin: 10px 0;
   background-color: var(--bg-color);
@@ -54,7 +54,7 @@ blockquote footer {
   background: inherit;
   font-size: 0.9em;
   text-align: right;
-  color: #F0F7EE;
+  color: #333;
   margin: 0;
   padding-top: 2px; 
 }
@@ -340,7 +340,7 @@ color: grey;
 }
 
 .boxed-section {
-  background-color: var(--bg-color); 
+  background-color: white; 
   border: 0.5px solid var(--bg-color); 
   border-radius: 8px; 
   padding: 20px; 
