@@ -151,12 +151,6 @@ body.dark-mode blockquote footer {
   padding: 10px 15px;
 }
 
-.menu a:active {
-  background-color: #024f68; 
-  color: #ffffff; 
-  transform: scale(0.95);
-}
-
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
