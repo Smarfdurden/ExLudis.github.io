@@ -269,7 +269,9 @@ body.dark-mode .profile-section {
 .read-more-btn:hover {
   background-color: #013a4d;
 }
-
+.game-info-container {
+color: grey;
+}
 .centered-container {
   display: flex;
   flex-direction: column;
@@ -674,6 +676,22 @@ footer .sharethis-inline-follow-buttons {
   margin-left: 250px;
 }
 
+@media (max-width: 600px) {
+  .article-header h1 {
+    font-size: 20px;
+  }
+
+  .article-header .author-name,
+  .article-header p {
+    font-size: 10px;
+  }
+
+  .article-date {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 
 .top-image {
   display: block; 
@@ -1049,4 +1067,12 @@ body.dark-mode h1 {
   .video-wrapper {
     margin-bottom: 20px; 
   }
+}
+
+.short-hr {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--text-color), rgba(0, 0, 0, 0)); /* Gradient for fading effect */
+  border: none;
+  margin: 10px auto;
 }

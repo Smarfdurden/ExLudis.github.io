@@ -67,3 +67,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const articles = document.querySelectorAll('.article-container');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tag = button.getAttribute('data-tag');
+      articles.forEach(article => {
+        const tags = article.getAttribute('data-tags').split(',');
+        if (tags.includes(tag)) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    });
+  });
+});
