@@ -38,7 +38,7 @@ blockquote {
   font-style: italic;
   padding: 5px 15px;
   margin: 10px 0;
-  background-color: #f9f9f9;
+  background-color: var(--bg-color);
   color: #333;
   font-size: 1.0em;
   line-height: 1.8;
@@ -60,9 +60,8 @@ blockquote footer {
 }
 
 body.dark-mode blockquote {
-  background-color: #3b4252;
+  background-color: var(--bg-color);
   color: #ddd;
-  border-left: 5px solid skylightblue;
 }
 
 body.dark-mode blockquote footer {
@@ -197,11 +196,6 @@ body.dark-mode blockquote footer {
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar a:active {
-    background-color: rgba(255, 255, 255, 0.1); /* Light overlay to show clickable area */
-    color: #F0F7EE;
   }
 }
 
@@ -622,7 +616,7 @@ footer .sharethis-inline-follow-buttons {
 
 
 .dark-mode .footer {
-  background-color: black;
+  background-color: #011a24;
   color: #F0F7EE;
 }
 
