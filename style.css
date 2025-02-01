@@ -72,7 +72,7 @@ body.dark-mode blockquote footer {
 
 .navbar {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 60px;
@@ -107,7 +107,12 @@ body.dark-mode blockquote footer {
   padding: 10px 15px;
   display: block;
   text-align: center; 
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  transform: scale(1.1);
 }
 
 .menu {
