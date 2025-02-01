@@ -433,6 +433,7 @@ body.dark-mode a {
 #toggle-dark-mode.sun-moon .icon {
   display: inline-block;
   transition: transform 0.3s;
+  transform: rotate(180deg);
 }
 
 body.dark-mode #toggle-dark-mode.sun-moon .icon {
@@ -467,6 +468,15 @@ body.dark-mode #toggle-dark-mode.switch {
 
 body.dark-mode #toggle-dark-mode.switch::before {
   transform: translateX(25px);
+}
+
+#toggle-dark-mode .icon {
+  transition: transform 0.3s;
+  transform: rotate(0deg); 
+}
+
+#toggle-dark-mode.clicked .icon {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 1024px) {
