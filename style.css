@@ -44,7 +44,7 @@ blockquote {
   line-height: 1.8;
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid grey;
+  border-left: 5px solid #240B01;
 }
 
 blockquote p {
@@ -751,12 +751,11 @@ footer .sharethis-inline-follow-buttons {
   }
 }
 
-
 .top-image {
   display: block; 
   margin: 0 auto; 
   width: 100%; 
-  max-width: 475px;
+  max-width: 900px;
   height: auto; 
 }
 
