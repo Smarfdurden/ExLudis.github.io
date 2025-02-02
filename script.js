@@ -87,3 +87,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const magazineItems = document.querySelectorAll('.magazine-item');
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) - 100 && // Trigger 100px before the element is fully in view
+      rect.left >= 0 &&
+      rect.bottom >= 0 &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    magazineItems.forEach(item => {
+      if (isElementInViewport(item)) {
+        item.classList.add('slide-up');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll);
+
+  // Initial check
+  handleScroll();
+});
