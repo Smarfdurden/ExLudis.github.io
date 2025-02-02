@@ -831,6 +831,30 @@ footer .sharethis-inline-follow-buttons {
   background-repeat: no-repeat;
 }
 
+/* Keyframes for sliding animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Initial state of magazine items */
+.magazine-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Class to apply the sliding animation */
+.magazine-item.slide-up {
+  animation: slideUp 0.5s forwards;
+}
+
 .magazine-item .date {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 0.7rem;
