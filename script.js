@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) - 100 && // Trigger 100px before the element is fully in view
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0 &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
