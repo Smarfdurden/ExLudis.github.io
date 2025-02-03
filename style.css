@@ -301,7 +301,15 @@ color: grey;
 
 .image-container {
   text-align: center; 
+  margin-bottom: 1rem;
 }
+
+.image-credit {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
 .centered-text {
   text-align: center; 
   margin-bottom: 1em; 
