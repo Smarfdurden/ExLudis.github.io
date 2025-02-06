@@ -1,15 +1,14 @@
+
 <!DOCTYPE html> 
 <html lang="en">
   <head>
-	<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NX1DF89P5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-8NX1DF89P5');
-
   // Example: Event tracking for button clicks
   document.addEventListener('DOMContentLoaded', () => {
     const darkModeButton = document.getElementById('toggle-dark-mode');
@@ -25,7 +24,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Smarf Durden Video Game Reviews and Gaming News for PlayStation 5, Xbox Series X, Xbox Series S, Nintendo Switch 2, iOS and Android.">
+<meta name="description" content="Smarf Durden video game reviews and opinions for PlayStation 5, Xbox Series X, Xbox Series S, Nintendo Switch 2, iOS and Android.">
 <meta name="fediverse:creator" content="@smarfdurden@mastodon.social">
 <title>Home - SmarfDurden</title>
 <link rel="stylesheet" href="style.css">
@@ -40,31 +39,31 @@
 <style>
 </style>
     </head>
-	<body>
-	<nav class="navbar">
+  <body>
+  <nav class="navbar">
   <!-- Hamburger -->
   <div class="menu-toggle" id="menu-toggle">
     <i class="fas fa-bars"></i> 
   </div>
     <ul class="menu">
-      <li><a href="index.html" class="load-page">Home</a></li>
-      <li><a href="reviews.html" class="load-page">Game Reviews</a></li>
-      <li><a href="news.html" class="load-page">Gaming News</a></li>
+      <li><a href="index.html" class="load-page"><i class="fas fa-home"></i></a></li>
       <li><a href="contactme.html" class="load-page">Contact Me</a></li>
     </ul>
-    <button id="toggle-dark-mode">
-      <i id="icon" class="fas fa-sun"></i> 
-    </button>
+      <button id="toggle-dark-mode">
+        <i id="icon" class="fas fa-sun"></i> 
+      </button>
+    </div>
+    
   </nav>
-
 <div class="spacer"></div> <br>
-  <header>
-    <h1><span style="font-size: 1em;">Video Game Reviews & News</span> </h1>
-  </header>
-
+  
+  <div class="filter-buttons">
+    <button type="button" class="filter-button" data-filter="all">All</button>
+    <button type="button" class="filter-button" data-filter="articles">Articles</button>
+    <button type="button" class="filter-button" data-filter="reviews">Reviews</button>
+  </div>
 <div class="magazine-container">
-
-  <div class="magazine-item slide-up">
+  <div class="magazine-item slide-up" data-tags="articles">
     <a href="Pages/ea/Will_Mass_Effect_5_be_a_live-service_title.html">
       <div class="thumbnail" style="background-image: url('Assets/Mass Effect/3ade52118eeef6669e77b41524b386ec.webp');"></div>
       
@@ -74,18 +73,16 @@
   <span class="read-more">Read More</span>
     </a>
 </div>
-  <div class="magazine-item slide-up">
+  <div class="magazine-item slide-up" data-tags="articles">
     <a href="Pages/searchlight/Monthly_Searchlight_February's_Most_Anticipated_Games.html">
       <div class="thumbnail" style="background-image: url('Assets/collages/feb3_collage_fixed transparent.webp');"></div>
-      
       <h2>Monthly Searchlight: February's Most Anticipated Games</h2>
       <span class="date">February 03, 2025</span>
   <p class="excerpt">February is a packed month, so to get you ready, here’s a list of my most anticipated games for February 2025: Kingdom Come: Deliverance 2, Civilization 7, and more. </p>
   <span class="read-more">Read More</span>
     </a>
   </div>
-
-  <div class="magazine-item slide-up">
+  <div class="magazine-item slide-up" data-tags="articles">
     <a href="Pages/WB/Multiversus_shutting_down_after_season_5.html">
       <div class="thumbnail" style="background-image: url('Assets/WB/batshag.webp');"></div>
       
@@ -95,8 +92,7 @@
   <span class="read-more">Read More</span>
     </a>
   </div>
-
-  <div class="magazine-item slide-up">
+  <div class="magazine-item slide-up" data-tags="articles">
     <a href="Pages/Marvel Snap_has_already_found_a_new_publisher.html">
       <div class="thumbnail" style="background-image: url('Assets/Marvel Snap/Marvel-Snap-Key-Art.webp');"></div>
       
@@ -106,8 +102,7 @@
   <span class="read-more">Read More</span>
     </a>
   </div>
-
-  <div class="magazine-item slide-up">
+  <div class="magazine-item slide-up" data-tags="articles">
     <a href="Pages/Marvel Rivals/Marvel_Rivals_data_miners_now_think_the_‘fake’_heroes_are_real.html">
       <div class="thumbnail" style="background-image: url('Assets/Marvel Rivals/rivalsofficialart2.webp');"></div>
       
@@ -117,8 +112,7 @@
   <span class="read-more">Read More</span>
     </a>
   </div>
-
-  <div class="magazine-item">
+  <div class="magazine-item" data-tags="articles">
   <a href="Pages/ea/Dragon_Age_The_Veilguard_appears_to_receive_its_final_update.html">
     <div class="thumbnail" style="background-image: url('Assets/Veilguard/dav.webp');"></div>
     
@@ -128,8 +122,7 @@
     <span class="read-more">Read More</span>
   </a>
 </div>
-
-<div class="magazine-item">
+<div class="magazine-item" data-tags="articles">
       <a href="Pages/WB/Warner_Bros_president_is_stepping_down_following poor_financial_results.html">
         <div class="thumbnail" 
              style="background-image: url('Assets/WB/multiversus_artwork.webp');">
@@ -142,8 +135,7 @@
     <span class="read-more">Read More</span>
       </a>
     </div>
-
-<div class="magazine-item">
+<div class="magazine-item" data-tags="articles">
       <a href="Pages/Switch%202/Switch2_Mouse_Functionality.html">
         <div class="thumbnail" 
              style="background-image: url('Assets/Nintendo/nintenswitch2.avif');">
@@ -156,22 +148,19 @@
     <span class="read-more">Read More</span>
       </a>
     </div>
-
-	<div class="magazine-item">
-      <a href="Pages/Marvel Rivals\Marvel Rivals to Launch New Game Mode During Spring Festival.html">
+  <div class="magazine-item" data-tags="articles">
+      <a href="Pages/Marvel Rivals/Marvel Rivals to Launch New Game Mode During Spring Festival.html">
         <div class="thumbnail" 
              style="background-image: url('Assets/Marvel Rivals/no writing spring.webp');">
         </div>
         
         <h2>Marvel Rivals to Launch New Game Mode During Spring Festival</h2>
         <span class="date"> January 21, 2025</span>
-
-		<p class="excerpt"> Today Marvel Rivals released a new trailer which introduces their new game mode, Clash of Dancing Lions - a 3v3 soccer match where you can use your character abilities. This spring event will take place on January 23, which includes the new game mode and all the skins – including a free skin for Star-Lord, which might be the best skin in the bunch. </p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> Today Marvel Rivals released a new trailer which introduces their new game mode, Clash of Dancing Lions - a 3v3 soccer match where you can use your character abilities. This spring event will take place on January 23, which includes the new game mode and all the skins – including a free skin for Star-Lord, which might be the best skin in the bunch. </p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-	<div class="magazine-item">
+  <div class="magazine-item" data-tags="articles">
       <a href="Pages/snappublisher.html">
         <div class="thumbnail" 
              style="background-image: url('Assets/Marvel Snap/marvel-snap.webp');">
@@ -179,13 +168,13 @@
         
         <h2>Marvel Snap Returns Online After TikTok Ban, Developers Seek New Publisher to Prevent Future Issues</h2>
         <span class="date"> January 21, 2025</span>
-	
-		<p class="excerpt"> Marvel Snap is online in the U.S. again after it was banned after its publisher, NetEase, took it down alongside TikTok on Sunday. Second Dinner, the Marvel Snap developer, took to twitter to tell fans that it is actively looking for a new publisher to ensure it doesn’t happen in the future.  </p>
-		<span class="read-more">Read More</span>
+  
+    <p class="excerpt"> Marvel Snap is online in the U.S. again after it was banned after its publisher, NetEase, took it down alongside TikTok on Sunday. Second Dinner, the Marvel Snap developer, took to twitter to tell fans that it is actively looking for a new publisher to ensure it doesn’t happen in the future.  </p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-	
-	<div class="magazine-item">
+  
+  <div class="magazine-item" data-tags="articles">
       <a href="Pages/Ubisoft/acshadows.html">
         <div class="thumbnail" 
              style="background-image: url('Assets/AC Shadows/acshadows blank header.webp');">
@@ -193,13 +182,12 @@
         
         <h2>Everything you need to know about Assassin's Creed Shadows </h2>
         <span class="date"> January 08, 2025</span>
-
-		<p class="excerpt"> Ubisoft has once again shown off more Assassins Creed: Shadows gameplay - this time focusing on exploration. Ubisoft has previously shown off gameplay for stealth, combat, parkour and now exploration - which will presumably be the last blog before the game releases on March 20. </p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> Ubisoft has once again shown off more Assassins Creed: Shadows gameplay - this time focusing on exploration. Ubisoft has previously shown off gameplay for stealth, combat, parkour and now exploration - which will presumably be the last blog before the game releases on March 20. </p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
     
-    <div class="magazine-item">
+    <div class="magazine-item" data-tags="reviews">
       <a href="Pages/Reviews/RivalsReview.html">
         <div class="thumbnail" 
              style="background-image: url('Assets/Marvel Rivals/announcement.webp');">
@@ -213,124 +201,115 @@
     <span class="read-more">Read More</span>
       </a>
     </div>
-	
-    <div class="magazine-item">
+  
+    <div class="magazine-item" data-tags="articles">
       <a href="Pages/Marvel Rivals/Rivals2newheroes.html">
         <div class="thumbnail" style="background-image: url('Assets/Marvel Rivals/rivalsheader.webp');"></div>
         
         <h2>Marvel Rivals to Introduce Two New Heroes Every Season</h2>
         <span class="date"> January 14, 2025</span>
-		<p class="excerpt"> In an interview with the British outlet Metro, Marvel Rivals director Guangyun Chen had this to say when asked what cadence players should expect for new heroes being added to the game: </p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> In an interview with the British outlet Metro, Marvel Rivals director Guangyun Chen had this to say when asked what cadence players should expect for new heroes being added to the game: </p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-    <div class="magazine-item">
+    <div class="magazine-item" data-tags="reviews">
       <a href="Pages/Reviews/Veilguard.html">
         <div class="thumbnail" style="background-image: url('Assets/Veilguard/dragon.webp');"></div>
         
         <h2 class="centered-headline">Dragon Age: Veilguard – The Dreadwolfening</h2>
         <span class="date"> December 29, 2024</span>
-		<p class="excerpt"> Dragon Age is a series that over the past two decades has transformed itself with every entry, and Dragon Age: Veilguard is no exception. The combat is a lot more action-oriented, continuing to stray even farther from the turn-based mechanics and deep storyline from the original Dragon Age: Origins. This isn't necessarily a bad thing, but it was a disappointment to fans that longed for the return of the mechanics of the old Dragon Age games.</p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> Dragon Age is a series that over the past two decades has transformed itself with every entry, and Dragon Age: Veilguard is no exception. The combat is a lot more action-oriented, continuing to stray even farther from the turn-based mechanics and deep storyline from the original Dragon Age: Origins. This isn't necessarily a bad thing, but it was a disappointment to fans that longed for the return of the mechanics of the old Dragon Age games.</p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-    <div class="magazine-item">
+    <div class="magazine-item" data-tags="reviews">
       <a href="Pages/Reviews/Astrobot.html">
         <div class="thumbnail" style="background-image: url('Assets/Astrobot/astro-bot-cast-in-front-of-game-logo-on-dark-blue-background-2x1-composite.avif');"></div>
         
         <h2 class="centered-headline">Astrobot - Gnome Sized, but not a Gnome</h2>
         <span class="date"> January 31, 2025</span>
-		<p class="excerpt"> Astrobot is one of the best-feeling games on PlayStation and one of the only 3D platformers on the system. Like the demo before it, Astrobot makes great use of dual sense features, which was a highlight for me. I loved feeling all the different materials astro would walk on, and I spent much time seeing what I could interact with to give me that next hit of dual sense crack.</p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> Astrobot is one of the best-feeling games on PlayStation and one of the only 3D platformers on the system. Like the demo before it, Astrobot makes great use of dual sense features, which was a highlight for me. I loved feeling all the different materials astro would walk on, and I spent much time seeing what I could interact with to give me that next hit of dual sense crack.</p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-    <div class="magazine-item">
+    <div class="magazine-item" data-tags="reviews">
       <a href="Pages/Reviews/goty24.html">
         <div class="thumbnail" style="background-image: url('Assets/metaphor/Metaphor-ReFantazio-6-1024x576.webp');"></div>
         
         <h2>Smarf's Top 5 Games of 2024</h2>
         <span class="date"> January 05, 2025</span>
-		<p class="excerpt"> This was a strange year for me when it comes to gaming. I was interested in very few of the new games coming out and didn’t necessarily want to spend money on them. The games that I did play, I managed to play because I rented them with Gamefly, but shipping speed put a damper on how quickly I could play them.</p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> This was a strange year for me when it comes to gaming. I was interested in very few of the new games coming out and didn’t necessarily want to spend money on them. The games that I did play, I managed to play because I rented them with Gamefly, but shipping speed put a damper on how quickly I could play them.</p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-	<div class="magazine-item">
-	<a href="Pages/Marvel Rivals/5newrivals.html">
+  <div class="magazine-item" data-tags="articles">
+  <a href="Pages/Marvel Rivals/5newrivals.html">
     <div class="thumbnail" style="background-image: url('Assets/Marvel Rivals/GfxEo1lWwAAFrul.webp');"></div>
     
     <h2>5 New Heroes Discovered in Marvel Rivals Game Files</h2>
     <span class="date"> January 11, 2025</span>
     
-	<p class="excerpt"> A leaker known as X0XLEAK posted on X that 5 new heroes were found in the game files. The heroes are: </p>
-	<span class="read-more">Read More</span>
-	  </a>
-	</div>
-
-	 <div class="magazine-item">
+  <p class="excerpt"> A leaker known as X0XLEAK posted on X that 5 new heroes were found in the game files. The heroes are: </p>
+  <span class="read-more">Read More</span>
+    </a>
+  </div>
+   <div class="magazine-item" data-tags="articles">
       <a href="Pages/Switch 2/FinalSwitch2Rumor.html">
         <div class="thumbnail" style="background-image: url('Assets/Nintendo/Untitled-1_yJncNl4.webp');"></div>
         
         <h2>Switch 2 Announcement Expected This Week</h2>
         <span class="date"> January 13, 2025</span>
-		<p class="excerpt"> Reliable leaker and podcaster, Nate the Hate, announced on his podcast that the Switch 2 will be announced this Thursday, 16th January. Meanwhile, Tom Warren of The Verge corroborated on X that a Switch 2 reveal is expected this week.</p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> Reliable leaker and podcaster, Nate the Hate, announced on his podcast that the Switch 2 will be announced this Thursday, 16th January. Meanwhile, Tom Warren of The Verge corroborated on X that a Switch 2 reveal is expected this week.</p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-	 <div class="magazine-item">
+   <div class="magazine-item" data-tags="articles">
       <a href="Pages/Switch 2/switch2xbox1.html">
         <div class="thumbnail" style="background-image: url('Assets/Nintendo/switchofficial.webp');"></div>
         
         <h2>Nintendo Switch 2 will be getting Xbox games according to leaker</h2>
         <span class="date"> January 10, 2025</span>
-		<p class="excerpt"> NateTheHate, a reliable leaker and podcaster, claimed Halo: The Master Chief Collection and Microsoft flight Simulator 2024  will be coming to the Nintendo Switch 2.</p>
-		<span class="read-more">Read More</span>
+    <p class="excerpt"> NateTheHate, a reliable leaker and podcaster, claimed Halo: The Master Chief Collection and Microsoft flight Simulator 2024  will be coming to the Nintendo Switch 2.</p>
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-	<div class="magazine-item">
+  <div class="magazine-item" data-tags="articles">
      <a href="Pages/Switch 2/Switch2NotOfficial.html">
      <div class="thumbnail" style="background-image: url('Assets/Nintendo/Nintendo Logo.webp');"></div>
      
      <h2>Nintendo Responds to Leaks: "Not Official"</h2>
      <span class="date"> January 10, 2025</span>
-	 <p class="excerpt">Yesterday, I wrote an article covering all the Nintendo Switch 2 leaks from CES and online, and now Nintendo has finally released a statement addressing them.</p>
-	 <span class="read-more">Read More</span>
+   <p class="excerpt">Yesterday, I wrote an article covering all the Nintendo Switch 2 leaks from CES and online, and now Nintendo has finally released a statement addressing them.</p>
+   <span class="read-more">Read More</span>
      </a>
     </div>
-
-	<div class="magazine-item">
+  <div class="magazine-item" data-tags="articles">
       <a href="Pages/Switch 2/switch2rumor1.html">
         <div class="thumbnail" style="background-image: url('Assets/Nintendo/960x0 (1).webp');"></div>
       
         <h2>What's going on with the Switch 2 leaks?</h2>
         <span class="date"> January 09, 2025</span>
-		<p class="excerpt">Leaks about the Nintendo Switch 2 have been surfacing everywhere for weeks now with more big news dropping this morning. OnLeaks, in collaboration with 91mobiles,shared a 360-degree render of the Nintendo Switch 2, telling us the following:</p>
-		
-		<span class="read-more">Read More</span>
+    <p class="excerpt">Leaks about the Nintendo Switch 2 have been surfacing everywhere for weeks now with more big news dropping this morning. OnLeaks, in collaboration with 91mobiles,shared a 360-degree render of the Nintendo Switch 2, telling us the following:</p>
+    
+    <span class="read-more">Read More</span>
       </a>
     </div>
-
-	<div class="magazine-item">
+  <div class="magazine-item" data-tags="reviews">
       <a href="Pages/Reviews/Dissapointees24.html">
         <div class="thumbnail" style="background-image: url('Assets/SSKTJL/suicide-squad.jpg');"></div>
         
         <h2>Disappointees 2024</h2>
         <span class="date"> January 10, 2025</span>
-		  <p class="excerpt">This is a new series that I'm going to do at the end of each year along with my Game of the Year list. There's always games that I felt could have been good, but just left me feeling disappointed.</p>
+      <p class="excerpt">This is a new series that I'm going to do at the end of each year along with my Game of the Year list. There's always games that I felt could have been good, but just left me feeling disappointed.</p>
       <span class="read-more">Read More</span>
       </a>
     </div>
   </div>
-
-	<a rel="me" href="https://mastodon.social/@smarfdurden"></a>
+  <a rel="me" href="https://mastodon.social/@smarfdurden"></a>
     <div class="spacer"></div>
   </div>
   <script src="script.js" defer></script>
   <script src="Assets/js/jquery-3.6.0.min.js" async></script>
+ 
   </body>
 </html>
