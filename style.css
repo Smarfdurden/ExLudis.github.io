@@ -930,6 +930,26 @@ body.dark-mode .magazine-container .magazine-item {
 .email-button:hover {
   background-color: #0056b3;
 }
+
+.icon {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 10px;
+  background-color: #007BFF; 
+  border-radius: 5px;
+  text-decoration: none;
+  color: #F0F7EE; 
+  transition: background-color 0.3s;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  width: 20px; 
+  height: 20px;
+}
+
+.icon:hover {
+  background-color: #0056b3;
+}
+
 .excerpt {
   text-align: left;
 }
