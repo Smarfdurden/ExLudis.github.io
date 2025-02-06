@@ -1060,5 +1060,4 @@ body.dark-mode h1 {
 }
 .filter-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }
