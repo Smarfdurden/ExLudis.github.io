@@ -1069,7 +1069,8 @@ body.dark-mode h1 {
 .filter-button {
   background-color: #011A24;
   color: #fff;
-  border: none;
+  border: 0.5px solid;
+  border-color: var(--primary-border-color);
   padding: 10px 20px;
   margin: 0 5px;
   cursor: pointer;
