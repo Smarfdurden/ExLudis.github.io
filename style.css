@@ -60,6 +60,8 @@ body.dark-mode blockquote {
 body.dark-mode blockquote footer {
   color: #aaa;
 }
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -934,7 +936,9 @@ body.dark-mode .magazine-container .magazine-item {
 .icon {
   display: inline-block;
   margin-top: 5px;
+  justify-content: center;
   padding: 10px 10px;
+  align-items: center;
   background-color: #007BFF; 
   border-radius: 5px;
   text-decoration: none;
