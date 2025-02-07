@@ -1057,7 +1057,7 @@ body.dark-mode h1 {
 .short-hr {
   width: 100px;
   height: 1px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--text-color), rgba(0, 0, 0, 0)); /* Gradient for fading effect */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--text-color), rgba(0, 0, 0, 0)); 
   border: none;
   margin: 10px auto;
 }
