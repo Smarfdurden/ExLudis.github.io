@@ -318,7 +318,7 @@ color: grey;
 }
 
 .boxed-section a {
-  color: lightblue !important;
+  color: blue !important;
   text-decoration: none;
 }
 
@@ -327,6 +327,11 @@ body.dark-mode .boxed-section {
   border-color: var(--primary-border-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
+body.dark-mode .boxed-section a {
+  color: lightblue !important;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   .boxed-section {
     margin: 20px 10px; 
