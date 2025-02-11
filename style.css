@@ -314,10 +314,14 @@ color: grey;
   margin: 20px auto; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left; 
-}
-.boxed-section {
   line-height: 1.8; 
 }
+
+.boxed-section a {
+  color: lightblue !important;
+  text-decoration: none;
+}
+
 body.dark-mode .boxed-section {
   background-color: #2F2F2F; 
   border-color: var(--primary-border-color);
