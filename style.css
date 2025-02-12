@@ -241,6 +241,7 @@ body.dark-mode .profile-section {
 }
 .game-info-container {
 color: grey;
+text-align: center;
 }
 .centered-container {
   display: flex;
